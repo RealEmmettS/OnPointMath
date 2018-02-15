@@ -24,6 +24,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
     @IBOutlet weak var text3: UITextField!
+    @IBOutlet weak var denom: UITextField!
     @IBOutlet weak var text4: UITextField!
     
     //output
@@ -31,7 +32,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     
     //Picker Options
-    let options = ["--Trigonometry--","Pythagorean Theorum","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon"]
+    let options = ["--Trigonometry--","Pythagorean Theorum","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -163,6 +164,17 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
                 liter = 0
             }
             answer.text = "Answer: \(liter!/3.785412)";
+        }else if row == 12 {
+            //Fraction to Decimal
+            var numer = Float(text3.text!);
+            var denomer = Float(denom.text!);
+            if numer==nil {
+                numer = 0
+            }
+            if denomer==nil{
+                denomer = 0
+            }
+            answer.text = "Answer: \(numer!/denomer!)";
         }
     }
 
