@@ -40,11 +40,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         self.view.endEditing(true)
     }
     
-    - (IBAction)dismissKeyboard:(id)sender;
-    {
-    [textField becomeFirstResponder];
-    [textField resignFirstResponder];
-    }
+
     
     
     
