@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */; };
+		DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC597029200AA2D900CAAC64 /* investmentSelect.swift */; };
+		DC745D832010DCE100AFA43B /* geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC745D822010DCE100AFA43B /* geometry.swift */; };
+		DC790E222009716800740B38 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC790E212009716800740B38 /* RoundedButton.swift */; };
+		DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA34B272008443B00F6A1C7 /* AppDelegate.swift */; };
+		DCA34B2D2008443B00F6A1C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34B2B2008443B00F6A1C7 /* Main.storyboard */; };
+		DCA34B2F2008443B00F6A1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */; };
+		DCA34B322008443B00F6A1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */; };
+		DCA34B3D2008443B00F6A1C7 /* On_Point_MathematicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */; };
+		DCA34B482008443B00F6A1C7 /* On_Point_MathematicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA34B472008443B00F6A1C7 /* On_Point_MathematicsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCA34B392008443B00F6A1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA34B1C2008443B00F6A1C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA34B232008443B00F6A1C7;
+			remoteInfo = "On Point Mathematics";
+		};
+		DCA34B442008443B00F6A1C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCA34B1C2008443B00F6A1C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCA34B232008443B00F6A1C7;
+			remoteInfo = "On Point Mathematics";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCalc.swift; sourceTree = "<group>"; };
+		DC597029200AA2D900CAAC64 /* investmentSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = investmentSelect.swift; sourceTree = "<group>"; };
+		DC745D822010DCE100AFA43B /* geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometry.swift; sourceTree = "<group>"; };
+		DC790E212009716800740B38 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DCA34B242008443B00F6A1C7 /* On Point Mathematics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On Point Mathematics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA34B272008443B00F6A1C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DCA34B2C2008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DCA34B312008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DCA34B332008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA34B382008443B00F6A1C7 /* On Point MathematicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point MathematicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_MathematicsTests.swift; sourceTree = "<group>"; };
+		DCA34B3E2008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA34B432008443B00F6A1C7 /* On Point MathematicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point MathematicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA34B472008443B00F6A1C7 /* On_Point_MathematicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_MathematicsUITests.swift; sourceTree = "<group>"; };
+		DCA34B492008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA34B212008443B00F6A1C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B352008443B00F6A1C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B402008443B00F6A1C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA34B1B2008443B00F6A1C7 = {
+			isa = PBXGroup;
+			children = (
+				DCA34B262008443B00F6A1C7 /* On Point Mathematics */,
+				DCA34B3B2008443B00F6A1C7 /* On Point MathematicsTests */,
+				DCA34B462008443B00F6A1C7 /* On Point MathematicsUITests */,
+				DCA34B252008443B00F6A1C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA34B252008443B00F6A1C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA34B242008443B00F6A1C7 /* On Point Mathematics.app */,
+				DCA34B382008443B00F6A1C7 /* On Point MathematicsTests.xctest */,
+				DCA34B432008443B00F6A1C7 /* On Point MathematicsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA34B262008443B00F6A1C7 /* On Point Mathematics */ = {
+			isa = PBXGroup;
+			children = (
+				DCA34B272008443B00F6A1C7 /* AppDelegate.swift */,
+				DC597029200AA2D900CAAC64 /* investmentSelect.swift */,
+				DC745D822010DCE100AFA43B /* geometry.swift */,
+				DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */,
+				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
+				DC790E212009716800740B38 /* RoundedButton.swift */,
+				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
+				DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */,
+				DCA34B332008443B00F6A1C7 /* Info.plist */,
+			);
+			path = "On Point Mathematics";
+			sourceTree = "<group>";
+		};
+		DCA34B3B2008443B00F6A1C7 /* On Point MathematicsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */,
+				DCA34B3E2008443B00F6A1C7 /* Info.plist */,
+			);
+			path = "On Point MathematicsTests";
+			sourceTree = "<group>";
+		};
+		DCA34B462008443B00F6A1C7 /* On Point MathematicsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DCA34B472008443B00F6A1C7 /* On_Point_MathematicsUITests.swift */,
+				DCA34B492008443B00F6A1C7 /* Info.plist */,
+			);
+			path = "On Point MathematicsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCA34B232008443B00F6A1C7 /* On Point Mathematics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA34B4C2008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point Mathematics" */;
+			buildPhases = (
+				DCA34B202008443B00F6A1C7 /* Sources */,
+				DCA34B212008443B00F6A1C7 /* Frameworks */,
+				DCA34B222008443B00F6A1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "On Point Mathematics";
+			productName = "On Point Mathematics";
+			productReference = DCA34B242008443B00F6A1C7 /* On Point Mathematics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCA34B372008443B00F6A1C7 /* On Point MathematicsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA34B4F2008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point MathematicsTests" */;
+			buildPhases = (
+				DCA34B342008443B00F6A1C7 /* Sources */,
+				DCA34B352008443B00F6A1C7 /* Frameworks */,
+				DCA34B362008443B00F6A1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA34B3A2008443B00F6A1C7 /* PBXTargetDependency */,
+			);
+			name = "On Point MathematicsTests";
+			productName = "On Point MathematicsTests";
+			productReference = DCA34B382008443B00F6A1C7 /* On Point MathematicsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DCA34B422008443B00F6A1C7 /* On Point MathematicsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA34B522008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point MathematicsUITests" */;
+			buildPhases = (
+				DCA34B3F2008443B00F6A1C7 /* Sources */,
+				DCA34B402008443B00F6A1C7 /* Frameworks */,
+				DCA34B412008443B00F6A1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCA34B452008443B00F6A1C7 /* PBXTargetDependency */,
+			);
+			name = "On Point MathematicsUITests";
+			productName = "On Point MathematicsUITests";
+			productReference = DCA34B432008443B00F6A1C7 /* On Point MathematicsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA34B1C2008443B00F6A1C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Emmett S.";
+				TargetAttributes = {
+					DCA34B232008443B00F6A1C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DCA34B372008443B00F6A1C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DCA34B232008443B00F6A1C7;
+					};
+					DCA34B422008443B00F6A1C7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DCA34B232008443B00F6A1C7;
+					};
+				};
+			};
+			buildConfigurationList = DCA34B1F2008443B00F6A1C7 /* Build configuration list for PBXProject "On Point Mathematics" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCA34B1B2008443B00F6A1C7;
+			productRefGroup = DCA34B252008443B00F6A1C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA34B232008443B00F6A1C7 /* On Point Mathematics */,
+				DCA34B372008443B00F6A1C7 /* On Point MathematicsTests */,
+				DCA34B422008443B00F6A1C7 /* On Point MathematicsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA34B222008443B00F6A1C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA34B322008443B00F6A1C7 /* LaunchScreen.storyboard in Resources */,
+				DCA34B2F2008443B00F6A1C7 /* Assets.xcassets in Resources */,
+				DCA34B2D2008443B00F6A1C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B362008443B00F6A1C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B412008443B00F6A1C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA34B202008443B00F6A1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */,
+				DC745D832010DCE100AFA43B /* geometry.swift in Sources */,
+				DC790E222009716800740B38 /* RoundedButton.swift in Sources */,
+				DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */,
+				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B342008443B00F6A1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA34B3D2008443B00F6A1C7 /* On_Point_MathematicsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA34B3F2008443B00F6A1C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA34B482008443B00F6A1C7 /* On_Point_MathematicsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCA34B3A2008443B00F6A1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA34B232008443B00F6A1C7 /* On Point Mathematics */;
+			targetProxy = DCA34B392008443B00F6A1C7 /* PBXContainerItemProxy */;
+		};
+		DCA34B452008443B00F6A1C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCA34B232008443B00F6A1C7 /* On Point Mathematics */;
+			targetProxy = DCA34B442008443B00F6A1C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCA34B2B2008443B00F6A1C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA34B2C2008443B00F6A1C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA34B312008443B00F6A1C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCA34B4A2008443B00F6A1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DCA34B4B2008443B00F6A1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCA34B4D2008443B00F6A1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCA34B4E2008443B00F6A1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DCA34B502008443B00F6A1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point MathematicsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-MathematicsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On Point Mathematics.app/On Point Mathematics";
+			};
+			name = Debug;
+		};
+		DCA34B512008443B00F6A1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point MathematicsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-MathematicsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On Point Mathematics.app/On Point Mathematics";
+			};
+			name = Release;
+		};
+		DCA34B532008443B00F6A1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point MathematicsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-MathematicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "On Point Mathematics";
+			};
+			name = Debug;
+		};
+		DCA34B542008443B00F6A1C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M9D5379H93;
+				INFOPLIST_FILE = "On Point MathematicsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-MathematicsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "On Point Mathematics";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA34B1F2008443B00F6A1C7 /* Build configuration list for PBXProject "On Point Mathematics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA34B4A2008443B00F6A1C7 /* Debug */,
+				DCA34B4B2008443B00F6A1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA34B4C2008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point Mathematics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA34B4D2008443B00F6A1C7 /* Debug */,
+				DCA34B4E2008443B00F6A1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA34B4F2008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point MathematicsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA34B502008443B00F6A1C7 /* Debug */,
+				DCA34B512008443B00F6A1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA34B522008443B00F6A1C7 /* Build configuration list for PBXNativeTarget "On Point MathematicsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA34B532008443B00F6A1C7 /* Debug */,
+				DCA34B542008443B00F6A1C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA34B1C2008443B00F6A1C7 /* Project object */;
+}
