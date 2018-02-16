@@ -30,7 +30,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         // Do any additional setup after loading the view.
     }
     //Picker Options
-    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Trapazoid","Circle","--Volume--","Prism","Pyramid","--Surface Area--","Cube","Rectangular Prism","Cylinder"];
+    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Trapazoid","Circle","--Volume--","Prism","Pyramid","--Surface Area--","Cube","Rectangular Prism","Cylinder","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -144,45 +144,64 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Please Pick a Formula"
         }else if row == 10 {
             //Cube
+            // Formula: S=Ph+2B
             var l = Float(text1.text!);
+            var h = Float(text2.text!);
+            var B = Float(text3.text!);
             
             if l == nil{
                 l = 0
             }
+            if h == nil{
+                h = 0
+            }
+            if B == nil{
+                B = 0
+            }
             
-            let ll = pow(l!, 2)
             
-            let SA = 6*ll
+            let prt1 = l!+l!+l!+l!
+            let prt2 = prt1*h!
+            let prt3 = 2*B!
+            let prt4 = prt2+prt3
+            
+            let SA = prt4
+            
             answer_label.text = "Answer About: \(SA)"
             
         }else if row == 11 {
             //Rec. Prism
+            // Formula: S=Ph+2B
             var l = Float(text1.text!);
             var h = Float(text2.text!);
-            var w = Float(text3.text!);
+            var B = Float(text3.text!);
             
             if l == nil{
-                l=0
+                l = 0
             }
             if h == nil{
-                h=0
+                h = 0
             }
-            if w == nil{
-                w=0
+            if B == nil{
+                B = 0
             }
             
             
-            let SApt1 = 2*l!*w!
-            let SApt2 = 2*h!*w!
-            let SApt3 = 2*l!*h!
-            let SA = SApt1+SApt2+SApt3
+            let prt1 = l!+l!+l!+l!
+            let prt2 = prt1*h!
+            let prt3 = 2*B!
+            let prt4 = prt2+prt3
+            
+            let SA = prt4
             
             answer_label.text = "Answer About: \(SA)"
+            
 
         }else if row == 12 {
             //Cylinder
-            var r = Float(radius.text!);
-            var h = Float(text2.text!);
+            // Formula: S= (2*pi*r)*h+(2*pi*(pow, r))
+            var r = Double(radius.text!);
+            var h = Double(text2.text!);
             
             if r == nil{
                 r = 0
@@ -192,13 +211,62 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
                 h = 0
             }
             
-            let SACpt1 = pow(r!, 2);
-            let SACpt2 = 2*3.14*SACpt1;
-            let SACpt3 = 2*3.14*r!*h!;
-            let SAC = SACpt2+SACpt3
+           // 2*pi*r
+           let prt1 = 2*3.14*r!;
+            
+           // 2*pi*(pow, r)
+            let prt2 = pow(r!, 2)
+            
+            // (prt1*h)+prt2
+            let SA = (prt1*h!)+prt2
             
             
-            answer_label.text = "Answer About: \(SAC)"
+            answer_label.text = "Answer About: \(SA)"
+            
+        }else if row == 13 {
+            answer_label.text = "Please Pick a Formula"
+            
+        }else if row == 14 {
+            //Rec. Prism
+            // Formula: S=Ph+2B
+            var l = Float(text1.text!);
+            var h = Float(text2.text!);
+            
+            if l == nil{
+                l = 0
+            }
+            if h == nil{
+                h = 0
+            }
+            
+            //Find Perimeter of Base
+            let prt1 = l!+l!+l!+l!
+            let prt2 = prt1*h!
+            
+            let LSA = prt2
+            
+            answer_label.text = "Answer About: \(LSA)"
+            
+        }else if row == 15 {
+            //Cylinder
+            // Formula: S=Ph+2B
+            var r = Float(radius.text!);
+            var h = Float(text2.text!);
+            
+            if r == nil{
+                r = 0
+            }
+            if h == nil{
+                h = 0
+            }
+            
+            //Circumfrence
+            let prt1 = 2*3.14*r!
+            let prt2 = prt1*h!
+            
+            let LSA = prt2
+            
+            answer_label.text = "Answer About: \(LSA)"
             
         }
     }
