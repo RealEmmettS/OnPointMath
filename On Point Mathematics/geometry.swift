@@ -189,6 +189,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
+            //SA
         }else if row == 10 {
             //Cube
             // Formula: S=P*h+2*B
@@ -233,7 +234,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
             var l = Float(text1.text!);
             var h = Float(text2.text!);
-            var B = Float(text3.text!);
+            var w = Float(text3.text!);
             
             if l == nil{
                 l = 0
@@ -241,14 +242,15 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             if h == nil{
                 h = 0
             }
-            if B == nil{
-                B = 0
+            if w == nil{
+                w = 0
             }
             
+            let B = l!*w!
             
-            let prt1 = l!+l!+l!+l!
+            let prt1 = B
             let prt2 = prt1*h!
-            let prt3 = 2*B!
+            let prt3 = 2*B
             let prt4 = prt2+prt3
             
             let SA = prt4
@@ -294,28 +296,32 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
-            
+            //LAS
         }else if row == 14 {
             //Rec. Prism
             // Formula: S=Ph+2B
             
             text1.backgroundColor = UIColor.lightGray
             text2.backgroundColor = UIColor.lightGray
-            text3.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.lightGray
             radius.backgroundColor = UIColor.white
 
             var l = Float(text1.text!);
+            var w = Float(text3.text!);
             var h = Float(text2.text!);
             
             if l == nil{
                 l = 0
+            }
+            if w == nil{
+                w = 0
             }
             if h == nil{
                 h = 0
             }
             
             //Find Perimeter of Base
-            let prt1 = l!+l!+l!+l!
+            let prt1 = l!+l!+w!+w!
             let prt2 = prt1*h!
             
             let LSA = prt2
