@@ -54,9 +54,18 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
         }else if row == 1 {
             //Triangle
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
+            
             var b = Float(text1.text!);
             var h = Float(text2.text!);
             if b == nil{
@@ -69,17 +78,27 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
         }else if row == 2 {
             //Rectangle
-            var b = Float(text1.text!);
-            var h = Float(text2.text!);
-            if b == nil{
-                b = 0
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor.white
+            
+            var l = Float(text1.text!);
+            var w = Float(text3.text!);
+            if l == nil{
+                l = 0
             }
-            if h == nil{
-                h = 0
+            if w == nil{
+                w = 0
             }
-            answer_label.text = "Answer: \(b!*h!)"
+            answer_label.text = "Answer: \(l!*w!)"
         }else if row == 3 {
             //Parallelogram
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
+            
             var b = Float(text1.text!);
             var h = Float(text2.text!);
             if b == nil{
@@ -91,6 +110,11 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(b!*h!)"
         }else if row == 4 {
             //Trapazoid
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor.white
+            
             var b = Float(text1.text!);
             var h = Float(text2.text!);
             var b2 = Float(text3.text!);
@@ -106,6 +130,11 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(0.5*(b!+b2!)*h!)"
         }else if row == 5 {
             //Circle
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.lightGray
+
             var r = Float(radius.text!);
             if r == nil{
                 r = 0
@@ -114,9 +143,18 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer About: \(3.14159265359*re)"
         }else if row == 6 {
             //Volume
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
         }else if row == 7 {
             //Prism
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
+        
             var b = Float(text1.text!);
             var h = Float(text2.text!);
             if b == nil{
@@ -129,6 +167,11 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(B*h!)"
         }else if row == 8 {
             //Pyramid
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
+            
             var b = Float(text1.text!);
             var h = Float(text2.text!);
             if b == nil{
@@ -141,10 +184,20 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer About: \(0.33333333333*B*h!)"
         }else if row == 9 {
             //Surface Area
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
         }else if row == 10 {
             //Cube
-            // Formula: S=Ph+2B
+            // Formula: S=P*h+2*B
+            
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor.white
+            
             var l = Float(text1.text!);
             var h = Float(text2.text!);
             var B = Float(text3.text!);
@@ -171,7 +224,13 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
         }else if row == 11 {
             //Rec. Prism
-            // Formula: S=Ph+2B
+            // Formula: S=P*h+2*B
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor.white
+            
+            
             var l = Float(text1.text!);
             var h = Float(text2.text!);
             var B = Float(text3.text!);
@@ -200,6 +259,12 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }else if row == 12 {
             //Cylinder
             // Formula: S= (2*pi*r)*h+(2*pi*(pow, r))
+            
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.lightGray
+            
             var r = Double(radius.text!);
             var h = Double(text2.text!);
             
@@ -224,11 +289,21 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer About: \(SA)"
             
         }else if row == 13 {
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
             answer_label.text = "Please Pick a Formula"
             
         }else if row == 14 {
             //Rec. Prism
             // Formula: S=Ph+2B
+            
+            text1.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.white
+
             var l = Float(text1.text!);
             var h = Float(text2.text!);
             
@@ -250,6 +325,12 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }else if row == 15 {
             //Cylinder
             // Formula: S=Ph+2B
+            
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.lightGray
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor.lightGray
+            
             var r = Float(radius.text!);
             var h = Float(text2.text!);
             
