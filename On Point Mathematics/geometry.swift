@@ -61,8 +61,8 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Please Pick a Formula"
         }else if row == 1 {
             //Triangle
-            text1.backgroundColor = UIColor.blue
-            text2.backgroundColor = UIColor.blue
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             
@@ -78,9 +78,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
         }else if row == 2 {
             //Rectangle
-            text1.backgroundColor = UIColor.blue
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text2.backgroundColor = UIColor.white
-            text3.backgroundColor = UIColor.blue
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
             
             var l = Float(text1.text!);
@@ -94,8 +94,8 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(l!*w!)"
         }else if row == 3 {
             //Parallelogram
-            text1.backgroundColor = UIColor.blue
-            text2.backgroundColor = UIColor.blue
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             
@@ -110,9 +110,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(b!*h!)"
         }else if row == 4 {
             //Trapazoid
-            text1.backgroundColor = UIColor.blue
-            text2.backgroundColor = UIColor.blue
-            text3.backgroundColor = UIColor.blue
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
             
             var b = Float(text1.text!);
@@ -133,7 +133,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
-            radius.backgroundColor = UIColor.blue
+            radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
 
             var r = Float(radius.text!);
             if r == nil{
@@ -150,8 +150,8 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Please Pick a Formula"
         }else if row == 7 {
             //Prism
-            text1.backgroundColor = UIColor.blue
-            text2.backgroundColor = UIColor.blue
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
         
@@ -167,8 +167,8 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer: \(B*h!)"
         }else if row == 8 {
             //Pyramid
-            text1.backgroundColor = UIColor.lightGray
-            text2.backgroundColor = UIColor.lightGray
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             
@@ -194,9 +194,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //Cube
             // Formula: S=P*h+2*B
             
-            text1.backgroundColor = UIColor.lightGray
-            text2.backgroundColor = UIColor.lightGray
-            text3.backgroundColor = UIColor.lightGray
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
             
             var l = Float(text1.text!);
@@ -226,9 +226,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }else if row == 11 {
             //Rec. Prism
             // Formula: S=P*h+2*B
-            text1.backgroundColor = UIColor.lightGray
-            text2.backgroundColor = UIColor.lightGray
-            text3.backgroundColor = UIColor.lightGray
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
             
             
@@ -263,9 +263,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             // Formula: S= (2*pi*r)*h+(2*pi*(pow, r))
             
             text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
-            radius.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             
             var r = Double(radius.text!);
             var h = Double(text2.text!);
@@ -301,9 +301,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //Rec. Prism
             // Formula: S=Ph+2B
             
-            text1.backgroundColor = UIColor.lightGray
-            text2.backgroundColor = UIColor.lightGray
-            text3.backgroundColor = UIColor.lightGray
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
 
             var l = Float(text1.text!);
@@ -333,9 +333,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             // Formula: S=Ph+2B
             
             text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor.lightGray
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
-            radius.backgroundColor = UIColor.lightGray
+            radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             
             var r = Float(radius.text!);
             var h = Float(text2.text!);
