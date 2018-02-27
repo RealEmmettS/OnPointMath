@@ -58,7 +58,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Please Pick a Formula"
+            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
         }else if row == 1 {
             //Triangle
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
@@ -147,7 +147,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Please Pick a Formula"
+            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
         }else if row == 7 {
             //Prism
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
@@ -188,7 +188,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Please Pick a Formula"
+            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
             //SA
         }else if row == 10 {
             //Cube
@@ -295,7 +295,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Please Pick a Formula"
+            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
             //LAS
         }else if row == 14 {
             //Rec. Prism

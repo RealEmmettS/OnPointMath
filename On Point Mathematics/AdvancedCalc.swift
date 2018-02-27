@@ -59,7 +59,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            answer.text = "Please Pick a formula"
+            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 1 {
             //Pythagorean Theorum
@@ -83,7 +83,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 
             
         }else if row == 2 {
-            answer.text = "Please Pick a formula"
+            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 3 {
             //Speed
@@ -130,7 +130,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
             answer.text = "Answer About: \(a)"
             
         }else if row == 5 {
-            answer.text = "Please Pick a formula"
+            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 6 {
             //Feet to Meters

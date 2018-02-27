@@ -63,7 +63,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            accountbal.text = "Select Calculation Type"
+            accountbal.text = "Pick calculation last\nTo recalculate, reselect your options"
             interest.text = ""
         }else if row == 1 {
             //Simple Interest Calculator
