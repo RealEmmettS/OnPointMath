@@ -18,6 +18,7 @@
 		DCA34B322008443B00F6A1C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */; };
 		DCA34B3D2008443B00F6A1C7 /* On_Point_MathematicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */; };
 		DCA34B482008443B00F6A1C7 /* On_Point_MathematicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA34B472008443B00F6A1C7 /* On_Point_MathematicsUITests.swift */; };
+		DCF2518E204653F500559E64 /* TabColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF2518D204653F500559E64 /* TabColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DCA34B432008443B00F6A1C7 /* On Point MathematicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point MathematicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA34B472008443B00F6A1C7 /* On_Point_MathematicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_MathematicsUITests.swift; sourceTree = "<group>"; };
 		DCA34B492008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF2518D204653F500559E64 /* TabColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DC0B9897203645BC0094FA79 /* Notes.swift */,
 				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
 				DC790E212009716800740B38 /* RoundedButton.swift */,
+				DCF2518D204653F500559E64 /* TabColors.swift */,
 				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
 				DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */,
 				DCA34B332008443B00F6A1C7 /* Info.plist */,
@@ -276,6 +279,7 @@
 				DC790E222009716800740B38 /* RoundedButton.swift in Sources */,
 				DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */,
 				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
+				DCF2518E204653F500559E64 /* TabColors.swift in Sources */,
 				DC0B9898203645BC0094FA79 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9D5379H93;
 				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9D5379H93;
 				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
 				PRODUCT_NAME = "$(TARGET_NAME)";

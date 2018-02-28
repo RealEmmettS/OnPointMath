@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UVd-1X-839"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Geometry" image="Geometry" id="53s-Hi-Sin"/>
+                    <tabBarItem key="tabBarItem" title="Geometry" image="Geometry" landscapeImage="Geometry" id="53s-Hi-Sin"/>
                     <connections>
                         <outlet property="answer_label" destination="TIC-gk-AFe" id="kAx-bk-8QD"/>
                         <outlet property="picker" destination="pgA-Av-h8d" id="Bzz-OW-u0H"/>
@@ -206,7 +206,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V7R-qd-X8C"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Advanced" image="Genius" id="Elo-4Z-FKA"/>
+                    <tabBarItem key="tabBarItem" title="Advanced" image="Genius" landscapeImage="Genius" id="Elo-4Z-FKA"/>
                     <connections>
                         <outlet property="Picker" destination="TkE-kr-UdX" id="POb-Oe-l9a"/>
                         <outlet property="answer" destination="T6y-yf-NKc" id="fqb-lW-o1d"/>
@@ -265,7 +265,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="592-HJ-dfG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="note" landscapeImage="note" selectedImage="note" id="E1v-tP-1Ap"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="note" landscapeImage="note" largeContentSizeImage="note" selectedImage="note" id="E1v-tP-1Ap"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG9-Dh-kL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,7 +363,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VMT-Ya-5hh"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Investments" image="Money" id="lgO-G5-Q4B"/>
+                    <tabBarItem key="tabBarItem" title="Investments" image="Money" landscapeImage="Money" id="lgO-G5-Q4B"/>
                     <connections>
                         <outlet property="accountbal" destination="QlV-1d-fuf" id="8uF-CZ-JQe"/>
                         <outlet property="interest" destination="1pZ-Dl-YiB" id="Z1V-tu-vJO"/>
@@ -377,14 +377,16 @@
             </objects>
             <point key="canvasLocation" x="46" y="849"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="5Fh-Lb-dNh">
             <objects>
-                <tabBarController id="N2I-Kv-0Zh" sceneMemberID="viewController">
+                <tabBarController id="N2I-Kv-0Zh" customClass="TabBarVC" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="leA-Tb-zhd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ApS-WE-rUA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="zGm-Ej-2D0" kind="relationship" relationship="viewControllers" id="bSJ-8h-5FP"/>

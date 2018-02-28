@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+
+
+class PickerTextColor: UIPickerViewDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // make unselected icons white
+        self.UIPickerView.textColor = UIColor.white
+    }
+}

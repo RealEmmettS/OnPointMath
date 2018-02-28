@@ -58,6 +58,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
+            answer_label.textColor = UIColor(red:1.00, green:0.42, blue:0.00, alpha:1.0)
             answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
         }else if row == 1 {
             //Triangle
