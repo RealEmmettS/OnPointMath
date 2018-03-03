@@ -30,7 +30,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         // Do any additional setup after loading the view.
     }
     //Picker Options
-    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Trapazoid","Circle","--Volume--","Prism","Pyramid","--Surface Area--","Cube","Rectangular Prism","Cylinder","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
+    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,9 +61,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
         }else if row == 1 {
             //Triangle
-            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text3.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
             
             var b = Float(text1.text!);
@@ -99,36 +99,16 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             
-            var b = Float(text1.text!);
+            var l = Float(text1.text!);
             var h = Float(text2.text!);
-            if b == nil{
-                b = 0
+            if l == nil{
+                l = 0
             }
             if h == nil{
                 h = 0
             }
-            answer_label.text = "Answer: \(b!*h!)"
-        }else if row == 4 {
-            //Trapazoid
-            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            radius.backgroundColor = UIColor.white
-            
-            var b = Float(text1.text!);
-            var h = Float(text2.text!);
-            var b2 = Float(text3.text!);
-            if b == nil{
-                b = 0
-            }
-            if h == nil{
-                h = 0
-            }
-            if b2 == nil{
-                b2 = b
-            }
-            answer_label.text = "Answer: \(0.5*(b!+b2!)*h!)"
-        }else if row == 5 {
+            answer_label.text = "Answer: \(l!*h!)"
+        } else if row == 4 {
             //Circle
             text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor.white
@@ -141,48 +121,88 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             }
             let re = pow(r!, 2)
             answer_label.text = "Answer About: \(3.14159265359*re)"
-        }else if row == 6 {
+        }else if row == 5 {
             //Volume
             text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
-        }else if row == 7 {
-            //Prism
+        }else if row == 6 {
+            //Cube
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
         
-            var b = Float(text1.text!);
+            var l = Float(text1.text!);
             var h = Float(text2.text!);
-            if b == nil{
-                b = 0
+            var w = Float(text3.text!);
+            if l == nil{
+                l = 0
             }
             if h == nil{
                 h = 0
             }
-            let B =  pow(b!, 2)
+            if w == nil{
+                w = 0
+            }
+            
+            let B = l!*w!
             answer_label.text = "Answer: \(B*h!)"
-        }else if row == 8 {
-            //Pyramid
-            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        }else if row == 7 {
+            //Cone
+            text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text3.backgroundColor = UIColor.white
-            radius.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             
-            var b = Float(text1.text!);
             var h = Float(text2.text!);
-            if b == nil{
-                b = 0
-            }
+            var r = Float(radius.text!);
             if h == nil{
                 h = 0
             }
-            let B =  pow(b!, 2)
-            answer_label.text = "Answer About: \(0.33333333333*B*h!)"
+            if r == nil{
+                r = 0
+            }
+            let re = pow(r!, 2)
+            let B =  3.14159265359*re
+            answer_label.text = "Answer About: \((1/3)*B*h!)"
+        }else if row == 8 {
+                //Cylinder
+                text1.backgroundColor = UIColor.white
+                text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                text3.backgroundColor = UIColor.white
+                radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                
+                var h = Float(text2.text!);
+                var r = Float(radius.text!);
+                if h == nil{
+                    h = 0
+                }
+                if r == nil{
+                    r = 0
+                }
+            
+                let re = pow(r!, 2)
+                let B = 3.14159265359*re
+                answer_label.text = "Answer About: \(B*h!)"
         }else if row == 9 {
+            //Sphere
+            text1.backgroundColor = UIColor.white
+            text2.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor.white
+            radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            
+            var r = Float(radius.text!);
+            if r == nil{
+                r = 0
+            }
+            
+            let rCubed = pow(r!, 3)
+            let piRCubed = 3.14159265359*rCubed
+            answer_label.text = "Answer About: \((4/3)*piRCubed)"
+        }else if row == 10 {
             //Surface Area
             text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor.white
@@ -190,18 +210,17 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             radius.backgroundColor = UIColor.white
             answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
             //SA
-        }else if row == 10 {
+        }else if row == 11 {
             //Cube
             // Formula: S=P*h+2*B
             
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             
             var l = Float(text1.text!);
             var h = Float(text2.text!);
-            var B = Float(text3.text!);
             
             if l == nil{
                 l = 0
@@ -209,21 +228,19 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             if h == nil{
                 h = 0
             }
-            if B == nil{
-                B = 0
-            }
             
+            let B = l!*l!
             
             let prt1 = l!+l!+l!+l!
             let prt2 = prt1*h!
-            let prt3 = 2*B!
+            let prt3 = 2*B
             let prt4 = prt2+prt3
             
             let SA = prt4
             
             answer_label.text = "Answer About: \(SA)"
             
-        }else if row == 11 {
+        }else if row == 12 {
             //Rec. Prism
             // Formula: S=P*h+2*B
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
@@ -248,7 +265,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
             let B = l!*w!
             
-            let prt1 = B
+            let prt1 = l!+l!+w!+w!
             let prt2 = prt1*h!
             let prt3 = 2*B
             let prt4 = prt2+prt3
@@ -258,7 +275,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             answer_label.text = "Answer About: \(SA)"
             
 
-        }else if row == 12 {
+        }else if row == 13 {
             //Cylinder
             // Formula: S= (2*pi*r)*h+(2*pi*(pow, r))
             
@@ -279,10 +296,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             }
             
            // 2*pi*r
-           let prt1 = 2*3.14*r!;
+           let prt1 = 2*3.14159265359*r!;
             
            // 2*pi*(pow, r)
-            let prt2 = pow(r!, 2)
+            let prt2 = 2*3.14159265359*pow(r!, 2)
             
             // (prt1*h)+prt2
             let SA = (prt1*h!)+prt2
@@ -290,14 +307,50 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
             answer_label.text = "Answer About: \(SA)"
             
-        }else if row == 13 {
+        }else if row == 14 {
+            //Triangular Prism
+            // Formula: P*h+2B
+            text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+            radius.backgroundColor = UIColor.white
+            
+            
+            var l = Float(text1.text!);
+            var h = Float(text2.text!);
+            var w = Float(text3.text!);
+            
+            if l == nil{
+                l = 0
+            }
+            if h == nil{
+                h = 0
+            }
+            if w == nil{
+                w = 0
+            }
+            
+            let B = (1/2)*l!*w!
+            
+            let prt1 = l!+l!+w!+w!
+            let prt2 = prt1*h!
+            let prt3 = 2*B
+            let prt4 = prt2+prt3
+            
+            let SA = prt4
+            
+            answer_label.text = "Answer About: \(SA)"
+            
+            
+            
+        }else if row == 15 {
             text1.backgroundColor = UIColor.white
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
             answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
-            //LAS
-        }else if row == 14 {
+            //Lateral Surface Area
+        }else if row == 16 {
             //Rec. Prism
             // Formula: S=Ph+2B
             
@@ -328,7 +381,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
             answer_label.text = "Answer About: \(LSA)"
             
-        }else if row == 15 {
+        }else if row == 17 {
             //Cylinder
             // Formula: S=Ph+2B
             
