@@ -85,8 +85,8 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             let interestans = p!*re*t!
             let accountbalans = interestans+p!
             
-            interest.text = "Your intrest is about:\n $\(interestans)";
-            accountbal.text = "Your account bal is about:\n $\(accountbalans)";
+            interest.text = "Interest About:\n $\(interestans)";
+            accountbal.text = "Account Bal. About:\n $\(accountbalans)";
                     
         
         }else if row == 2 {
@@ -109,8 +109,8 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             let accountBalanceprt3 = Double(p!*accountBalanceprt2);
             let accountBalanceprt4 = round(accountBalanceprt3)
             
-            interest.text = "Your intrest is about:\n $\(accountBalanceprt4-p!)";
-            accountbal.text = "Your account bal is about:\n $\(accountBalanceprt4)";
+            interest.text = "Interest About:\n $\(accountBalanceprt4-p!)";
+            accountbal.text = "Account Bal. About:\n $\(accountBalanceprt4)";
     
             }
         }
