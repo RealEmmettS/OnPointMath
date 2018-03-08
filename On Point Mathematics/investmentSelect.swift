@@ -82,6 +82,8 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             let re = r!/100
             
+            
+            
             let interestans = p!*re*t!
             let accountbalans = interestans+p!
             

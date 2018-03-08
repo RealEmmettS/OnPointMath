@@ -132,7 +132,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //Cube
             text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text3.backgroundColor = UIColor.white
+            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
             radius.backgroundColor = UIColor.white
         
             var l = Float(text1.text!);
