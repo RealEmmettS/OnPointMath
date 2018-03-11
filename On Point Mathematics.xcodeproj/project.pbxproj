@@ -49,7 +49,7 @@
 		DCA34B2C2008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA34B312008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DCA34B332008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA34B332008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "New Group/Info.plist"; sourceTree = "<group>"; };
 		DCA34B382008443B00F6A1C7 /* On Point MathematicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point MathematicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_MathematicsTests.swift; sourceTree = "<group>"; };
 		DCA34B3E2008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,7 +114,10 @@
 				DC0B9897203645BC0094FA79 /* Notes.swift */,
 				DC790E212009716800740B38 /* RoundedButton.swift */,
 				DCF2518D204653F500559E64 /* TabColors.swift */,
-				DCF58E6F2053530300745B3B /* Resources */,
+				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
+				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
+				DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */,
+				DCA34B332008443B00F6A1C7 /* Info.plist */,
 			);
 			path = "On Point Mathematics";
 			sourceTree = "<group>";
@@ -135,18 +138,6 @@
 				DCA34B492008443B00F6A1C7 /* Info.plist */,
 			);
 			path = "On Point MathematicsUITests";
-			sourceTree = "<group>";
-		};
-		DCF58E6F2053530300745B3B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
-				DCA34B302008443B00F6A1C7 /* LaunchScreen.storyboard */,
-				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
-				DCA34B332008443B00F6A1C7 /* Info.plist */,
-			);
-			name = Resources;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
