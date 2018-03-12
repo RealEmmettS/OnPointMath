@@ -34,6 +34,9 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     //output
     @IBOutlet weak var interest: UILabel!
     @IBOutlet weak var accountbal: UILabel!
+   
+    
+    
     
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
@@ -45,6 +48,9 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             }
         }
     }
+    
+    
+    
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.picker.selectedRow(inComponent: 0)

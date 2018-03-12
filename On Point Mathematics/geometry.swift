@@ -8,7 +8,7 @@
 
 import UIKit
 
-class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     //Picker
     @IBOutlet weak var picker: UIPickerView!
@@ -25,9 +25,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
-        
-
-        // Do any additional setup after loading the view.
+        text1.delegate = self
+        text2.delegate = self
+        text3.delegate = self
+        radius.delegate = self
     }
     //Picker Options
     let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","Triangular Prism","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
@@ -36,6 +37,87 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    // MARK: - selectCalc
+//    func selectCalculation(fromRow selectedRow: Int){
+//        if self.canCalculate() {
+//            // All rows except for 0,5,10,15,
+//            if selectedRow == 1 {
+////                self.triangle()
+////            } else if selectedRow == 2 {
+////                self.rectangle()
+////            } else if selectedRow == 3 {
+////                self.parallelogram()
+////            } else if selectedRow == 4 {
+////                self.circle()
+////            } else if selectedRow == 6 {
+////                self.cubev()
+////            } else if selectedRow == 7 {
+////                self.conev()
+////            } else if selectedRow == 8 {
+////                self.cylinderv()
+////            } else if selectedRow == 9 {
+////                self.spherev()
+////            } else if selectedRow == 11 {
+////                self.cubesa()
+////            } else if selectedRow == 12 {
+////                self.rectanglesa()
+////            } else if selectedRow == 13 {
+////                self.cylindersa()
+////            } else if selectedRow == 14 {
+////                self.trianglesa()
+////            } else if selectedRow == 16 {
+////                self.rectanglelsa()
+////            } else if selectedRow == 17 {
+////                self.cylinderlsa()
+//            }
+//        }
+//    }
+    
+    // MARK: - Editing
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let selectedRow = self.picker.selectedRow(inComponent: 0)
+        if textField == text1 {
+            print("Priciple Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        } else if textField == text2 {
+            print("Rate Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }else if textField == text3{
+            print("Time Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }else if textField == radius{
+            print("Radius Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }
+    }
+    // MARK: canCalculate
+    func canCalculate() -> Bool {
+        var isFilledIn = false
+        if text1.text != nil && text2.text != nil && text3.text != nil && radius.text != nil {
+            isFilledIn = true
+        } else {
+            print("isFilledIn = false")
+        }
+        
+        return isFilledIn
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
