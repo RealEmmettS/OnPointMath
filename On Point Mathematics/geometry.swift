@@ -30,7 +30,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         // Do any additional setup after loading the view.
     }
     //Picker Options
-    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
+    let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","Triangular Prism","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
