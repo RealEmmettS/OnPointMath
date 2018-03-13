@@ -8,12 +8,17 @@
 
 import UIKit
 
-class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         Picker.dataSource = self
         Picker.delegate = self
+        text1.delegate = self
+        text2.delegate = self
+        text3.delegate = self
+        denom.delegate = self
+        text4.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -40,6 +45,83 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     
     
+    // MARK: - selectCalc
+    func selectCalculation(fromRow selectedRow: Int){
+        if self.canCalculate() {
+            // All rows except for 0,2,5 which are section titles
+            if selectedRow == 1 {
+                self.pythag()
+            } else if selectedRow == 3 {
+                self.speed()
+            } else if selectedRow == 4 {
+                self.accel()
+            } else if selectedRow == 6 {
+                self.fm()
+            } else if selectedRow == 7 {
+                self.mf()
+            } else if selectedRow == 8 {
+                self.mk()
+            } else if selectedRow == 9 {
+                self.km()
+            } else if selectedRow == 10 {
+                self.gl()
+            } else if selectedRow == 11 {
+                self.lg()
+            } else if selectedRow == 12 {
+                self.fd()
+            }
+        }
+    }
+    
+    // MARK: - Editing
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let selectedRow = self.Picker.selectedRow(inComponent: 0)
+        if textField == text1 {
+            print("Text1 Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        } else if textField == text2 {
+            print("Text2 Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }else if textField == text3{
+            print("Text3 Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }else if textField == denom{
+            print("Denom Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }else if textField == text4{
+            print("Text4 Ended")
+            self.selectCalculation(fromRow: selectedRow)
+        }
+    }
+    // MARK: canCalculate
+    func canCalculate() -> Bool {
+        var isFilledIn = false
+        if text1.text != nil && text2.text != nil && text3.text != nil && denom.text != nil && text4.text != nil {
+            isFilledIn = true
+        } else {
+            print("isFilledIn = false")
+        }
+        
+        return isFilledIn
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -62,148 +144,31 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
             answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 1 {
-            //Pythagorean Theorum
-            t1t2()
-            
-            var l1 = Float(text1.text!);
-            var l2 = Float(text2.text!);
-            
-            if l1 == nil{
-                l1 = 0
-            }
-            if l2 == nil{
-                l2 = 0
-            }
-            
-            let hpt1 = pow(l1!, 2)
-            let hpt2 = pow(l2!, 2)
-            let h = sqrt(hpt1+hpt2)
-            
-            answer.text = "Hypotenuse Length = \(h)"
-
-            
+            pythag()
         }else if row == 2 {
             answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 3 {
-            //Speed
-            t1t2()
-            var d = Float(text1.text!);
-            var t = Float(text2.text!);
-            
-            if d == nil{
-                d = 0
-            }
-            if t == nil{
-                t = 0
-            }
-            
-            let speed = d!/t!
-            
-            answer.text = "Answer About: \(speed)"
-            
+            speed()
         }else if row == 4 {
-            //Acceleration
-            text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            denom.backgroundColor = UIColor.white
-            text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            var vf = Float(text4.text!);
-            var vi = Float(text3.text!);
-            var t = Float(text2.text!);
-            
-            if vf == nil{
-                vf = 0
-            }
-            if vi == nil{
-                vi = 0
-            }
-            if t == nil{
-                t = 0
-            }
-            
-            let apt1 = vf!-vi!
-            let a = apt1/t!
-            
-            
-            answer.text = "Answer About: \(a)"
-            
+            accel()
         }else if row == 5 {
             answer.text = "Pick calculation last\nTo recalculate, reselect your options"
             allWhite()
         }else if row == 6 {
-            //Feet to Meters
-            text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor.white
-            text3.backgroundColor = UIColor.white
-            denom.backgroundColor = UIColor.white
-            text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            var f = Float(text4.text!);
-            if f==nil {
-                f = 0
-            }
-            answer.text = "Answer: \(f!/3.28)"
+            fm()
         }else if row == 7 {
-            //Meters to Feet
-            text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor.white
-            text3.backgroundColor = UIColor.white
-            denom.backgroundColor = UIColor.white
-            text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            var m = Float(text4.text!);
-            if m==nil{
-                m = 0
-            }
-            answer.text = "Answer: \(m!*3.28)"
+            mf()
         }else if row == 8 {
-            //Mile to Kilometer
-            t4()
-            var mile = Float(text4.text!);
-            if mile==nil {
-                mile = 0
-            }
-            answer.text = "Answer: \(mile!*1.61)";
+            mk()
         }else if row == 9 {
-            //Kilometer to Mile
-            t4()
-            var kilom = Float(text4.text!);
-            if kilom==nil {
-                kilom = 0
-            }
-            answer.text = "Answer: \(kilom!*0.6214)";
+            km()
         }else if row == 10 {
-            //Gallon to Liter
-            t4()
-            var gallon = Float(text4.text!);
-            if gallon==nil {
-                gallon = 0
-            }
-            answer.text = "Answer: \(gallon!*3.785412)";
+            gl()
         }else if row == 11 {
-            //Liter to Gallon
-            t4()
-            var liter = Float(text4.text!);
-            if liter==nil {
-                liter = 0
-            }
-            answer.text = "Answer: \(liter!/3.785412)";
+            lg()
         }else if row == 12 {
-            //Fraction to Decimal
-            text1.backgroundColor = UIColor.white
-            text2.backgroundColor = UIColor.white
-            text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            denom.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-            text4.backgroundColor = UIColor.white
-            var numer = Float(text3.text!);
-            var denomer = Float(denom.text!);
-            if numer==nil {
-                numer = 0
-            }
-            if denomer==nil{
-                denomer = 0
-            }
-            answer.text = "Answer: \(numer!/denomer!)";
+            fd()
         }
     }
 
@@ -243,7 +208,159 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
     }
     
+    func pythag() {
+        //Pythagorean Theorum
+        t1t2()
+        
+        var l1 = Float(text1.text!);
+        var l2 = Float(text2.text!);
+        
+        if l1 == nil{
+            l1 = 0
+        }
+        if l2 == nil{
+            l2 = 0
+        }
+        
+        let hpt1 = pow(l1!, 2)
+        let hpt2 = pow(l2!, 2)
+        let h = sqrt(hpt1+hpt2)
+        
+        answer.text = "Hypotenuse Length = \(h)"
+    }
     
+    func speed() {
+        //Speed
+        t1t2()
+        var d = Float(text1.text!);
+        var t = Float(text2.text!);
+        
+        if d == nil{
+            d = 0
+        }
+        if t == nil{
+            t = 0
+        }
+        
+        let speed = d!/t!
+        
+        answer.text = "Answer About: \(speed)"
+        
+    }
+    
+    func accel() {
+        //Acceleration
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        denom.backgroundColor = UIColor.white
+        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        var vf = Float(text4.text!);
+        var vi = Float(text3.text!);
+        var t = Float(text2.text!);
+        
+        if vf == nil{
+            vf = 0
+        }
+        if vi == nil{
+            vi = 0
+        }
+        if t == nil{
+            t = 0
+        }
+        
+        let apt1 = vf!-vi!
+        let acceleration = apt1/t!
+        
+        
+        answer.text = "Answer About: \(acceleration)"
+    }
+    
+    func fm() {
+        //Feet to Meters
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        denom.backgroundColor = UIColor.white
+        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        var f = Float(text4.text!);
+        if f==nil {
+            f = 0
+        }
+        answer.text = "Answer: \(f!/3.28)"
+    }
+    
+    func mf() {
+        //Meters to Feet
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        denom.backgroundColor = UIColor.white
+        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        var m = Float(text4.text!);
+        if m==nil{
+            m = 0
+        }
+        answer.text = "Answer: \(m!*3.28)"
+    }
+    
+    func mk() {
+        //Mile to Kilometer
+        t4()
+        var mile = Float(text4.text!);
+        if mile==nil {
+            mile = 0
+        }
+        answer.text = "Answer: \(mile!*1.61)";
+    }
+    
+    func km() {
+        //Kilometer to Mile
+        t4()
+        var kilom = Float(text4.text!);
+        if kilom==nil {
+            kilom = 0
+        }
+        answer.text = "Answer: \(kilom!*0.6214)";
+    }
+    
+    func gl() {
+        //Gallon to Liter
+        t4()
+        var gallon = Float(text4.text!);
+        if gallon==nil {
+            gallon = 0
+        }
+        answer.text = "Answer: \(gallon!*3.785412)";
+    }
+    
+    func lg() {
+        //Liter to Gallon
+        t4()
+        var liter = Float(text4.text!);
+        if liter==nil {
+            liter = 0
+        }
+        answer.text = "Answer: \(liter!/3.785412)";
+    }
+    
+    func fd() {
+        //Fraction to Decimal
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        denom.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text4.backgroundColor = UIColor.white
+        var numer = Float(text3.text!);
+        var denomer = Float(denom.text!);
+        if numer==nil {
+            numer = 0
+        }
+        if denomer==nil{
+            denomer = 0
+        }
+        answer.text = "Answer: \(numer!/denomer!)";
+    }
     
     
     

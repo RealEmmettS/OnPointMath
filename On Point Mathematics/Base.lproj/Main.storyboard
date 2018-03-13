@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3z7-bP-k5e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3z7-bP-k5e">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14081.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -302,7 +301,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the Text to Start Typing" translatesAutoresizingMaskIntoConstraints="NO" id="E2Z-ol-xvi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="-Tap  -To  -Type" translatesAutoresizingMaskIntoConstraints="NO" id="E2Z-ol-xvi">
                                 <rect key="frame" x="0.0" y="200" width="375" height="418"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -374,11 +373,10 @@
                                     <segue destination="Lsg-0O-LdD" kind="show" id="wug-DX-rm9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-Ce-rV3">
-                                <rect key="frame" x="0.0" y="169" width="375" height="449"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-Ce-rV3">
+                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Simple Interest: P*r*t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l*h Area - Rectangle: l*h Area - Parallelogram: l*h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π*r^2  Volume - Cube: B*h Volume - Cone: 1/3 B*h Volume - Cylinder: B*h Volume - Sphere: 4/3 π*r^3  SA - Cube: P*h + 2*B SA - R Prism: P*h + 2*B SA - Cylinder: 2π*r*h + 2π*r^2 SA - Triangular Prism: P*h + 2*B  LA - Cube: P*h LA - Cylinder: 2π*r*h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  f-m: f/3.28 m-f: m*3.28 mi-ki: mi*1.61 ki-mi: ki*0.6214 G-L: G*3.785412 L-G: L/3.785412 Frac-Deci: n/d </string>
+                                <mutableString key="text">Simple Interest: P*r*t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l*h Area - Rectangle: l*h Area - Parallelogram: l*h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π*r^2  Volume - Cube: B*h Volume - Cone: 1/3 B*h Volume - Cylinder: B*h Volume - Sphere: 4/3 π*r^3  SA - Cube: P*h + 2*B SA - R Prism: P*h + 2*B SA - Cylinder: 2π*r*h + 2π*r^2 SA - Triangular Prism: P*h + 2*B  LA - Cube: P*h LA - Cylinder: 2π*r*h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  feet-meter: f/3.28 meter-feet: m*3.28 mile-kilometer: mi*1.61 kilometer-mile: ki*0.6214 Gallon-Liter: G*3.785412 Liter-Gallon: L/3.785412 Fraction-Decicimal: numer/denom </mutableString>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -387,10 +385,14 @@
                         <constraints>
                             <constraint firstItem="xcs-lJ-jt7" firstAttribute="leading" secondItem="wa3-Gb-4qO" secondAttribute="leading" constant="28" id="8Oy-8t-zEB"/>
                             <constraint firstItem="wa3-Gb-4qO" firstAttribute="trailing" secondItem="JKR-eo-2qk" secondAttribute="trailing" constant="16" id="E2v-wF-rET"/>
+                            <constraint firstItem="1ly-Ce-rV3" firstAttribute="bottom" secondItem="wa3-Gb-4qO" secondAttribute="bottom" id="Ei2-Mt-HcT"/>
                             <constraint firstItem="JKR-eo-2qk" firstAttribute="top" secondItem="wa3-Gb-4qO" secondAttribute="top" constant="5" id="FgH-r5-O3C"/>
                             <constraint firstItem="xcs-lJ-jt7" firstAttribute="top" secondItem="wa3-Gb-4qO" secondAttribute="top" constant="5" id="W97-Dh-0bc"/>
                             <constraint firstItem="xcs-lJ-jt7" firstAttribute="top" secondItem="wa3-Gb-4qO" secondAttribute="top" constant="5" id="byJ-nK-xcf"/>
+                            <constraint firstItem="1ly-Ce-rV3" firstAttribute="trailing" secondItem="wa3-Gb-4qO" secondAttribute="trailing" id="jfJ-JV-evl"/>
                             <constraint firstItem="wa3-Gb-4qO" firstAttribute="trailing" secondItem="xcs-lJ-jt7" secondAttribute="trailing" constant="29" id="lZ0-ub-kcK"/>
+                            <constraint firstItem="1ly-Ce-rV3" firstAttribute="leading" secondItem="wa3-Gb-4qO" secondAttribute="leading" id="n1i-gW-5kp"/>
+                            <constraint firstItem="1ly-Ce-rV3" firstAttribute="top" secondItem="xcs-lJ-jt7" secondAttribute="bottom" constant="8" id="wGJ-ik-bMu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wa3-Gb-4qO"/>
                     </view>
@@ -398,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-aS-fVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="849"/>
+            <point key="canvasLocation" x="2844" y="848.72563718140941"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kbD-FO-l9a">
