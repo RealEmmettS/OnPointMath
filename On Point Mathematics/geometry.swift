@@ -46,40 +46,40 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
     
     
     // MARK: - selectCalc
-//    func selectCalculation(fromRow selectedRow: Int){
-//        if self.canCalculate() {
-//            // All rows except for 0,5,10,15,
-//            if selectedRow == 1 {
-////                self.triangle()
-////            } else if selectedRow == 2 {
-////                self.rectangle()
-////            } else if selectedRow == 3 {
-////                self.parallelogram()
-////            } else if selectedRow == 4 {
-////                self.circle()
-////            } else if selectedRow == 6 {
-////                self.cubev()
-////            } else if selectedRow == 7 {
-////                self.conev()
-////            } else if selectedRow == 8 {
-////                self.cylinderv()
-////            } else if selectedRow == 9 {
-////                self.spherev()
-////            } else if selectedRow == 11 {
-////                self.cubesa()
-////            } else if selectedRow == 12 {
-////                self.rectanglesa()
-////            } else if selectedRow == 13 {
-////                self.cylindersa()
-////            } else if selectedRow == 14 {
-////                self.trianglesa()
-////            } else if selectedRow == 16 {
-////                self.rectanglelsa()
-////            } else if selectedRow == 17 {
-////                self.cylinderlsa()
-//            }
-//        }
-//    }
+    func selectCalculation(fromRow selectedRow: Int){
+        if self.canCalculate() {
+            // All rows except for 0,5,10,15, which are section titles
+            if selectedRow == 1 {
+                self.triangle()
+            } else if selectedRow == 2 {
+                self.rectangle()
+            } else if selectedRow == 3 {
+                self.parallelogram()
+            } else if selectedRow == 4 {
+                self.circle()
+            } else if selectedRow == 6 {
+                self.cubev()
+            } else if selectedRow == 7 {
+                self.conev()
+            } else if selectedRow == 8 {
+                self.cylinderv()
+            } else if selectedRow == 9 {
+                self.spherev()
+            } else if selectedRow == 11 {
+                self.cubesa()
+            } else if selectedRow == 12 {
+                self.rectanglesa()
+            } else if selectedRow == 13 {
+                self.cylindersa()
+            } else if selectedRow == 14 {
+                self.trianglesa()
+            } else if selectedRow == 16 {
+                self.rectanglelsa()
+            } else if selectedRow == 17 {
+               self.cylinderlsa()
+            }
+        }
+    }
     
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -492,6 +492,189 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
             
         }
     }
+    
+    
+    
+    func triangle() {
+        //Triangle
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        radius.backgroundColor = UIColor.white
+        
+        var b = Float(text1.text!);
+        var h = Float(text2.text!);
+        if b == nil{
+            b = 0
+        }
+        if h == nil{
+            h = 0
+        }
+        answer_label.text = "Answer: \(0.5*b!*h!)"
+    }
+    
+    func rectangle() {
+        //Rectangle
+        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        radius.backgroundColor = UIColor.white
+        
+        var l = Float(text1.text!);
+        var w = Float(text3.text!);
+        if l == nil{
+            l = 0
+        }
+        if w == nil{
+            w = 0
+        }
+        answer_label.text = "Answer: \(l!*w!)"
+    }
+    
+    func parallelogram() {
+        //Parallelogram
+        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor.white
+        radius.backgroundColor = UIColor.white
+        
+        var l = Float(text1.text!);
+        var h = Float(text2.text!);
+        if l == nil{
+            l = 0
+        }
+        if h == nil{
+            h = 0
+        }
+        answer_label.text = "Answer: \(l!*h!)"
+    }
+    
+    func circle() {
+        //Circle
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        
+        var r = Float(radius.text!);
+        if r == nil{
+            r = 0
+        }
+        let re = pow(r!, 2)
+        answer_label.text = "Answer About: \(3.14159265359*re)"
+    }
+    
+    func cubev() {
+        //Cube
+        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        radius.backgroundColor = UIColor.white
+        
+        var l = Float(text1.text!);
+        var h = Float(text2.text!);
+        var w = Float(text3.text!);
+        if l == nil{
+            l = 0
+        }
+        if h == nil{
+            h = 0
+        }
+        if w == nil{
+            w = 0
+        }
+        
+        let B = l!*w!
+        answer_label.text = "Answer: \(B*h!)"
+    }
+    
+    func conev() {
+        //Cone
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor.white
+        radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        
+        var h = Float(text2.text!);
+        var r = Float(radius.text!);
+        if h == nil{
+            h = 0
+        }
+        if r == nil{
+            r = 0
+        }
+        let re = pow(r!, 2)
+        let B =  3.14159265359*re
+        answer_label.text = "Answer About: \((1/3)*B*h!)"
+    }
+    
+    func cylinderv() {
+        //Cylinder
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text3.backgroundColor = UIColor.white
+        radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        
+        var h = Float(text2.text!);
+        var r = Float(radius.text!);
+        if h == nil{
+            h = 0
+        }
+        if r == nil{
+            r = 0
+        }
+        
+        let re = pow(r!, 2)
+        let B = 3.14159265359*re
+        answer_label.text = "Answer About: \(B*h!)"
+    }
+    
+    func spherev() {
+        //Sphere
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        radius.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        
+        var r = Float(radius.text!);
+        if r == nil{
+            r = 0
+        }
+        
+        let rCubed = pow(r!, 3)
+        let piRCubed = 3.14159265359*rCubed
+        answer_label.text = "Answer About: \((4/3)*piRCubed)"
+    }
+    
+    func cubesa() {
+        
+    }
+    
+    func rectanglesa() {
+        
+    }
+    
+    func cylindersa() {
+        
+    }
+    
+    func trianglesa() {
+        
+    }
+    
+    func rectanglelsa() {
+        
+    }
+    
+    func cylinderlsa() {
+        
+    }
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
