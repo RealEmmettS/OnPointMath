@@ -141,19 +141,19 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer.text = "Answer Shows Up\nHere"
             allWhite()
         }else if row == 1 {
             pythag()
         }else if row == 2 {
-            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer.text = "Answer Shows Up\nHere"
             allWhite()
         }else if row == 3 {
             speed()
         }else if row == 4 {
             accel()
         }else if row == 5 {
-            answer.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer.text = "Answer Shows Up\nHere"
             allWhite()
         }else if row == 6 {
             fm()

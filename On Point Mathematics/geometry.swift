@@ -140,7 +140,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer_label.text = "Answer Shows Up\nHere"
         }else if row == 1 {
             triangle()
         }else if row == 2 {
@@ -155,7 +155,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer_label.text = "Answer Shows Up\nHere"
         }else if row == 6 {
             cubev()
         }else if row == 7 {
@@ -170,7 +170,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer_label.text = "Answer Shows Up\nHere"
             //SA
         }else if row == 11 {
             cubesa()
@@ -185,7 +185,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
             text2.backgroundColor = UIColor.white
             text3.backgroundColor = UIColor.white
             radius.backgroundColor = UIColor.white
-            answer_label.text = "Pick calculation last\nTo recalculate, reselect your options"
+            answer_label.text = "Answer Shows Up\nHere"
             //Lateral Surface Area
         }else if row == 16 {
             rectanglelsa()
