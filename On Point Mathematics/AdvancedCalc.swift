@@ -36,7 +36,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var answer: UILabel!
    
     //Picker Options
-    let options = ["--Trigonometry--","Pythagorean Theorum","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal"]
+    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,26 +48,28 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
         if self.canCalculate() {
-            // All rows except for 0,2,5 which are section titles
+            // All rows except for 0,3,6 which are section titles
             if selectedRow == 1 {
-                self.pythag()
-            } else if selectedRow == 3 {
-                self.speed()
+                self.hypot()
+            } else if selectedRow == 2 {
+                self.leg()
             } else if selectedRow == 4 {
+                self.speed()
+            } else if selectedRow == 5 {
                 self.accel()
-            } else if selectedRow == 6 {
-                self.fm()
             } else if selectedRow == 7 {
-                self.mf()
+                self.fm()
             } else if selectedRow == 8 {
-                self.mk()
+                self.mf()
             } else if selectedRow == 9 {
-                self.km()
+                self.mk()
             } else if selectedRow == 10 {
-                self.gl()
+                self.km()
             } else if selectedRow == 11 {
-                self.lg()
+                self.gl()
             } else if selectedRow == 12 {
+                self.lg()
+            } else if selectedRow == 13 {
                 self.fd()
             }
         }
@@ -144,30 +146,32 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
             answer.text = "Answer Shows Up\nHere"
             allWhite()
         }else if row == 1 {
-            pythag()
-        }else if row == 2 {
-            answer.text = "Answer Shows Up\nHere"
-            allWhite()
+            hypot()
+        }else if row == 2{
+            leg()
         }else if row == 3 {
-            speed()
-        }else if row == 4 {
-            accel()
-        }else if row == 5 {
             answer.text = "Answer Shows Up\nHere"
             allWhite()
+        }else if row == 4 {
+            speed()
+        }else if row == 5 {
+            accel()
         }else if row == 6 {
-            fm()
+            answer.text = "Answer Shows Up\nHere"
+            allWhite()
         }else if row == 7 {
-            mf()
+            fm()
         }else if row == 8 {
-            mk()
+            mf()
         }else if row == 9 {
-            km()
+            mk()
         }else if row == 10 {
-            gl()
+            km()
         }else if row == 11 {
-            lg()
+            gl()
         }else if row == 12 {
+            lg()
+        }else if row == 13 {
             fd()
         }
     }
@@ -208,7 +212,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
     }
     
-    func pythag() {
+    func hypot() {
         //Pythagorean Theorum
         t1t2()
         
@@ -227,6 +231,28 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         let h = sqrt(hpt1+hpt2)
         
         answer.text = "Hypotenuse Length = \(h)"
+    }
+    
+    func leg() {
+        //Pythagorean Theroum
+        t1t2()
+        
+        var l1 = Float(text1.text!);
+        var hy = Float(text2.text!);
+        
+        if l1 == nil{
+            l1 = 0
+        }
+        if hy == nil{
+            hy = 0
+        }
+        
+        let legpt1 = pow(l1!, 2)
+        let legpt2 = pow(hy!, 2)
+        let leg = sqrt(legpt1-legpt2)
+        
+        answer.text = "Leg Length = \(leg)"
+        
     }
     
     func speed() {
