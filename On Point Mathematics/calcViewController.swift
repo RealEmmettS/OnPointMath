@@ -19,6 +19,8 @@ class calcViewController: UIViewController {
     var numberOnScreen:Double = 0;
     var prevNumber:Double = 0;
     var performingMath = false;
+    var operation = 0;
+    
     
     @IBOutlet weak var label: UILabel!
     
@@ -27,7 +29,7 @@ class calcViewController: UIViewController {
         if performingMath == true {
             label.text = String(sender.tag-1)
             numberOnScreen = Double(label.text!)!
-            performingMath = true
+            performingMath = false
         } else {
             label.text = label.text! + String(sender.tag-1)
             numberOnScreen = Double(label.text!)!
@@ -40,16 +42,38 @@ class calcViewController: UIViewController {
             prevNumber = Double(label.text!)!
             
             if sender.tag == 12 {        //Divide
-                
+                label.text = "/";
             } else if sender.tag == 13 { //Multiply
-                
+                label.text = "x";
             } else if sender.tag == 14 { //Minus
-            
+            label.text = "-";
             } else if sender.tag == 15 { //Plus
                 label.text = "+";
             }
+            
+            operation = sender.tag
             performingMath = true;
         }
+        
+        if sender.tag == 16{
+            if operation == 12 {
+                label.text = String(prevNumber / numberOnScreen)
+            }else if operation == 13 {
+                label.text = String(prevNumber * numberOnScreen)
+            }else if operation == 14 {
+                label.text = String(prevNumber - numberOnScreen)
+            }else if operation == 15 {
+                label.text = String(prevNumber + numberOnScreen)
+            }
+        }
+        
+        if sender.tag == 11 {
+            label.text = ""
+            prevNumber = 0
+            numberOnScreen = 0
+            operation = 0
+        }
+
         
     }
     
