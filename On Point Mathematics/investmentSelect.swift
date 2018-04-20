@@ -34,6 +34,12 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     //output
     @IBOutlet weak var interest: UILabel!
     @IBOutlet weak var accountbal: UILabel!
+<<<<<<< HEAD
+=======
+   
+    
+    
+>>>>>>> Fixed-Lu-Updates
     
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
@@ -45,6 +51,12 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             }
         }
     }
+<<<<<<< HEAD
+=======
+    
+    
+    
+>>>>>>> Fixed-Lu-Updates
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.picker.selectedRow(inComponent: 0)
@@ -103,7 +115,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            accountbal.text = "Pick calculation last\nTo recalculate, reselect your options"
+            accountbal.text = "Answer Shows Up\nHere"
             interest.text = ""
         }else if row == 1 {
             //Simple Interest Calculator
@@ -201,3 +213,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Fixed-Lu-Updates
