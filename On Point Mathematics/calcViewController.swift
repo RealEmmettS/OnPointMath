@@ -31,8 +31,13 @@ class calcViewController: UIViewController {
             numberOnScreen = Double(label.text!)!
             performingMath = false
         } else {
-            label.text = label.text! + String(sender.tag-1)
-            numberOnScreen = Double(label.text!)!
+            if sender.tag == 20{
+                numberOnScreen = Double(label.text!)!
+                label.text = label.text! + String(".")
+            } else if sender.tag != 20{
+                label.text = label.text! + String(sender.tag-1)
+                numberOnScreen = Double(label.text!)!
+            }
         }
     }
     
@@ -72,6 +77,7 @@ class calcViewController: UIViewController {
             prevNumber = 0
             numberOnScreen = 0
             operation = 0
+            performingMath = false
         }
 
         
