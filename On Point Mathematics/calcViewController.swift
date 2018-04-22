@@ -27,13 +27,29 @@ class calcViewController: UIViewController {
     @IBAction func numbers(_ sender: UIButton) {
         
         if performingMath == true {
+            if sender.tag == 20{
+                if label.text == ""{
+                    label.text = "0"
+                    label.text = label.text! + String(".")
+                    numberOnScreen = Double(label.text!)!
+                } else {
+                    label.text = label.text! + String(".")
+                    numberOnScreen = Double(label.text!)!
+                }
+            }
             label.text = String(sender.tag-1)
             numberOnScreen = Double(label.text!)!
             performingMath = false
         } else {
             if sender.tag == 20{
-                numberOnScreen = Double(label.text!)!
-                label.text = label.text! + String(".")
+                if label.text == ""{
+                    label.text = "0"
+                    label.text = label.text! + String(".")
+                    numberOnScreen = Double(label.text!)!
+                } else {
+                    label.text = label.text! + String(".")
+                    numberOnScreen = Double(label.text!)!
+                }
             } else if sender.tag != 20{
                 label.text = label.text! + String(sender.tag-1)
                 numberOnScreen = Double(label.text!)!
@@ -51,7 +67,7 @@ class calcViewController: UIViewController {
             } else if sender.tag == 13 { //Multiply
                 label.text = "x";
             } else if sender.tag == 14 { //Minus
-            label.text = "-";
+                label.text = "-";
             } else if sender.tag == 15 { //Plus
                 label.text = "+";
             }
