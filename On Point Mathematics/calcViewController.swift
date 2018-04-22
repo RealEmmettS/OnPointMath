@@ -28,18 +28,21 @@ class calcViewController: UIViewController {
         
         if performingMath == true {
             if sender.tag == 20{
-                if label.text == ""{
+                if label.text == "" || label.text == "x" || label.text == "/" || label.text == "+" || label.text == "-"{
                     label.text = "0"
                     label.text = label.text! + String(".")
                     numberOnScreen = Double(label.text!)!
+                    performingMath = false
                 } else {
                     label.text = label.text! + String(".")
                     numberOnScreen = Double(label.text!)!
+                    performingMath = false
                 }
+            }else if sender.tag != 20{
+                label.text = String(sender.tag-1)
+                numberOnScreen = Double(label.text!)!
+                performingMath = false
             }
-            label.text = String(sender.tag-1)
-            numberOnScreen = Double(label.text!)!
-            performingMath = false
         } else {
             if sender.tag == 20{
                 if label.text == ""{
@@ -60,7 +63,22 @@ class calcViewController: UIViewController {
     @IBAction func Buttons(_ sender: UIButton) {
         if label.text != "" && sender.tag != 11 && sender.tag != 16 {
             
-            prevNumber = Double(label.text!)!
+            if label.text == "" || label.text == "x" || label.text == "/" || label.text == "+" || label.text == "-"{
+                let alert = UIAlertController(title: "Operation", message: "Please select only one operation at a time", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    self.label.text = ""
+                    self.prevNumber = 0
+                    self.numberOnScreen = 0
+                    self.operation = 0
+                    self.performingMath = false
+                }))
+                self.present(alert, animated: true)
+                
+            } else {
+                prevNumber = Double(label.text!)!
+            }
+
             
             if sender.tag == 12 {        //Divide
                 label.text = "/";
