@@ -15,7 +15,7 @@ class calcViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    //MARK: Initialization Variables
     var numberOnScreen:Double = 0;
     var prevNumber:Double = 0;
     var performingMath = false;
@@ -24,6 +24,8 @@ class calcViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    
+    //MARK: Numbers
     @IBAction func numbers(_ sender: UIButton) {
         
         if performingMath == true {
@@ -60,6 +62,8 @@ class calcViewController: UIViewController {
         }
     }
     
+    
+    //MARK: Operation Buttons
     @IBAction func Buttons(_ sender: UIButton) {
         if label.text != "" && sender.tag != 11 && sender.tag != 16 {
             
@@ -106,6 +110,8 @@ class calcViewController: UIViewController {
             }
         }
         
+        
+        //MARK: Reset
         if sender.tag == 11 {
             label.text = ""
             prevNumber = 0

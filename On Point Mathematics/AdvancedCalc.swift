@@ -109,26 +109,8 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //CODE HERE
+    //MARK: Picker View
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -178,23 +160,23 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 
 
 
-    
-    func allSelect(){
-        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        denom.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+    //MARK: Functions
+    func ResetFields() {
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        denom.backgroundColor = UIColor.white
+        text4.backgroundColor = UIColor.white
+        answer.text = "Please Select a\nCalculation"
     }
     
-    func allWhite(){
+    func allSelect(){
         text1.backgroundColor = UIColor.white
         text2.backgroundColor = UIColor.white
         text3.backgroundColor = UIColor.white
         denom.backgroundColor = UIColor.white
         text4.backgroundColor = UIColor.white
     }
-    
     
     func t1t2(){
         text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
