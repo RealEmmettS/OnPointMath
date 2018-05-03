@@ -530,10 +530,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
     }
     
     func ResetFields() {
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        radius.backgroundColor = UIColor.white
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        radius.backgroundColor = UIColor.darkGray
         answer_label.text = "Please Select a\nCalculation"
     }
     
