@@ -36,7 +36,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var answer: UILabel!
    
     //Picker Options
-    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal","Other","Square Root"]
+    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal","--Other--","Square Root"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -168,21 +168,14 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 
     //MARK: Functions
     func ResetFields() {
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
-        answer.text = "Please Select a\nCalculation"
-    }
-    
-    func allSelect(){
         text1.backgroundColor = UIColor.white
         text2.backgroundColor = UIColor.white
         text3.backgroundColor = UIColor.white
         denom.backgroundColor = UIColor.white
         text4.backgroundColor = UIColor.white
+        answer.text = "Please Select a\nCalculation"
     }
+    
     
     func t1t2(){
         text1.backgroundColor = UIColor.white
@@ -365,17 +358,18 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text3.backgroundColor = UIColor.white
         denom.backgroundColor = UIColor.white
         text4.backgroundColor = UIColor.darkGray
-        var numer = Float(text3.text!);
-        var denomer = Float(denom.text!);
-        if numer==nil {
-            numer = 0
+        var numerator = Float(text3.text!);
+        var denomerator = Float(denom.text!);
+        if numerator==nil {
+            numerator = 0
         }
-        if denomer==nil{
-            denomer = 0
+        if denomerator==nil{
+            denomerator = 0
         }
-        answer.text = "Answer: \(numer!/denomer!)";
+        answer.text = "Answer: \(numerator!/denomerator!)";
     }
     func sqroot() {
+        //square root
         text1.backgroundColor = UIColor.white
         text2.backgroundColor = UIColor.darkGray
         text3.backgroundColor = UIColor.darkGray
@@ -383,8 +377,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text4.backgroundColor = UIColor.darkGray
         
         var number = Double(text1.text!)
+        if number == nil {
+            number = 0
+        }
         
-        var answernumber = sqrt(number!)
+        let answernumber = sqrt(number!)
         answer.text = "Answer: \(answernumber)";
     }
 

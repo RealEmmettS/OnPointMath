@@ -123,8 +123,6 @@ class calcViewController: UIViewController {
         
     }
     
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
