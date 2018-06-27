@@ -36,7 +36,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var answer: UILabel!
    
     //Picker Options
-    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal"]
+    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal", "Feet to Inches", "Inches to Feet", "Fahrenheit to Celsius", "Celsius to Fahrenheit","--Other--","Square Root"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,7 +48,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
         if self.canCalculate() {
-            // All rows except for 0,3,6 which are section titles
+            // All rows except for 0,3,6,18 which are section titles
             if selectedRow == 1 {
                 self.hypot()
             } else if selectedRow == 2 {
@@ -71,6 +71,16 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
                 self.lg()
             } else if selectedRow == 13 {
                 self.fd()
+            } else if selectedRow == 14 {
+                self.ftin()
+            }else if selectedRow == 15{
+                self.inft()
+            }else if selectedRow == 16 {
+                self.fc()
+            }else if selectedRow == 17 {
+                self.cf()
+            }else if selectedRow == 19 {
+                self.sqroot()
             }
         }
     }
@@ -109,26 +119,8 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //CODE HERE
+    //MARK: Picker View
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -144,21 +136,21 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
             answer.text = "Answer Shows Up\nHere"
-            allWhite()
+            ResetFields()
         }else if row == 1 {
             hypot()
         }else if row == 2{
             leg()
         }else if row == 3 {
             answer.text = "Answer Shows Up\nHere"
-            allWhite()
+            ResetFields()
         }else if row == 4 {
             speed()
         }else if row == 5 {
             accel()
         }else if row == 6 {
             answer.text = "Answer Shows Up\nHere"
-            allWhite()
+            ResetFields()
         }else if row == 7 {
             fm()
         }else if row == 8 {
@@ -173,43 +165,49 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
             lg()
         }else if row == 13 {
             fd()
+        }else if row == 14 {
+            ftin()
+        }else if row == 15 {
+            inft()
+        }else if row == 16{
+            fc()
+        }else if row == 17{
+            cf()
+        }else if row == 18{
+            answer.text = "Answer Shows Up\nHere"
+            ResetFields()
+        }else if row == 19{
+            sqroot()
         }
     }
 
 
 
-    
-    func allSelect(){
-        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        denom.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-    }
-    
-    func allWhite(){
+    //MARK: Functions
+    func ResetFields() {
         text1.backgroundColor = UIColor.white
         text2.backgroundColor = UIColor.white
         text3.backgroundColor = UIColor.white
         denom.backgroundColor = UIColor.white
         text4.backgroundColor = UIColor.white
+        answer.text = "Please Select a\nCalculation"
     }
     
     
     func t1t2(){
-        text1.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor.white
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
     }
     
     func t4(){
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.white
     }
     
     func hypot() {
@@ -276,11 +274,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func accel() {
         //Acceleration
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.white
+        text3.backgroundColor = UIColor.white
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.white
         var vf = Float(text4.text!);
         var vi = Float(text3.text!);
         var t = Float(text2.text!);
@@ -304,11 +302,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func fm() {
         //Feet to Meters
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.white
         var f = Float(text4.text!);
         if f==nil {
             f = 0
@@ -318,11 +316,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func mf() {
         //Meters to Feet
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.white
         var m = Float(text4.text!);
         if m==nil{
             m = 0
@@ -372,21 +370,107 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func fd() {
         //Fraction to Decimal
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        denom.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-        text4.backgroundColor = UIColor.white
-        var numer = Float(text3.text!);
-        var denomer = Float(denom.text!);
-        if numer==nil {
-            numer = 0
+        text1.backgroundColor = UIColor.darkGray
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.white
+        denom.backgroundColor = UIColor.white
+        text4.backgroundColor = UIColor.darkGray
+        var numerator = Float(text3.text!);
+        var denomerator = Float(denom.text!);
+        if numerator==nil {
+            numerator = 0
         }
-        if denomer==nil{
-            denomer = 0
+        if denomerator==nil{
+            denomerator = 0
         }
-        answer.text = "Answer: \(numer!/denomer!)";
+        answer.text = "Answer: \(numerator!/denomerator!)";
     }
+    func sqroot() {
+        //square root
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var number = Double(text1.text!)
+        if number == nil {
+            number = 0
+        }
+        
+        let answernumber = sqrt(number!)
+        answer.text = "Answer: \(answernumber)";
+    }
+    func ftin() {
+        //Feet to Inches
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var feet = Double(text1.text!)
+        if feet == nil{
+            feet = 0
+        }
+        
+        
+        
+        let inches = feet!*12
+        answer.text = "Answer: \(inches)"
+    }
+    func inft() {
+        //Inches to Feet
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var inches = Double(text1.text!)
+        if inches == nil{
+            inches = 0
+        }
+        
+        
+        
+        let feet = inches!/12
+        answer.text = "Answer: \(feet)"
+    }
+    func fc() {
+        //Fahrenheit to Celsius
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var frnheit = Double(text1.text!)
+        if frnheit == nil{
+            frnheit = 0
+        }
+        
+        var celsius = (frnheit!-32)/1.8
+        
+        answer.text = "Answer: \(celsius)"
+    }
+    func cf() {
+        //Celsius to Fahrenheit
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var celsius = Double(text1.text!)
+        if celsius == nil{
+            celsius = 0
+        }
+        
+        var frnheit = (celsius!*1.8)+32
+        answer.text = "Answer: \(frnheit)"
+    }
+
     
     
     
