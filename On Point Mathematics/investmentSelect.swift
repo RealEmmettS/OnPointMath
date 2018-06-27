@@ -32,7 +32,10 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var bankOrCarSelect: UISegmentedControl!
     
-    let bankOrCar = 0
+    let boc = 0
+    
+    
+    
     
 
     
@@ -47,10 +50,16 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     func selectCalculation(fromRow selectedRow: Int){
         if self.canCalculate() {
             if selectedRow == 1 {
+                time.placeholder = "What's the time? (of loan in years)"
                 self.simpleInterest()
             } else if selectedRow == 2 {
+                time.placeholder = "What's the time? (of loan in years)"
                 self.compoundInterest()
+            } else if selectedRow == 3 {
+                time.placeholder = "What's the time? (of loan in months)"
+                self.carLoan()
             }
+
         }
     }
     
@@ -84,7 +93,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     
     //Picker Options
-    let options = ["--Select Interest Type--","Simple Interest","Compound Interest"]
+    let options = ["--Select Calc Type--","Simple Interest","Compound Interest","Car Loan"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -116,15 +125,21 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         if row == 0 {
             accountbal.text = "Answer Shows Up\nHere"
             interest.text = ""
+            time.placeholder = "What's the time? (of loan in years)"
         }else if row == 1 {
             //Simple Interest Calculator
+            time.placeholder = "What's the time? (of loan in years)"
             self.simpleInterest()
-            
             
         }else if row == 2 {
             //Compound Interest Calculator
+            time.placeholder = "What's the time? (of loan in years)"
             self.compoundInterest()
             
+        }else if row == 3 {
+            //Car Loan
+            time.placeholder = "What's the time? (of loan in months)"
+            self.carLoan()
         }
     }
     
@@ -206,7 +221,12 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             p = 0
         }
         
-        let step1 = r!/12
+        let re = r!/100
+        
+        
+       //let allSteps =  p!*(r! / 12) / (1 - (1 + r!) / 12)-t!
+        
+        let step1 = re/12
         let step2 = step1*p!
         let step3 = step1+1
         let step4 = pow(step3, t!)
@@ -214,12 +234,12 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         let step6 = 1-step5
         let step7 = step2/step6
         
-        interest.text = "Monthly Payments: \(step7)\n(No Down Payments)";
-        accountbal.text = "Loan Total: \(p)";
+        let roundedStep7 = round(step7)
+        //let roundedAllSteps = round(allSteps)
         
         
-        
-        
+        interest.text = "Monthly Payments: \(roundedStep7)\n(No Down Payments)";
+        accountbal.text = "";
         
     }
     
