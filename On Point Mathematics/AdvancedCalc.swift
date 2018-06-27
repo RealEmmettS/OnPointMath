@@ -36,7 +36,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     @IBOutlet weak var answer: UILabel!
    
     //Picker Options
-    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal","--Other--","Square Root"]
+    let options = ["--Pythagorean Theorum--","Hypotenuse","Leg","--Physics--","Speed","Acceleration","--Conversions--","Feet to Meters","Meters to Feet","Mile to Kilometer","Kilometer to Mile","Gallon to Liter","Liter to Gallon","Fraction to Decimal", "Feet to Inches", "Inches to Feet", "Fahrenheit to Celsius", "Celsius to Fahrenheit","--Other--","Square Root"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,7 +48,7 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
         if self.canCalculate() {
-            // All rows except for 0,3,6 which are section titles
+            // All rows except for 0,3,6,18 which are section titles
             if selectedRow == 1 {
                 self.hypot()
             } else if selectedRow == 2 {
@@ -71,7 +71,15 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
                 self.lg()
             } else if selectedRow == 13 {
                 self.fd()
-            } else if selectedRow == 15 {
+            } else if selectedRow == 14 {
+                self.ftin()
+            }else if selectedRow == 15{
+                self.inft()
+            }else if selectedRow == 16 {
+                self.fc()
+            }else if selectedRow == 17 {
+                self.cf()
+            }else if selectedRow == 19 {
                 self.sqroot()
             }
         }
@@ -158,8 +166,17 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         }else if row == 13 {
             fd()
         }else if row == 14 {
-            ResetFields()
+            ftin()
         }else if row == 15 {
+            inft()
+        }else if row == 16{
+            fc()
+        }else if row == 17{
+            cf()
+        }else if row == 18{
+            answer.text = "Answer Shows Up\nHere"
+            ResetFields()
+        }else if row == 19{
             sqroot()
         }
     }
@@ -383,6 +400,75 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         
         let answernumber = sqrt(number!)
         answer.text = "Answer: \(answernumber)";
+    }
+    func ftin() {
+        //Feet to Inches
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var feet = Double(text1.text!)
+        if feet == nil{
+            feet = 0
+        }
+        
+        
+        
+        let inches = feet!*12
+        answer.text = "Answer: \(inches)"
+    }
+    func inft() {
+        //Inches to Feet
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var inches = Double(text1.text!)
+        if inches == nil{
+            inches = 0
+        }
+        
+        
+        
+        let feet = inches!/12
+        answer.text = "Answer: \(feet)"
+    }
+    func fc() {
+        //Fahrenheit to Celsius
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var frnheit = Double(text1.text!)
+        if frnheit == nil{
+            frnheit = 0
+        }
+        
+        var celsius = (frnheit!-32)/1.8
+        
+        answer.text = "Answer: \(celsius)"
+    }
+    func cf() {
+        //Celsius to Fahrenheit
+        text1.backgroundColor = UIColor.white
+        text2.backgroundColor = UIColor.darkGray
+        text3.backgroundColor = UIColor.darkGray
+        denom.backgroundColor = UIColor.darkGray
+        text4.backgroundColor = UIColor.darkGray
+        
+        var celsius = Double(text1.text!)
+        if celsius == nil{
+            celsius = 0
+        }
+        
+        var frnheit = (celsius!*1.8)+32
+        answer.text = "Answer: \(frnheit)"
     }
 
     

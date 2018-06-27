@@ -30,6 +30,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var principle: UITextField!
     @IBOutlet weak var rate: UITextField!
     @IBOutlet weak var time: UITextField!
+    @IBOutlet weak var bankOrCarSelect: UISegmentedControl!
     
     //output
     @IBOutlet weak var interest: UILabel!
