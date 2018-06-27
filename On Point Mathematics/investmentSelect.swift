@@ -32,6 +32,10 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var bankOrCarSelect: UISegmentedControl!
     
+    let bankOrCar = 0
+    
+
+    
     //output
     @IBOutlet weak var interest: UILabel!
     @IBOutlet weak var accountbal: UILabel!
@@ -118,8 +122,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             
             
         }else if row == 2 {
-            //code here
-            //            AdvancedCalc.allWhite(principle.text)
+            //Compound Interest Calculator
             self.compoundInterest()
             
         }
@@ -187,6 +190,37 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         
         interest.text = "Interest About:\n $\(accountBalanceprt4-p!)";
         accountbal.text = "Account Bal. About:\n $\(accountBalanceprt4)";
+    }
+    
+    func carLoan() {
+        var r = Double(rate.text!);
+        if r == nil{
+            r = 0
+        }
+        var t = Double(time.text!);
+        if t == nil{
+            t = 0
+        }
+        var p = Double(principle.text!);
+        if p == nil{
+            p = 0
+        }
+        
+        let step1 = r!/12
+        let step2 = step1*p!
+        let step3 = step1+1
+        let step4 = pow(step3, t!)
+        let step5 = 1/step4
+        let step6 = 1-step5
+        let step7 = step2/step6
+        
+        interest.text = "Monthly Payments: \(step7)\n(No Down Payments)";
+        accountbal.text = "Loan Total: \(p)";
+        
+        
+        
+        
+        
     }
     
     
