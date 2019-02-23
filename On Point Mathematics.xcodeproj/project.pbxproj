@@ -49,7 +49,7 @@
 		DCA34B2C2008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA34B312008443B00F6A1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DCA34B332008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "New Group/Info.plist"; sourceTree = "<group>"; };
+		DCA34B332008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCA34B382008443B00F6A1C7 /* On Point MathematicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point MathematicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA34B3C2008443B00F6A1C7 /* On_Point_MathematicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_MathematicsTests.swift; sourceTree = "<group>"; };
 		DCA34B3E2008443B00F6A1C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
