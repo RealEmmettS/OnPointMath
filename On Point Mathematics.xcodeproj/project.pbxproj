@@ -111,12 +111,7 @@
 				DC597029200AA2D900CAAC64 /* investmentSelect.swift */,
 				DC745D822010DCE100AFA43B /* geometry.swift */,
 				DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */,
-<<<<<<< HEAD
-				DC0B9897203645BC0094FA79 /* Notes.swift */,
-=======
 				A0CE4B3220818728000C93C4 /* calcViewController.swift */,
-				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
->>>>>>> Fixed-Lu-Updates
 				DC790E212009716800740B38 /* RoundedButton.swift */,
 				DCF2518D204653F500559E64 /* TabColors.swift */,
 				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,

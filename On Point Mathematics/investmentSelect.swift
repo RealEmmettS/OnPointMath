@@ -35,12 +35,12 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     //output
     @IBOutlet weak var interest: UILabel!
     @IBOutlet weak var accountbal: UILabel!
-<<<<<<< HEAD
-=======
+
+
    
     
     
->>>>>>> Fixed-Lu-Updates
+
     
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
@@ -52,12 +52,11 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             }
         }
     }
-<<<<<<< HEAD
-=======
+
     
     
     
->>>>>>> Fixed-Lu-Updates
+
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.picker.selectedRow(inComponent: 0)
@@ -214,7 +213,4 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> Fixed-Lu-Updates
