@@ -5,10 +5,8 @@
 //  Created by Emmett S. on 1/13/18.
 //  Copyright © 2018 Emmett S. All rights reserved.
 //
-
 import UIKit
 //import SnapKit
-
 class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     
@@ -30,33 +28,40 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var principle: UITextField!
     @IBOutlet weak var rate: UITextField!
     @IBOutlet weak var time: UITextField!
-    @IBOutlet weak var bankOrCarSelect: UISegmentedControl!
+    
+    let boc = 0
+    
+    
+    
+    
+    
     
     //output
     @IBOutlet weak var interest: UILabel!
     @IBOutlet weak var accountbal: UILabel!
-
-
-   
     
     
-
+    
     
     // MARK: - selectCalc
     func selectCalculation(fromRow selectedRow: Int){
         if self.canCalculate() {
             if selectedRow == 1 {
+                time.placeholder = "What's the time? (of loan in years)"
                 self.simpleInterest()
             } else if selectedRow == 2 {
+                time.placeholder = "What's the time? (of loan in years)"
                 self.compoundInterest()
+            } else if selectedRow == 3 {
+                time.placeholder = "What's the time? (of loan in months)"
+                self.carLoan()
             }
+            
         }
     }
-
     
     
     
-
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         let selectedRow = self.picker.selectedRow(inComponent: 0)
@@ -85,7 +90,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     
     
     //Picker Options
-    let options = ["--Select Interest Type--","Simple Interest","Compound Interest"]
+    let options = ["--Select Calc Type--","Simple Interest","Compound Interest","Car Loan"]
     
     //Hide keyboard when touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -117,16 +122,21 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         if row == 0 {
             accountbal.text = "Answer Shows Up\nHere"
             interest.text = ""
+            time.placeholder = "What's the time? (of loan in years)"
         }else if row == 1 {
             //Simple Interest Calculator
+            time.placeholder = "What's the time? (of loan in years)"
             self.simpleInterest()
             
-            
         }else if row == 2 {
-            //code here
-            //            AdvancedCalc.allWhite(principle.text)
+            //Compound Interest Calculator
+            time.placeholder = "What's the time? (of loan in years)"
             self.compoundInterest()
             
+        }else if row == 3 {
+            //Car Loan
+            time.placeholder = "What's the time? (of loan in months)"
+            self.carLoan()
         }
     }
     
@@ -194,6 +204,42 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         accountbal.text = "Account Bal. About:\n $\(accountBalanceprt4)";
     }
     
+    func carLoan() {
+        var r = Double(rate.text!);
+        if r == nil{
+            r = 0
+        }
+        var t = Double(time.text!);
+        if t == nil{
+            t = 0
+        }
+        var p = Double(principle.text!);
+        if p == nil{
+            p = 0
+        }
+        
+        let re = r!/100
+        
+        
+        //let allSteps =  p!*(r! / 12) / (1 - (1 + r!) / 12)-t!
+        
+        let step1 = re/12
+        let step2 = step1*p!
+        let step3 = step1+1
+        let step4 = pow(step3, t!)
+        let step5 = 1/step4
+        let step6 = 1-step5
+        let step7 = step2/step6
+        
+        let roundedStep7 = round(step7)
+        //let roundedAllSteps = round(allSteps)
+        
+        
+        interest.text = "Monthly Payments: \(roundedStep7)\n(No Down Payments)";
+        accountbal.text = "";
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -212,5 +258,4 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
      */
     
 }
-
 

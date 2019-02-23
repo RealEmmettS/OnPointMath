@@ -1071,13 +1071,6 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhp-9c-0fF">
-                                <rect key="frame" x="16" y="393" width="343" height="29"/>
-                                <segments>
-                                    <segment title="Bank"/>
-                                    <segment title="Car"/>
-                                </segments>
-                            </segmentedControl>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvP-ko-1ms">
                                 <rect key="frame" x="0.0" y="429" width="375" height="88"/>
                                 <constraints>
@@ -1098,7 +1091,6 @@
                             <constraint firstItem="kGO-6W-7eD" firstAttribute="top" secondItem="ztA-O0-dBK" secondAttribute="bottom" constant="8" id="CeB-Dd-kek"/>
                             <constraint firstItem="XX7-3b-Z6x" firstAttribute="top" secondItem="VMT-Ya-5hh" secondAttribute="top" constant="8" id="H6z-mf-4am"/>
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" id="Hmo-67-wTk"/>
-                            <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="jhp-9c-0fF" secondAttribute="trailing" constant="16" id="KlT-j7-Vvv"/>
                             <constraint firstItem="QlV-1d-fuf" firstAttribute="top" secondItem="1pZ-Dl-YiB" secondAttribute="bottom" constant="8" id="LvG-y5-MFA"/>
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="trailing" secondItem="VMT-Ya-5hh" secondAttribute="trailing" id="Miy-vq-f4F"/>
                             <constraint firstItem="NgC-IV-SSq" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" constant="16" id="Nvz-6K-zcO"/>
@@ -1106,14 +1098,12 @@
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="top" secondItem="NgC-IV-SSq" secondAttribute="bottom" constant="44" id="QAQ-Mt-NH1"/>
                             <constraint firstItem="XX7-3b-Z6x" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" constant="16" id="QF2-j8-WcK"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="kGO-6W-7eD" secondAttribute="trailing" constant="16" id="Qa6-uV-KTW"/>
-                            <constraint firstItem="jhp-9c-0fF" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" constant="16" id="QbU-AX-HvJ"/>
                             <constraint firstItem="ztA-O0-dBK" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" constant="16" id="Rwt-D9-O4b"/>
                             <constraint firstItem="1pZ-Dl-YiB" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" id="T7Q-v5-cf4"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="XX7-3b-Z6x" secondAttribute="trailing" constant="16" id="V9T-I8-fCw"/>
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="trailing" secondItem="VMT-Ya-5hh" secondAttribute="trailing" id="VJf-Pw-G8f"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="QlV-1d-fuf" secondAttribute="trailing" constant="16" id="WIl-su-5pq"/>
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="top" secondItem="XX7-3b-Z6x" secondAttribute="bottom" constant="239.5" id="XG5-Cl-W0Q"/>
-                            <constraint firstItem="zvP-ko-1ms" firstAttribute="top" secondItem="jhp-9c-0fF" secondAttribute="bottom" constant="8" id="ZO4-Jc-YaF"/>
                             <constraint firstItem="Otq-gj-xP1" firstAttribute="top" secondItem="VMT-Ya-5hh" secondAttribute="top" constant="4" id="aer-jj-njY"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="bottom" secondItem="QlV-1d-fuf" secondAttribute="bottom" constant="20" id="bai-LY-hkc"/>
                             <constraint firstItem="QlV-1d-fuf" firstAttribute="leading" secondItem="VMT-Ya-5hh" secondAttribute="leading" constant="16" id="cRa-hv-rMd"/>
@@ -1124,7 +1114,6 @@
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="Otq-gj-xP1" secondAttribute="trailing" constant="16" id="oit-Zv-evu"/>
                             <constraint firstItem="Otq-gj-xP1" firstAttribute="top" secondItem="VMT-Ya-5hh" secondAttribute="top" constant="4" id="oul-eU-WP1"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="ZSW-MS-dN4" secondAttribute="trailing" constant="47" id="pKp-1M-OXR"/>
-                            <constraint firstItem="jhp-9c-0fF" firstAttribute="top" secondItem="NgC-IV-SSq" secondAttribute="bottom" constant="8" id="qEo-PP-GsI"/>
                             <constraint firstItem="ztA-O0-dBK" firstAttribute="top" secondItem="ZSW-MS-dN4" secondAttribute="bottom" constant="22" id="ubm-G5-Zuf"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="NgC-IV-SSq" secondAttribute="trailing" constant="16" id="uzp-W5-tsg"/>
                         </constraints>
@@ -1133,7 +1122,6 @@
                     <tabBarItem key="tabBarItem" title="Investments" image="money_box" landscapeImage="money_box" largeContentSizeImage="money_box" selectedImage="money_box" id="lgO-G5-Q4B"/>
                     <connections>
                         <outlet property="accountbal" destination="QlV-1d-fuf" id="8uF-CZ-JQe"/>
-                        <outlet property="bankOrCarSelect" destination="jhp-9c-0fF" id="W7r-Uw-msP"/>
                         <outlet property="interest" destination="1pZ-Dl-YiB" id="Z1V-tu-vJO"/>
                         <outlet property="picker" destination="zvP-ko-1ms" id="MNf-AW-I9h"/>
                         <outlet property="principle" destination="ztA-O0-dBK" id="1GM-jW-xXM"/>
