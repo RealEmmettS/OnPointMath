@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,28 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the principle? (base investment)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dif-SO-m1T">
-                                <rect key="frame" x="16" y="217" width="343" height="30"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ITo-2P-7Sf"/>
-                                    <constraint firstAttribute="height" constant="30" id="YHL-IR-kMr"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the rate per year?" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MzW-LX-eWJ">
-                                <rect key="frame" x="16" y="255" width="343" height="30"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7Yf-sY-nMC"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="sri-Jr-A1O"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Shows Up Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-zd-y1A">
                                 <rect key="frame" x="16" y="543" width="343" height="48"/>
                                 <constraints>
@@ -49,17 +27,6 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the time? (of loan in years)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h5m-FV-Nr3">
-                                <rect key="frame" x="16" y="293" width="343" height="30"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0ql-05-hAs"/>
-                                    <constraint firstAttribute="height" constant="30" id="DGS-bV-ies"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Calculations Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCY-dl-rx5">
                                 <rect key="frame" x="47" y="154" width="281" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
@@ -67,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment Calculations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPe-qI-LQc">
-                                <rect key="frame" x="16" y="34" width="343" height="93.5"/>
+                                <rect key="frame" x="16" y="34" width="343" height="94"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,66 +49,85 @@
                                 </constraints>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgR-q8-rUC">
-                                <rect key="frame" x="0.0" y="543" width="375" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="AUC-VI-K2P"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="591" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRI-ug-dv6">
-                                <rect key="frame" x="0.0" y="367" width="375" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="0WC-Ke-RJX"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="FhL-83-bMH"/>
-                                </constraints>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZx-N9-cmF">
-                                <rect key="frame" x="-41" y="615" width="456" height="181"/>
+                                <rect key="frame" x="0.0" y="615" width="375" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="FZx-N9-cmF" secondAttribute="height" multiplier="136:21" constant="-716.19047619047615" id="en6-q4-f24"/>
+                                    <constraint firstAttribute="height" constant="52" id="ftO-ms-bQi"/>
                                 </constraints>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the principle? (base investment)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dif-SO-m1T">
+                                <rect key="frame" x="16" y="341" width="343" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ITo-2P-7Sf"/>
+                                    <constraint firstAttribute="height" constant="30" id="YHL-IR-kMr"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the rate per year?" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MzW-LX-eWJ">
+                                <rect key="frame" x="16" y="379" width="343" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Yf-sY-nMC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="sri-Jr-A1O"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's the time? (of loan in years)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h5m-FV-Nr3">
+                                <rect key="frame" x="16" y="417" width="343" height="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0ql-05-hAs"/>
+                                    <constraint firstAttribute="height" constant="30" id="DGS-bV-ies"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="22" id="3SJ-ce-6Ka"/>
+                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="146" id="3SJ-ce-6Ka"/>
                             <constraint firstItem="MzW-LX-eWJ" firstAttribute="top" secondItem="dif-SO-m1T" secondAttribute="bottom" constant="8" id="3mF-XR-rPC"/>
                             <constraint firstItem="h5m-FV-Nr3" firstAttribute="top" secondItem="MzW-LX-eWJ" secondAttribute="bottom" constant="8" id="60u-Su-4O9"/>
-                            <constraint firstItem="VPL-zd-y1A" firstAttribute="top" secondItem="BgR-q8-rUC" secondAttribute="bottom" constant="-48" id="72o-SX-rmH"/>
                             <constraint firstItem="dif-SO-m1T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Zo-Nq-QBj"/>
-                            <constraint firstItem="FZx-N9-cmF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-41" id="9O0-KG-0kZ"/>
-                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="22" id="AQB-ce-cNy"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="top" secondItem="h5m-FV-Nr3" secondAttribute="bottom" constant="44" id="AyS-1S-aS6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VPL-zd-y1A" secondAttribute="bottom" constant="76" id="DlK-xG-FEt"/>
-                            <constraint firstItem="FZx-N9-cmF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="129" id="Dpy-mC-gb1"/>
+                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="146" id="AQB-ce-cNy"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BQK-Ui-o6c"/>
+                            <constraint firstItem="VCY-dl-rx5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="154" id="BmB-8w-KaK"/>
                             <constraint firstItem="237-gZ-fj6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="EMi-SC-Hot"/>
                             <constraint firstItem="h5m-FV-Nr3" firstAttribute="top" secondItem="MzW-LX-eWJ" secondAttribute="bottom" constant="8" id="FkS-gt-l1T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dPe-qI-LQc" secondAttribute="trailing" constant="16" id="IbW-mK-vRw"/>
-                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="22" id="Mjs-uq-BOG"/>
+                            <constraint firstItem="dif-SO-m1T" firstAttribute="top" secondItem="VCY-dl-rx5" secondAttribute="bottom" constant="146" id="Mjs-uq-BOG"/>
                             <constraint firstItem="dif-SO-m1T" firstAttribute="trailing" secondItem="237-gZ-fj6" secondAttribute="trailing" id="OB9-1K-WS4"/>
                             <constraint firstItem="h5m-FV-Nr3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PRF-XW-Ixn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h5m-FV-Nr3" secondAttribute="trailing" constant="16" id="Qjy-iw-Thz"/>
+                            <constraint firstItem="BgR-q8-rUC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RKW-6a-kah"/>
                             <constraint firstItem="dPe-qI-LQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S2T-hu-oYN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="237-gZ-fj6" secondAttribute="trailing" constant="16" id="Tk0-OW-792"/>
                             <constraint firstItem="MzW-LX-eWJ" firstAttribute="top" secondItem="dif-SO-m1T" secondAttribute="bottom" constant="8" id="VYi-Yj-sw3"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vcm-f3-KkH"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vam-1M-aRP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VPL-zd-y1A" secondAttribute="trailing" constant="16" id="VmG-vv-7rq"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="top" secondItem="h5m-FV-Nr3" secondAttribute="bottom" constant="44" id="W8U-sB-ZtM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MzW-LX-eWJ" secondAttribute="trailing" constant="16" id="Y9G-j7-Yh5"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YNU-fH-MP4"/>
                             <constraint firstItem="dPe-qI-LQc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="Z8Q-G6-D63"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="top" secondItem="BgR-q8-rUC" secondAttribute="bottom" constant="24" id="ZAh-Rm-RiT"/>
                             <constraint firstItem="MzW-LX-eWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zoj-3v-Dha"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="top" secondItem="h5m-FV-Nr3" secondAttribute="bottom" constant="44" id="b5L-ec-cVi"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cef-YV-GjD"/>
-                            <constraint firstAttribute="trailing" secondItem="FZx-N9-cmF" secondAttribute="trailing" constant="-40" id="cft-hr-o8T"/>
-                            <constraint firstItem="BgR-q8-rUC" firstAttribute="trailing" secondItem="MRI-ug-dv6" secondAttribute="trailing" id="ilT-lp-crs"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="top" secondItem="VPL-zd-y1A" secondAttribute="bottom" constant="24" id="aMa-ZR-2eM"/>
+                            <constraint firstItem="FZx-N9-cmF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b9z-Z3-DFw"/>
+                            <constraint firstItem="VCY-dl-rx5" firstAttribute="top" secondItem="dPe-qI-LQc" secondAttribute="bottom" constant="26" id="ezg-Xl-4FJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dif-SO-m1T" secondAttribute="trailing" constant="16" id="lAY-So-GO0"/>
+                            <constraint firstItem="BgR-q8-rUC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q1z-Jm-Qci"/>
                             <constraint firstItem="VCY-dl-rx5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="rDW-UA-xam"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="top" secondItem="dPe-qI-LQc" secondAttribute="bottom" constant="239.5" id="svX-uP-14x"/>
-                            <constraint firstItem="MRI-ug-dv6" firstAttribute="top" secondItem="h5m-FV-Nr3" secondAttribute="bottom" constant="44" id="wOH-Un-gXy"/>
-                            <constraint firstItem="BgR-q8-rUC" firstAttribute="leading" secondItem="MRI-ug-dv6" secondAttribute="leading" id="wt6-Jn-0ip"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VCY-dl-rx5" secondAttribute="trailing" constant="47" id="xvU-c0-IYi"/>
                             <constraint firstItem="VPL-zd-y1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yHj-lM-gXA"/>
                         </constraints>

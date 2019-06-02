@@ -190,29 +190,56 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text3.backgroundColor = UIColor.white
         denom.backgroundColor = UIColor.white
         text4.backgroundColor = UIColor.white
+        
+        text1.text = ""
+        text2.text = ""
+        text3.text = ""
+        denom.text = ""
+        text4.text = ""
+        
         answer.text = "Please Select a\nCalculation"
     }
     
-    
+    //Shading Presets
     func t1t2(){
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.white
+//        text2.backgroundColor = UIColor.white
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.darkGray
+        
+        text1.text = ""
+        text2.text = ""
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = "DO NOT FILL IN"
     }
     
     func t4(){
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.white
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
+        
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
     }
     
+    
+    
+    
+    
+    //Calculations
     func hypot() {
         //Pythagorean Theorum
         t1t2()
+        
+        text1.placeholder  = "Leg 1"
+        text2.placeholder = "Leg 2"
         
         var l1 = Float(text1.text!);
         var l2 = Float(text2.text!);
@@ -235,6 +262,9 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         //Pythagorean Theroum
         t1t2()
         
+        text1.placeholder = "Leg 1"
+        text2.placeholder = "Hypotenuse"
+        
         var l1 = Float(text1.text!);
         var hy = Float(text2.text!);
         
@@ -256,6 +286,10 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func speed() {
         //Speed
         t1t2()
+        
+        text1.placeholder = "Distance (m)"
+        text2.placeholder = "Time (s)"
+        
         var d = Float(text1.text!);
         var t = Float(text2.text!);
         
@@ -274,11 +308,22 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func accel() {
         //Acceleration
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.white
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.white
+//        text3.backgroundColor = UIColor.white
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
+        
+        text1.text = "DO NOT FILL IN"
+        text2.text = ""
+        text3.text = ""
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text2.placeholder = "Time (s)"
+        text3.placeholder = "Initial Velocity"
+        text4.placeholder = "Final Velocity"
+        
         var vf = Float(text4.text!);
         var vi = Float(text3.text!);
         var t = Float(text2.text!);
@@ -302,11 +347,20 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func fm() {
         //Feet to Meters
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.white
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
+        
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Feet"
+        
         var f = Float(text4.text!);
         if f==nil {
             f = 0
@@ -316,11 +370,20 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func mf() {
         //Meters to Feet
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.white
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
+        
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Meters"
+        
         var m = Float(text4.text!);
         if m==nil{
             m = 0
@@ -331,6 +394,9 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func mk() {
         //Mile to Kilometer
         t4()
+        
+        text4.placeholder = "Miles"
+        
         var mile = Float(text4.text!);
         if mile==nil {
             mile = 0
@@ -341,6 +407,9 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func km() {
         //Kilometer to Mile
         t4()
+        
+        text4.placeholder = "Kilometer"
+        
         var kilom = Float(text4.text!);
         if kilom==nil {
             kilom = 0
@@ -351,6 +420,9 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func gl() {
         //Gallon to Liter
         t4()
+        
+        text4.placeholder = "Gallons"
+        
         var gallon = Float(text4.text!);
         if gallon==nil {
             gallon = 0
@@ -361,6 +433,9 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     func lg() {
         //Liter to Gallon
         t4()
+        
+        text4.placeholder = "Liters"
+        
         var liter = Float(text4.text!);
         if liter==nil {
             liter = 0
@@ -370,11 +445,20 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func fd() {
         //Fraction to Decimal
-        text1.backgroundColor = UIColor.darkGray
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.white
+//        denom.backgroundColor = UIColor.white
+//        text4.backgroundColor = UIColor.darkGray
+        
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = ""
+        denom.text = ""
+        text4.text = "DO NOT FILL IN"
+        
+        text3.placeholder = "Numerator"
+        
         var numerator = Float(text3.text!);
         var denomerator = Float(denom.text!);
         if numerator==nil {
@@ -387,13 +471,21 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     func sqroot() {
         //square root
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
         
-        var number = Double(text1.text!)
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Number"
+        
+        var number = Double(text4.text!)
         if number == nil {
             number = 0
         }
@@ -403,13 +495,21 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     func ftin() {
         //Feet to Inches
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
         
-        var feet = Double(text1.text!)
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Feet"
+        
+        var feet = Double(text4.text!)
         if feet == nil{
             feet = 0
         }
@@ -421,13 +521,21 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     func inft() {
         //Inches to Feet
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
         
-        var inches = Double(text1.text!)
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Inches"
+        
+        var inches = Double(text4.text!)
         if inches == nil{
             inches = 0
         }
@@ -439,35 +547,51 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     }
     func fc() {
         //Fahrenheit to Celsius
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
         
-        var frnheit = Double(text1.text!)
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Fahrenheit"
+        
+        var frnheit = Double(text4.text!)
         if frnheit == nil{
             frnheit = 0
         }
         
-        var celsius = (frnheit!-32)/1.8
+        let celsius = (frnheit!-32)/1.8
         
         answer.text = "Answer: \(celsius)"
     }
     func cf() {
         //Celsius to Fahrenheit
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.darkGray
-        text3.backgroundColor = UIColor.darkGray
-        denom.backgroundColor = UIColor.darkGray
-        text4.backgroundColor = UIColor.darkGray
+//        text1.backgroundColor = UIColor.darkGray
+//        text2.backgroundColor = UIColor.darkGray
+//        text3.backgroundColor = UIColor.darkGray
+//        denom.backgroundColor = UIColor.darkGray
+//        text4.backgroundColor = UIColor.white
         
-        var celsius = Double(text1.text!)
+        text1.text = "DO NOT FILL IN"
+        text2.text = "DO NOT FILL IN"
+        text3.text = "DO NOT FILL IN"
+        denom.text = "DO NOT FILL IN"
+        text4.text = ""
+        
+        text4.placeholder = "Celsius"
+        
+        var celsius = Double(text4.text!)
         if celsius == nil{
             celsius = 0
         }
         
-        var frnheit = (celsius!*1.8)+32
+        let frnheit = (celsius!*1.8)+32
         answer.text = "Answer: \(frnheit)"
     }
 
