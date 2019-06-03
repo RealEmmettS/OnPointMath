@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D9D13322A4C457007701DF /* UltimateButtonProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9D13222A4C457007701DF /* UltimateButtonProject.swift */; };
 		A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE4B3220818728000C93C4 /* calcViewController.swift */; };
 		DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */; };
 		DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC597029200AA2D900CAAC64 /* investmentSelect.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24D9D13222A4C457007701DF /* UltimateButtonProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateButtonProject.swift; sourceTree = "<group>"; };
 		A0CE4B3220818728000C93C4 /* calcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcViewController.swift; sourceTree = "<group>"; };
 		DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCalc.swift; sourceTree = "<group>"; };
 		DC597029200AA2D900CAAC64 /* investmentSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = investmentSelect.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */,
 				A0CE4B3220818728000C93C4 /* calcViewController.swift */,
 				DC790E212009716800740B38 /* RoundedButton.swift */,
+				24D9D13222A4C457007701DF /* UltimateButtonProject.swift */,
 				DCF2518D204653F500559E64 /* TabColors.swift */,
 				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
 				DCA34B2B2008443B00F6A1C7 /* Main.storyboard */,
@@ -284,6 +287,7 @@
 				DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */,
 				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
 				DCF2518E204653F500559E64 /* TabColors.swift in Sources */,
+				24D9D13322A4C457007701DF /* UltimateButtonProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
