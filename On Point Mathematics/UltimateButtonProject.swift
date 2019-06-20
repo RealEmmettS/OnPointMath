@@ -26,9 +26,9 @@ class UltimateButton: UIButton {
         }
     }
     
-//    @IBInspectable var BorderSize: CGSize = CGSize(width: 63.67, height: 85){
+//    @IBInspectable var BorderSize: CGFloat = 3/UIScreen.main.nativeScale{
 //        didSet{
-//            self.frame.size = BorderSize
+//            self.layer.borderWidth = BorderSize
 //        }
 //    }
     
