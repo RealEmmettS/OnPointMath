@@ -30,7 +30,7 @@ class calcViewController: UIViewController {
         
         if performingMath == true {
             if sender.tag == 20{
-                if label.text == "" || label.text == "x" || label.text == "/" || label.text == "+" || label.text == "-"{
+                if label.text == "" || label.text == "x" || label.text == "÷" || label.text == "+" || label.text == "-"{
                     label.text = "0"
                     label.text = label.text! + String(".")
                     numberOnScreen = Double(label.text!)!
