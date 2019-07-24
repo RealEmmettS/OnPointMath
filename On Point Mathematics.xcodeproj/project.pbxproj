@@ -10,6 +10,10 @@
 		24D9D13322A4C457007701DF /* UltimateButtonProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9D13222A4C457007701DF /* UltimateButtonProject.swift */; };
 		A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE4B3220818728000C93C4 /* calcViewController.swift */; };
 		D199367022D6C9CD00CA29CD /* NewCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */; };
+		D1DFE3EE22E6738500F5E7B5 /* NewCalculationSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */; };
+		D1DFE3F022E6745E00F5E7B5 /* ArrayForCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */; };
+		D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */; };
+		D1DFE3F422E82FFF00F5E7B5 /* ResultsAndCalcPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */; };
 		DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */; };
 		DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC597029200AA2D900CAAC64 /* investmentSelect.swift */; };
 		DC745D832010DCE100AFA43B /* geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC745D822010DCE100AFA43B /* geometry.swift */; };
@@ -44,6 +48,10 @@
 		24D9D13222A4C457007701DF /* UltimateButtonProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateButtonProject.swift; sourceTree = "<group>"; };
 		A0CE4B3220818728000C93C4 /* calcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcViewController.swift; sourceTree = "<group>"; };
 		D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalcViewController.swift; sourceTree = "<group>"; };
+		D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalculationSelector.swift; sourceTree = "<group>"; };
+		D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForCalculations.swift; sourceTree = "<group>"; };
+		D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsAndCalcPage.swift; sourceTree = "<group>"; };
 		DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCalc.swift; sourceTree = "<group>"; };
 		DC597029200AA2D900CAAC64 /* investmentSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = investmentSelect.swift; sourceTree = "<group>"; };
 		DC745D822010DCE100AFA43B /* geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometry.swift; sourceTree = "<group>"; };
@@ -88,6 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1DFE3EC22E6734800F5E7B5 /* New Style */ = {
+			isa = PBXGroup;
+			children = (
+				D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */,
+				D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */,
+				D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */,
+				D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */,
+				D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */,
+			);
+			path = "New Style";
+			sourceTree = "<group>";
+		};
 		DCA34B1B2008443B00F6A1C7 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +136,8 @@
 				DC745D822010DCE100AFA43B /* geometry.swift */,
 				DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */,
 				A0CE4B3220818728000C93C4 /* calcViewController.swift */,
-				D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */,
 				DC790E212009716800740B38 /* RoundedButton.swift */,
+				D1DFE3EC22E6734800F5E7B5 /* New Style */,
 				24D9D13222A4C457007701DF /* UltimateButtonProject.swift */,
 				DCF2518D204653F500559E64 /* TabColors.swift */,
 				DCA34B2E2008443B00F6A1C7 /* Assets.xcassets */,
@@ -285,8 +305,12 @@
 			files = (
 				DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */,
 				DC745D832010DCE100AFA43B /* geometry.swift in Sources */,
+				D1DFE3F022E6745E00F5E7B5 /* ArrayForCalculations.swift in Sources */,
 				DC790E222009716800740B38 /* RoundedButton.swift in Sources */,
+				D1DFE3EE22E6738500F5E7B5 /* NewCalculationSelector.swift in Sources */,
+				D1DFE3F422E82FFF00F5E7B5 /* ResultsAndCalcPage.swift in Sources */,
 				A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */,
+				D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */,
 				DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */,
 				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
 				DCF2518E204653F500559E64 /* TabColors.swift in Sources */,
