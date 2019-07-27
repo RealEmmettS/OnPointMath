@@ -100,10 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */,
-				D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */,
 				D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */,
-				D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */,
+				D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */,
 				D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */,
+				D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */,
 			);
 			path = "New Style";
 			sourceTree = "<group>";

@@ -19,7 +19,7 @@ class NewCalculationSelector: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-        view.tintColor = UIColor(red:0.02, green:0.71, blue:0.99, alpha:1.0)
+        view.tintColor = UIColor(red:0.40, green:0.69, blue:0.90, alpha:1.0)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
     }
@@ -51,7 +51,13 @@ class NewCalculationSelector: UITableViewController {
         return "\(allSections[section].title)"
     }
     
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedCalcID = allSections[indexPath.section].items[indexPath.row].id
+        selectedCalcName = allSections[indexPath.section].items[indexPath.row].title
+        
+        performSegue(withIdentifier: "showResults", sender: self)
+    }
     
     
     

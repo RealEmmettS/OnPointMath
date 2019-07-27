@@ -8,6 +8,9 @@
 
 import Foundation
 
+var selectedCalcID: Double = 0.0
+var selectedCalcName: String = ""
+
 
 //Structs to set up the array values (it makes array values easier to pull and sort in the TableView)
 struct Headline {
@@ -27,6 +30,8 @@ struct SectionHeadline {
 
 
 let allSections = invSections+geoSections+advSections
+let allItems = invest+geoArea+geoVolume+geoSA+geoLSA+advPythag+advPhysics+advConv+advOther
+
 let invSections = [SectionHeadline(id: 1.0, title: "Investments", items: invest)]
 let invest = [
     Headline(id: 1.01, title: "Simple Interest"),
