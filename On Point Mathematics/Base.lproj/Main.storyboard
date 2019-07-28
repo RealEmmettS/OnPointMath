@@ -1262,7 +1262,7 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="585"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" textLabel="f3O-tb-Ogu" rowHeight="75" style="IBUITableViewCellStyleDefault" id="2YS-RH-LTa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" textLabel="f3O-tb-Ogu" detailTextLabel="Uvp-Y2-hAu" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="2YS-RH-LTa">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2YS-RH-LTa" id="Gyt-pg-GGo">
@@ -1270,9 +1270,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3O-tb-Ogu">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="74.666666666666671"/>
+                                                    <rect key="frame" x="15" y="18" width="33.333333333333336" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uvp-Y2-hAu">
+                                                    <rect key="frame" x="14.999999999999996" y="41.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1322,13 +1329,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculations" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-RQ-vV7">
-                                <rect key="frame" x="16" y="103" width="343" height="68.333333333333314"/>
+                                <rect key="frame" x="16" y="58.999999999999993" width="343" height="68.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-xB-dKZ">
-                                <rect key="frame" x="16" y="240" width="343" height="30"/>
+                                <rect key="frame" x="16" y="196" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="g4u-LH-T9C"/>
                                 </constraints>
@@ -1337,7 +1344,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CeC-f7-wYx">
-                                <rect key="frame" x="16" y="354" width="343" height="30"/>
+                                <rect key="frame" x="16" y="310" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gDd-ms-mTw"/>
                                 </constraints>
@@ -1346,7 +1353,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-HM-WkV">
-                                <rect key="frame" x="16" y="316" width="343" height="30"/>
+                                <rect key="frame" x="16" y="272" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LU4-pO-dUR"/>
                                 </constraints>
@@ -1355,7 +1362,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-Ca-Dig">
-                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <rect key="frame" x="16" y="234" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U97-lY-lJU"/>
                                 </constraints>
@@ -1364,7 +1371,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RpA-Xo-UAZ">
-                                <rect key="frame" x="16" y="392" width="343" height="30"/>
+                                <rect key="frame" x="16" y="348" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HrO-zO-MJp"/>
                                 </constraints>
@@ -1384,6 +1391,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-pS-l8X">
                                 <rect key="frame" x="125" y="728" width="124" height="30"/>
                                 <state key="normal" title="Copy to Clipboard"/>
+                                <connections>
+                                    <action selector="copyToClipboard:" destination="b6p-cv-6v9" eventType="touchUpInside" id="dXd-9t-C2N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1456,12 +1466,12 @@
                         <outlet property="answer" destination="saB-2O-rya" id="THG-VN-CFr"/>
                         <outlet property="answer_label" destination="saB-2O-rya" id="OCb-Zk-0jg"/>
                         <outlet property="calcLabel" destination="YGI-RQ-vV7" id="2ae-M9-o2b"/>
-                        <outlet property="denom" destination="RpA-Xo-UAZ" id="4fH-ft-jC6"/>
-                        <outlet property="radius" destination="CeC-f7-wYx" id="ScW-oz-fSQ"/>
                         <outlet property="text1" destination="cQV-xB-dKZ" id="8hb-e6-gHO"/>
                         <outlet property="text2" destination="P1s-Ca-Dig" id="e8M-Ug-rfx"/>
                         <outlet property="text3" destination="w4q-HM-WkV" id="Nks-Dl-P5Y"/>
-                        <outlet property="text4" destination="CeC-f7-wYx" id="rqf-dS-b09"/>
+                        <outlet property="text4" destination="CeC-f7-wYx" id="IE9-Rp-PM6"/>
+                        <outlet property="text5" destination="RpA-Xo-UAZ" id="f69-Bs-orE"/>
+                        <segue destination="irS-zy-0ey" kind="show" identifier="sendBack" id="VgC-Zx-7sP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YY-xn-03T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1516,6 +1526,7 @@
         <image name="order" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="VgC-Zx-7sP"/>
         <segue reference="41Q-db-krS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import Foundation
 
-class ResultsAndCalcPage: UIViewController {
+class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        text1.delegate = self
+        text2.delegate = self
+        text3.delegate = self
+        text4.delegate = self
+        text5.delegate = self
         answer_label.text = "Answer Will Appear Here"
-        calcLabel.text = selectedCalcName
         
-        print("\(selectedCalcName) - \(selectedCalcID)")
+        if selectedCalcID == nil || selectedCalcName == nil{
+            performSegue(withIdentifier: "sendBack", sender: self)
+        } else {
+            notUsedTextFields(first: 0, second: 0, third: 0, fourth: 0, fifth: 0)
+            setupCalculation(itemID: selectedCalcID)
+            calcLabel.text = selectedCalcName
+            print("\(selectedCalcName) - \(selectedCalcID)")
+        }
     }
     
     @IBOutlet weak var calcLabel: UILabel!
@@ -26,9 +38,176 @@ class ResultsAndCalcPage: UIViewController {
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var text2: UITextField!
     @IBOutlet weak var text3: UITextField!
-    @IBOutlet weak var radius: UITextField! //radius and text4 are the same thing
-    @IBOutlet weak var denom: UITextField!
     @IBOutlet weak var text4: UITextField!
+    @IBOutlet weak var text5: UITextField!
+    
+    
+    func notUsedTextFields(first: Int, second: Int, third: Int, fourth: Int, fifth: Int){
+        if first == 1{
+            text1.text = "DO NOT FILL IN"
+            text1.isEnabled = true
+            text1.isHidden = true
+        }
+        if second == 1{
+            text2.text = "DO NOT FILL IN"
+            text2.isEnabled = true
+            text2.isHidden = true
+        }
+        if third == 1{
+            text3.text = "DO NOT FILL IN"
+            text3.isEnabled = true
+            text3.isHidden = true
+        }
+        if fourth == 1{
+            text4.text = "DO NOT FILL IN"
+            text4.isEnabled = true
+            text4.isHidden = true
+        }
+        if fifth == 1{
+            text5.text = "DO NOT FILL IN"
+            text5.isEnabled = true
+            text5.isHidden = true
+        }
+    }
+    
+    
+    
+    
+    // MARK: - Editing
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == text1 {
+            setupCalculation(itemID: selectedCalcID)
+            print("Done Editing")
+        } else if textField == text2 {
+           setupCalculation(itemID: selectedCalcID)
+            print("Done Editing")
+        }else if textField == text3{
+            setupCalculation(itemID: selectedCalcID)
+            print("Done Editing")
+        }else if textField == text4{
+            setupCalculation(itemID: selectedCalcID)
+            print("Done Editing")
+        }else if textField == text5{
+            setupCalculation(itemID: selectedCalcID)
+            print("Done Editing")
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    @IBAction func copyToClipboard(_ sender: Any) {
+        UIPasteboard.general.string = answer.text
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //This sets up the calculations based off of item ID's
+    func setupCalculation(itemID: Double){
+        //Investments - 1
+        if itemID == 1.01{
+            simpleInterest()
+        }else if itemID == 1.02{
+            compoundInterest()
+        }else if itemID == 1.03{
+            carLoan()
+        }
+        
+        //Geometry Area - 2
+        if itemID == 2.01{
+            triangle()
+        } else if itemID == 2.02{
+            rectangle()
+        }else if itemID == 2.03{
+            parallelogram()
+        }else if itemID == 2.04{
+            circle()
+        }
+        
+        //Geometry Volume = 2.1
+        if itemID == 2.11{
+            cubev()
+        }else if itemID == 2.12{
+            conev()
+        }else if itemID == 2.13{
+            cylinderv()
+        }else if itemID == 2.14{
+            spherev()
+        }
+        
+        //Geometry Surface Area - 2.2
+        if itemID == 2.21{
+            cubesa()
+        }else if itemID == 2.22{
+            rectanglesa()
+        }else if itemID == 2.23{
+            cylindersa()
+        }else if itemID == 2.24{
+            trianglesa()
+        }
+        
+        //Geometry Lateral Surface Area - 2.3
+        if itemID == 2.31{
+            rectanglelsa()
+        }else if itemID == 2.32{
+            cylinderlsa()
+        }
+        
+        //Anvanced Pythag - 3
+        if itemID == 3.01{
+            hypot()
+        }else if itemID == 3.02{
+            leg()
+        }
+        
+        //Advanced Physics - 3.1
+        if itemID == 3.11{
+            speed()
+        }else if itemID == 3.12{
+            accel()
+        }
+        
+        //Advanced Conversions - 3.2
+        if itemID == 3.21{
+            fm()
+        }else if itemID == 3.22{
+            mf()
+        }else if itemID == 3.23{
+            mk()
+        }else if itemID == 3.24{
+            km()
+        }else if itemID == 3.25{
+            gl()
+        }else if itemID == 3.26{
+            lg()
+        }else if itemID == 3.27{
+            fd()
+        }else if itemID == 3.28{
+            ftin()
+        }else if itemID == 3.29{
+            inft()
+        }else if itemID == 3.210{
+            fc()
+        }else if itemID == 3.211{
+            cf()
+        }
+        
+        //Advanced Other - 3.3
+        if itemID == 3.31{
+            sqroot()
+        }
+    }
     
     
     
@@ -44,20 +223,99 @@ class ResultsAndCalcPage: UIViewController {
     
     
     
+    
+    //p(), r(), and t() are part of the setup for Simple, Compound, and Car calculations
+    func p() -> Float {
+        var p = Float(text1.text!);
+        if p == nil{
+            p = 0
+        }
+        return p!
+    }
+    
+    func r() -> Float {
+        var r = Float(text2.text!);
+        if r == nil{
+            r = 0
+        }
+        return r!
+    }
+    
+    func t() -> Float {
+        var t = Float(text3.text!);
+        if t == nil{
+            t = 0
+        }
+        return t!
+    }
+    
+    
+    
+    func simpleInterest(){
+        //Simple Interest Calculator
+        let r = self.r()
+        let t = self.t()
+        let p = self.p()
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Principle (Base Investment)"
+        text2.placeholder = "Rate"
+        text3.placeholder = "Time (In Years)"
+        
+        let re = r/100
+        let interestans = p*re*t
+        let accountbalans = interestans+p
+        
+        answer_label.text = "Interest About: $\(interestans)\nAccount Bal. About: $\(accountbalans)";
+    }
+    
+    func compoundInterest(){
+        let r = Double(self.r());
+        let t = Double(self.t());
+        let p = Double(self.p());
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        
+        let re = r/100
+        let accountBalanceprt1 = Double(1+re);
+        let accountBalanceprt2 = pow(accountBalanceprt1, t);
+        let accountBalanceprt3 = Double(p*accountBalanceprt2);
+        let accountBalanceprt4 = round(accountBalanceprt3)
+        
+        answer_label.text = "Interest About: $\(accountBalanceprt4-p)\nAccount Bal. About: $\(accountBalanceprt4)";
+    }
+    
+    func carLoan() {
+        let r = Double(self.r());
+        let t = Double(self.t());
+        let p = Double(self.p());
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        
+        let re = r/100
+        
+        
+        //let allSteps =  p!*(r! / 12) / (1 - (1 + r!) / 12)-t!
+        
+        let step1 = re/12
+        let step2 = step1*p
+        let step3 = step1+1
+        let step4 = pow(step3, t)
+        let step5 = 1/step4
+        let step6 = 1-step5
+        let step7 = step2/step6
+        
+        let roundedStep7 = round(step7)
+        //let roundedAllSteps = round(allSteps)
+        
+        
+        answer_label.text = "Monthly Payments: \(roundedStep7)\n(No Down Payments)";
+        
+    }
     func triangle() {
         //Triangle
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.darkGray
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
         
-        
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
-        
-        text2.placeholder = "Base"
+        text2.placeholder = "Height"
+        text1.placeholder = "Base"
         
         var b = Float(text1.text!);
         var h = Float(text2.text!);
@@ -72,20 +330,14 @@ class ResultsAndCalcPage: UIViewController {
     
     func rectangle() {
         //Rectangle
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.white
-        //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = "DO NOT FILL IN"
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
         
-        text3.placeholder = "Width"
+        text1.placeholder = "Length"
+        text2.placeholder = "Width"
         
         var l = Float(text1.text!);
-        var w = Float(text3.text!);
+        var w = Float(text2.text!);
         if l == nil{
             l = 0
         }
@@ -97,15 +349,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func parallelogram() {
         //Parallelogram
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
+       notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Length"
+        text2.placeholder = "Width"
         
         var l = Float(text1.text!);
         var h = Float(text2.text!);
@@ -120,19 +368,12 @@ class ResultsAndCalcPage: UIViewController {
     
     func circle() {
         //Circle
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Radius"
         
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         if r == nil{
             r = 0
         }
@@ -142,16 +383,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func cubev() {
         //Cube
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.white
-        //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
         
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         var l = Float(text1.text!);
@@ -173,20 +409,13 @@ class ResultsAndCalcPage: UIViewController {
     
     func conev() {
         //Cone
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        text1.placeholder = "Height"
+        text2.placeholder = "Radius"
         
-        radius.placeholder = "Radius"
-        
-        var h = Float(text2.text!);
-        var r = Float(radius.text!);
+        var h = Float(text1.text!);
+        var r = Float(text2.text!);
         if h == nil{
             h = 0
         }
@@ -200,20 +429,13 @@ class ResultsAndCalcPage: UIViewController {
     
     func cylinderv() {
         //Cylinder
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Height"
+        text2.placeholder = "Radius"
         
-        radius.placeholder = "Radius"
-        
-        var h = Float(text2.text!);
-        var r = Float(radius.text!);
+        var h = Float(text1.text!);
+        var r = Float(text2.text!);
         if h == nil{
             h = 0
         }
@@ -228,19 +450,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func spherev() {
         //Sphere
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Radius"
         
-        radius.placeholder = "Radius"
-        
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         if r == nil{
             r = 0
         }
@@ -254,15 +468,9 @@ class ResultsAndCalcPage: UIViewController {
         //Cube
         // Formula: S=P*h+2*B3
         
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.darkGray
-        
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         
         var l = Float(text1.text!);
         var h = Float(text2.text!);
@@ -291,17 +499,12 @@ class ResultsAndCalcPage: UIViewController {
     func rectanglesa() {
         //Rec. Prism
         // Formula: S=P*h+2*B
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.white
-        //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
-        
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
+        
         
         var l = Float(text1.text!);
         var h = Float(text2.text!);
@@ -333,19 +536,12 @@ class ResultsAndCalcPage: UIViewController {
         //Cylinder
         // Formula: S= (2*pi*r)*h+(2*pi*(pow, r))
         
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Radius"
+        text2.placeholder = "Height"
         
-        radius.placeholder = "Radius"
-        
-        var r = Double(radius.text!);
+        var r = Double(text1.text!);
         var h = Double(text2.text!);
         
         if r == nil{
@@ -373,16 +569,10 @@ class ResultsAndCalcPage: UIViewController {
     func trianglesa() {
         //Triangular Prism
         // Formula: P*h+2B
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.white
-        //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
-        
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         
@@ -416,16 +606,9 @@ class ResultsAndCalcPage: UIViewController {
         //Rec. Prism
         // Formula: S=Ph+2B
         
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.white
-        //        radius.backgroundColor = UIColor.darkGray
-        
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
-        
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         var l = Float(text1.text!);
@@ -455,19 +638,11 @@ class ResultsAndCalcPage: UIViewController {
         //Cylinder
         // Formula: S=Ph+2B
         
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.white
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Radius"
+        text2.placeholder = "Height"
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
-        
-        radius.placeholder = "Radius"
-        
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         var h = Float(text2.text!);
         
         if r == nil{
@@ -486,45 +661,13 @@ class ResultsAndCalcPage: UIViewController {
         answer_label.text = "Answer About: \(LSA)"
     }
     
-    func ResetFields() {
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        radius.backgroundColor = UIColor.darkGray
-        
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = ""
-        
-        answer_label.text = "Please Select a\nCalculation"
-    }
     func t1t2(){
-        //        text1.backgroundColor = UIColor.white
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = "DO NOT FILL IN"
+      notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
     }
     
-    func t4(){
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
-        
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+    func t1(){
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
     }
     
     
@@ -605,26 +748,15 @@ class ResultsAndCalcPage: UIViewController {
     }
     
     func accel() {
-        //Acceleration
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.white
-        //        text3.backgroundColor = UIColor.white
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = ""
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        text1.placeholder = "Time (s)"
+        text2.placeholder = "Initial Velocity"
+        text3.placeholder = "Final Velocity"
         
-        text2.placeholder = "Time (s)"
-        text3.placeholder = "Initial Velocity"
-        text4.placeholder = "Final Velocity"
-        
-        var vf = Float(text4.text!);
-        var vi = Float(text3.text!);
-        var t = Float(text2.text!);
+        var vf = Float(text3.text!);
+        var vi = Float(text2.text!);
+        var t = Float(text1.text!);
         
         if vf == nil{
             vf = 0
@@ -645,21 +777,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func fm() {
         //Feet to Meters
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Feet"
         
-        text4.placeholder = "Feet"
-        
-        var f = Float(text4.text!);
+        var f = Float(text1.text!);
         if f==nil {
             f = 0
         }
@@ -668,21 +790,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func mf() {
         //Meters to Feet
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Meters"
         
-        text4.placeholder = "Meters"
-        
-        var m = Float(text4.text!);
+        var m = Float(text1.text!);
         if m==nil{
             m = 0
         }
@@ -691,11 +803,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func mk() {
         //Mile to Kilometer
-        t4()
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
         
-        text4.placeholder = "Miles"
+        text1.placeholder = "Miles"
         
-        var mile = Float(text4.text!);
+        var mile = Float(text1.text!);
         if mile==nil {
             mile = 0
         }
@@ -704,11 +816,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func km() {
         //Kilometer to Mile
-        t4()
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
         
-        text4.placeholder = "Kilometer"
+        text1.placeholder = "Kilometer"
         
-        var kilom = Float(text4.text!);
+        var kilom = Float(text1.text!);
         if kilom==nil {
             kilom = 0
         }
@@ -717,11 +829,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func gl() {
         //Gallon to Liter
-        t4()
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
         
-        text4.placeholder = "Gallons"
+        text1.placeholder = "Gallons"
         
-        var gallon = Float(text4.text!);
+        var gallon = Float(text1.text!);
         if gallon==nil {
             gallon = 0
         }
@@ -730,11 +842,11 @@ class ResultsAndCalcPage: UIViewController {
     
     func lg() {
         //Liter to Gallon
-        t4()
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
         
-        text4.placeholder = "Liters"
+        text1.placeholder = "Liters"
         
-        var liter = Float(text4.text!);
+        var liter = Float(text1.text!);
         if liter==nil {
             liter = 0
         }
@@ -743,22 +855,14 @@ class ResultsAndCalcPage: UIViewController {
     
     func fd() {
         //Fraction to Decimal
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.white
-        //        denom.backgroundColor = UIColor.white
-        //        text4.backgroundColor = UIColor.darkGray
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = ""
-        denom.text = ""
-        text4.text = "DO NOT FILL IN"
+       
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Numerator"
+        text2.placeholder = "Denominator"
         
-        text3.placeholder = "Numerator"
-        
-        var numerator = Float(text3.text!);
-        var denomerator = Float(denom.text!);
+        var numerator = Float(text1.text!);
+        var denomerator = Float(text2.text!);
         if numerator==nil {
             numerator = 0
         }
@@ -769,21 +873,10 @@ class ResultsAndCalcPage: UIViewController {
     }
     func sqroot() {
         //square root
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Number"
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
-        
-        text4.placeholder = "Number"
-        
-        var number = Double(text4.text!)
+        var number = Double(text1.text!)
         if number == nil {
             number = 0
         }
@@ -793,21 +886,11 @@ class ResultsAndCalcPage: UIViewController {
     }
     func ftin() {
         //Feet to Inches
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Feet"
         
-        text4.placeholder = "Feet"
-        
-        var feet = Double(text4.text!)
+        var feet = Double(text1.text!)
         if feet == nil{
             feet = 0
         }
@@ -819,21 +902,11 @@ class ResultsAndCalcPage: UIViewController {
     }
     func inft() {
         //Inches to Feet
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Inches"
         
-        text4.placeholder = "Inches"
-        
-        var inches = Double(text4.text!)
+        var inches = Double(text1.text!)
         if inches == nil{
             inches = 0
         }
@@ -845,21 +918,11 @@ class ResultsAndCalcPage: UIViewController {
     }
     func fc() {
         //Fahrenheit to Celsius
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Fahrenheit"
         
-        text4.placeholder = "Fahrenheit"
-        
-        var frnheit = Double(text4.text!)
+        var frnheit = Double(text1.text!)
         if frnheit == nil{
             frnheit = 0
         }
@@ -870,21 +933,11 @@ class ResultsAndCalcPage: UIViewController {
     }
     func cf() {
         //Celsius to Fahrenheit
-        //        text1.backgroundColor = UIColor.darkGray
-        //        text2.backgroundColor = UIColor.darkGray
-        //        text3.backgroundColor = UIColor.darkGray
-        //        denom.backgroundColor = UIColor.darkGray
-        //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Celsius"
         
-        text4.placeholder = "Celsius"
-        
-        var celsius = Double(text4.text!)
+        var celsius = Double(text1.text!)
         if celsius == nil{
             celsius = 0
         }

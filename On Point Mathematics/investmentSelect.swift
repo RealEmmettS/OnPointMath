@@ -19,8 +19,6 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         time.delegate = self
         
         interest.text = ""
-        
-        // Do any additional setup after loading the view.
     }
     
     //Picker View

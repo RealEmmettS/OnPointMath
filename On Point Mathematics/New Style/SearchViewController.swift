@@ -37,10 +37,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
         
-        if isSearching{
+        if isSearching == true{
             cell.textLabel?.text = searchCalc[indexPath.row]
-        } else {
-           cell.textLabel?.text = allItems[indexPath.row].title
+            cell.detailTextLabel?.text = ""
+        } else if isSearching == false || SearchBar.text == ""{
+            cell.textLabel?.text = allItems[indexPath.row].title
+            cell.detailTextLabel?.text = allItems[indexPath.row].group
         }
         return cell
     }
@@ -53,8 +55,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             for match in matches{
                 searchCalc.append(match.title)
             }
+//        //SubMatches allow the user to search for the subtitles of items (the section group for items)
         
-        isSearching = true
+//        let SubMatches = allItems.filter({$0.group.lowercased().prefix(searchText.count) == searchText.lowercased()})
+//        for SMatch in SubMatches{
+//            searchCalc.append(SMatch.group)
+//        }
+        if searchBar.text == ""{
+            isSearching = false
+        }else if searchBar.text != ""{
+            isSearching = true
+        }
         tableView.reloadData()
     }
     
