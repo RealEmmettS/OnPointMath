@@ -19,12 +19,15 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         text4.delegate = self
         text5.delegate = self
         answer_label.text = "Answer Will Appear Here"
+        if selectedCalcID == nil{
+            selectedCalcID = 0
+        }
         
         if selectedCalcID == nil || selectedCalcName == nil{
             performSegue(withIdentifier: "sendBack", sender: self)
         } else {
             notUsedTextFields(first: 0, second: 0, third: 0, fourth: 0, fifth: 0)
-            setupCalculation(itemID: selectedCalcID)
+            setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             calcLabel.text = selectedCalcName
             print("\(selectedCalcName) - \(selectedCalcID)")
         }
@@ -76,19 +79,19 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     // MARK: - Editing
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == text1 {
-            setupCalculation(itemID: selectedCalcID)
+            setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             print("Done Editing")
         } else if textField == text2 {
-           setupCalculation(itemID: selectedCalcID)
+           setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             print("Done Editing")
         }else if textField == text3{
-            setupCalculation(itemID: selectedCalcID)
+            setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             print("Done Editing")
         }else if textField == text4{
-            setupCalculation(itemID: selectedCalcID)
+            setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             print("Done Editing")
         }else if textField == text5{
-            setupCalculation(itemID: selectedCalcID)
+            setupCalculation(itemID: selectedCalcID, itemName: selectedCalcName)
             print("Done Editing")
         }
     }
@@ -114,13 +117,13 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     
     
     //This sets up the calculations based off of item ID's
-    func setupCalculation(itemID: Double){
+    func setupCalculation(itemID: Double, itemName: String){
         //Investments - 1
-        if itemID == 1.01{
+        if itemID == 1.01 || itemName == "Simple Interest"{
             simpleInterest()
-        }else if itemID == 1.02{
+        }else if itemID == 1.02 || itemName == "Compound Interest"{
             compoundInterest()
-        }else if itemID == 1.03{
+        }else if itemID == 1.03 || itemName == "Car Loan"{
             carLoan()
         }
         

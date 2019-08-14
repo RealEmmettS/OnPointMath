@@ -996,7 +996,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-aS-fVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="848.72563718140941"/>
+            <point key="canvasLocation" x="2926" y="848"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nd6-bc-hh1">
@@ -1194,6 +1194,7 @@
                         <segue destination="irS-zy-0ey" kind="relationship" relationship="viewControllers" id="bit-A0-nYy"/>
                         <segue destination="VJg-pf-45r" kind="relationship" relationship="viewControllers" id="fPY-YJ-uzv"/>
                         <segue destination="Lvl-v2-XvM" kind="relationship" relationship="viewControllers" id="9Az-V8-O5F"/>
+                        <segue destination="eOe-iF-TPb" kind="relationship" relationship="viewControllers" id="xiX-E5-aXJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggb-JK-7FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1342,6 +1343,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CeC-f7-wYx">
                                 <rect key="frame" x="16" y="310" width="343" height="30"/>
@@ -1351,6 +1355,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-HM-WkV">
                                 <rect key="frame" x="16" y="272" width="343" height="30"/>
@@ -1360,6 +1367,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="P1s-Ca-Dig">
                                 <rect key="frame" x="16" y="234" width="343" height="30"/>
@@ -1369,6 +1379,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RpA-Xo-UAZ">
                                 <rect key="frame" x="16" y="348" width="343" height="30"/>
@@ -1378,6 +1391,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saB-2O-rya">
                                 <rect key="frame" x="16" y="602" width="343" height="106"/>
@@ -1506,16 +1522,57 @@
                         <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="zGm-Ej-2D0" kind="relationship" relationship="viewControllers" id="PAd-KL-y9e"/>
                         <segue destination="4Sb-6D-NGS" kind="relationship" relationship="viewControllers" id="e8M-iZ-uV6"/>
                         <segue destination="r5P-us-geQ" kind="relationship" relationship="viewControllers" id="VLK-nW-ENP"/>
                         <segue destination="NYs-ib-ZOK" kind="relationship" relationship="viewControllers" id="NmS-65-Lae"/>
                         <segue destination="F2N-Y6-Q3c" kind="relationship" relationship="viewControllers" id="QVc-M9-P8O"/>
-                        <segue destination="zGm-Ej-2D0" kind="relationship" relationship="viewControllers" id="PAd-KL-y9e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZt-Gk-jxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-677" y="849"/>
+        </scene>
+        <!--Formulas-->
+        <scene sceneID="u4o-jI-2sD">
+            <objects>
+                <viewController id="eOe-iF-TPb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4eq-oH-nZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-NA-jk8">
+                                <rect key="frame" x="28" y="93" width="318" height="46.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-zt-kLI">
+                                <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="581.33333333333326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Simple Interest: P•r•t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l•h Area - Rectangle: l•h Area - Parallelogram: l•h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π•r^2  Volume - Cube: B•h Volume - Cone: 1/3 B•h Volume - Cylinder: B•h Volume - Sphere: 4/3 π•r^3  SA - Cube: P*h + 2•B SA - R Prism: P•h + 2•B SA - Cylinder: 2π•r•h + 2π•r^2 SA - Triangular Prism: P•h + 2•B  LA - Cube: P•h LA - Cylinder: 2π•r•h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  feet-meter: f/3.28 meter-feet: m•3.28 mile-kilometer: mi•1.61 kilometer-mile: ki•0.6214 Gallon-Liter: G•3.785412 Liter-Gallon: L/3.785412 Fraction-Decicimal: numer/denom </string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OLz-NA-jk8" firstAttribute="top" secondItem="msM-ZJ-AMg" secondAttribute="top" constant="5" id="4La-JN-4iH"/>
+                            <constraint firstItem="eqf-zt-kLI" firstAttribute="leading" secondItem="msM-ZJ-AMg" secondAttribute="leading" id="7aL-ZU-w31"/>
+                            <constraint firstItem="OLz-NA-jk8" firstAttribute="top" secondItem="msM-ZJ-AMg" secondAttribute="top" constant="5" id="DCh-Rk-2kU"/>
+                            <constraint firstItem="OLz-NA-jk8" firstAttribute="leading" secondItem="msM-ZJ-AMg" secondAttribute="leading" constant="28" id="aXY-99-LyQ"/>
+                            <constraint firstItem="msM-ZJ-AMg" firstAttribute="trailing" secondItem="OLz-NA-jk8" secondAttribute="trailing" constant="29" id="hHH-l4-sIN"/>
+                            <constraint firstItem="eqf-zt-kLI" firstAttribute="top" secondItem="OLz-NA-jk8" secondAttribute="bottom" constant="8" id="mkD-y6-Vtq"/>
+                            <constraint firstItem="eqf-zt-kLI" firstAttribute="trailing" secondItem="msM-ZJ-AMg" secondAttribute="trailing" id="nj3-Ud-tx2"/>
+                            <constraint firstItem="eqf-zt-kLI" firstAttribute="bottom" secondItem="msM-ZJ-AMg" secondAttribute="bottom" id="rGN-xG-FhH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="msM-ZJ-AMg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Formulas" image="order" landscapeImage="order" largeContentSizeImage="order" selectedImage="order" id="4OH-B5-VDg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVp-dc-t9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2926" y="1554"/>
         </scene>
     </scenes>
     <resources>
@@ -1527,6 +1584,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VgC-Zx-7sP"/>
-        <segue reference="41Q-db-krS"/>
+        <segue reference="vtr-pI-gs3"/>
     </inferredMetricsTieBreakers>
 </document>

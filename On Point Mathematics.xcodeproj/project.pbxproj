@@ -14,6 +14,7 @@
 		D1DFE3F022E6745E00F5E7B5 /* ArrayForCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */; };
 		D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */; };
 		D1DFE3F422E82FFF00F5E7B5 /* ResultsAndCalcPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */; };
+		D1E4B00622EE594C0008C8C3 /* ExtraCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4B00522EE594C0008C8C3 /* ExtraCode.swift */; };
 		DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */; };
 		DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC597029200AA2D900CAAC64 /* investmentSelect.swift */; };
 		DC745D832010DCE100AFA43B /* geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC745D822010DCE100AFA43B /* geometry.swift */; };
@@ -52,6 +53,7 @@
 		D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForCalculations.swift; sourceTree = "<group>"; };
 		D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsAndCalcPage.swift; sourceTree = "<group>"; };
+		D1E4B00522EE594C0008C8C3 /* ExtraCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraCode.swift; sourceTree = "<group>"; };
 		DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCalc.swift; sourceTree = "<group>"; };
 		DC597029200AA2D900CAAC64 /* investmentSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = investmentSelect.swift; sourceTree = "<group>"; };
 		DC745D822010DCE100AFA43B /* geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geometry.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */,
 				D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */,
 				D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */,
+				D1E4B00522EE594C0008C8C3 /* ExtraCode.swift */,
 			);
 			path = "New Style";
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */,
 				D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */,
 				DCA34B282008443B00F6A1C7 /* AppDelegate.swift in Sources */,
+				D1E4B00622EE594C0008C8C3 /* ExtraCode.swift in Sources */,
 				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
 				DCF2518E204653F500559E64 /* TabColors.swift in Sources */,
 				D199367022D6C9CD00CA29CD /* NewCalcViewController.swift in Sources */,

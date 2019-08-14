@@ -8,8 +8,8 @@
 
 import UIKit
 import Foundation
-
 @IBDesignable
+
 class UltimateButton: UIButton {
     
     var ButtonColor: UIColor = UIColor.blue
@@ -60,6 +60,7 @@ class UltimateButton: UIButton {
         layer.cornerRadius = frame.height/2
         layer.borderColor = isEnabled ? tintColor.cgColor : UIColor.lightGray.cgColor
     }
+    
     
     
     
