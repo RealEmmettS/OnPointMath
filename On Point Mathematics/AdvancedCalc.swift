@@ -20,8 +20,20 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         denom.delegate = self
         text4.delegate = self
 
-        // Do any additional setup after loading the view.
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
+    }
+    
+    
+    
+    
     //Picker View
     @IBOutlet weak var Picker: UIPickerView!
     

@@ -19,6 +19,16 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         time.delegate = self
         
         interest.text = ""
+        
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
     }
     
     //Picker View

@@ -13,8 +13,20 @@ class calcViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
+    }
+    
+    
+    
+    
     //MARK: Initialization Variables
     var numberOnScreen:Double = 0;
     var prevNumber:Double = 0;

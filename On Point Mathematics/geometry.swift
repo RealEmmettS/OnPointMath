@@ -35,8 +35,20 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
         text3.placeholder = "Width"
         radius.placeholder = "Radius"
         
-        
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if EasyModeEnabled == true{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
+    }
+    
+    
+    
+    
     //Picker Options
     let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","Triangular Prism","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
     
