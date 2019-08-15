@@ -20,13 +20,13 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         denom.delegate = self
         text4.delegate = self
 
-        if EasyModeEnabled == true{
+        if UnivCheckEasyModeState() == 1{
             performSegue(withIdentifier: "EasyMode", sender: self)
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if EasyModeEnabled == true{
+        if UnivCheckEasyModeState() == 1{
             performSegue(withIdentifier: "EasyMode", sender: self)
         }
     }
