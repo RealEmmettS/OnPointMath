@@ -278,6 +278,10 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         let p = Double(self.p());
         notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
         
+        text1.placeholder = "Principle (Base Investment)"
+        text2.placeholder = "Rate"
+        text3.placeholder = "Time (In Years)"
+        
         let re = r/100
         let accountBalanceprt1 = Double(1+re);
         let accountBalanceprt2 = pow(accountBalanceprt1, t);
@@ -292,6 +296,10 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         let t = Double(self.t());
         let p = Double(self.p());
         notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Principle (Base Investment)"
+        text2.placeholder = "Rate"
+        text3.placeholder = "Time (In Years)"
         
         let re = r/100
         

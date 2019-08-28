@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		24D9D13322A4C457007701DF /* UltimateButtonProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D9D13222A4C457007701DF /* UltimateButtonProject.swift */; };
 		A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CE4B3220818728000C93C4 /* calcViewController.swift */; };
-		D199367022D6C9CD00CA29CD /* NewCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */; };
+		D16F4A012304C12500856CFE /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F4A002304C12500856CFE /* SettingsPage.swift */; };
+		D16F4A032304C39100856CFE /* FormulaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16F4A022304C39100856CFE /* FormulaPage.swift */; };
 		D1DFE3EE22E6738500F5E7B5 /* NewCalculationSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */; };
 		D1DFE3F022E6745E00F5E7B5 /* ArrayForCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */; };
 		D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */; };
@@ -48,7 +49,8 @@
 /* Begin PBXFileReference section */
 		24D9D13222A4C457007701DF /* UltimateButtonProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateButtonProject.swift; sourceTree = "<group>"; };
 		A0CE4B3220818728000C93C4 /* calcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcViewController.swift; sourceTree = "<group>"; };
-		D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalcViewController.swift; sourceTree = "<group>"; };
+		D16F4A002304C12500856CFE /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		D16F4A022304C39100856CFE /* FormulaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaPage.swift; sourceTree = "<group>"; };
 		D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalculationSelector.swift; sourceTree = "<group>"; };
 		D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForCalculations.swift; sourceTree = "<group>"; };
 		D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -101,12 +103,12 @@
 		D1DFE3EC22E6734800F5E7B5 /* New Style */ = {
 			isa = PBXGroup;
 			children = (
-				D199366F22D6C9CD00CA29CD /* NewCalcViewController.swift */,
 				D1DFE3EF22E6745E00F5E7B5 /* ArrayForCalculations.swift */,
 				D1DFE3ED22E6738500F5E7B5 /* NewCalculationSelector.swift */,
 				D1DFE3F122E82D6C00F5E7B5 /* SearchViewController.swift */,
 				D1DFE3F322E82FFF00F5E7B5 /* ResultsAndCalcPage.swift */,
 				D1E4B00522EE594C0008C8C3 /* ExtraCode.swift */,
+				D16F4A002304C12500856CFE /* SettingsPage.swift */,
 			);
 			path = "New Style";
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 				DC745D822010DCE100AFA43B /* geometry.swift */,
 				DC12F0A3202347B0003FDFDC /* AdvancedCalc.swift */,
 				A0CE4B3220818728000C93C4 /* calcViewController.swift */,
+				D16F4A022304C39100856CFE /* FormulaPage.swift */,
 				DC790E212009716800740B38 /* RoundedButton.swift */,
 				D1DFE3EC22E6734800F5E7B5 /* New Style */,
 				24D9D13222A4C457007701DF /* UltimateButtonProject.swift */,
@@ -309,8 +312,10 @@
 				DC59702A200AA2D900CAAC64 /* investmentSelect.swift in Sources */,
 				DC745D832010DCE100AFA43B /* geometry.swift in Sources */,
 				D1DFE3F022E6745E00F5E7B5 /* ArrayForCalculations.swift in Sources */,
+				D16F4A032304C39100856CFE /* FormulaPage.swift in Sources */,
 				DC790E222009716800740B38 /* RoundedButton.swift in Sources */,
 				D1DFE3EE22E6738500F5E7B5 /* NewCalculationSelector.swift in Sources */,
+				D16F4A012304C12500856CFE /* SettingsPage.swift in Sources */,
 				D1DFE3F422E82FFF00F5E7B5 /* ResultsAndCalcPage.swift in Sources */,
 				A0CE4B3320818728000C93C4 /* calcViewController.swift in Sources */,
 				D1DFE3F222E82D6C00F5E7B5 /* SearchViewController.swift in Sources */,
@@ -318,7 +323,6 @@
 				D1E4B00622EE594C0008C8C3 /* ExtraCode.swift in Sources */,
 				DC12F0A4202347B0003FDFDC /* AdvancedCalc.swift in Sources */,
 				DCF2518E204653F500559E64 /* TabColors.swift in Sources */,
-				D199367022D6C9CD00CA29CD /* NewCalcViewController.swift in Sources */,
 				24D9D13322A4C457007701DF /* UltimateButtonProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,7 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9D5379H93;
 				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M9D5379H93;
 				INFOPLIST_FILE = "On Point Mathematics/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onpointech.On-Point-Mathematics";
 				PRODUCT_NAME = "$(TARGET_NAME)";

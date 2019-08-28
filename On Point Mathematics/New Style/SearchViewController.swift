@@ -16,11 +16,25 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         SearchBar.delegate = self
         SearchBar.returnKeyType = UIReturnKeyType.done
+        
+        if UnivCheckEasyModeState() == 0{
+            performSegue(withIdentifier: "EasyModeOff", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UnivCheckEasyModeState() == 0{
+            performSegue(withIdentifier: "EasyModeOff", sender: self)
+        }
+    }
+    
+    
+    
+    
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var isSearching = false
-    var searchCalc = [String?]()
+    var searchCalc = [Headline]()
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,33 +48,32 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
-        
-        if isSearching == true{
-            cell.textLabel?.text = searchCalc[indexPath.row]
-            cell.detailTextLabel?.text = ""
-        } else if isSearching == false || SearchBar.text == ""{
-            cell.textLabel?.text = allItems[indexPath.row].title
-            cell.detailTextLabel?.text = allItems[indexPath.row].group
+       
+        let items: Headline
+        if isSearching {
+            items = searchCalc[indexPath.row]
+        } else {
+            items = allItems[indexPath.row]
         }
+        cell.textLabel!.text = items.title
+        cell.detailTextLabel!.text = items.group
         return cell
     }
     
+    
+    
+    
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //searchCalc = allItems.filter({$0.title.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchCalc = allItems.filter({( item : Headline) -> Bool in
+            return item.title.lowercased().contains(searchText.lowercased())
+        })
         
-            searchCalc = [String]()
-            let matches = allItems.filter({$0.title.lowercased().prefix(searchText.count) == searchText.lowercased()})
-            for match in matches{
-                searchCalc.append(match.title)
-            }
-//        //SubMatches allow the user to search for the subtitles of items (the section group for items)
-        
-//        let SubMatches = allItems.filter({$0.group.lowercased().prefix(searchText.count) == searchText.lowercased()})
-//        for SMatch in SubMatches{
-//            searchCalc.append(SMatch.group)
-//        }
         if searchBar.text == ""{
             isSearching = false
         }else if searchBar.text != ""{
@@ -72,14 +85,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         isSearching = false
         searchBar.text = ""
+        self.view.endEditing(true)
         tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectedCalcID = allItems[indexPath.row].id
-        selectedCalcName = allItems[indexPath.row].title
+        if isSearching{
+            selectedCalcName = searchCalc[indexPath.row].title
+            selectedCalcID = searchCalc[indexPath.row].id
+            performSegue(withIdentifier: "ResultsSegue", sender: self)
+        }else{
+            selectedCalcName = allItems[indexPath.row].title
+            selectedCalcID = allItems[indexPath.row].id
+            performSegue(withIdentifier: "ResultsSegue", sender: self)
+        }
+       
     }
     
-}
 
+
+}

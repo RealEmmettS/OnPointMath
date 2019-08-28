@@ -19,9 +19,85 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         text3.delegate = self
         denom.delegate = self
         text4.delegate = self
+        ResetFields()
 
-        // Do any additional setup after loading the view.
+        if UnivCheckEasyModeState() == 1{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UnivCheckEasyModeState() == 1{
+            performSegue(withIdentifier: "EasyMode", sender: self)
+        }
+    }
+    
+    
+    func notUsedTextFields(first: Int, second: Int, third: Int, fourth: Int, fifth: Int){
+        if first == 1{
+            text1.isEnabled = true
+            text1.isHidden = true
+            print("Hide 1")
+        } else if first == 0{
+            text1.isEnabled = true
+            text1.isHidden = false
+            print("Show 1")
+        }
+        
+        if second == 1{
+            text2.isEnabled = true
+            text2.isHidden = true
+            print("Hide 2")
+        }else if second == 0{
+            text2.isEnabled = true
+            text2.isHidden = false
+            print("Show 2")
+        }
+        
+        if third == 1{
+            text3.isEnabled = true
+            text3.isHidden = true
+            print("Hide 3")
+        } else if third == 0{
+            text3.isEnabled = true
+            text3.isHidden = false
+            print("Show 3")
+        }
+        
+        if fourth == 1{
+            denom.isEnabled = true
+            denom.isHidden = true
+            print("Hide 4")
+        }else if fourth == 0{
+            denom.isEnabled = true
+            denom.isHidden = false
+            print("Show 4")
+        }
+        
+        if fifth == 1{
+            text4.isEnabled = true
+            text4.isHidden = true
+        }else if fifth == 0{
+            text4.isEnabled = true
+            text4.isHidden = false
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //Picker View
     @IBOutlet weak var Picker: UIPickerView!
     
@@ -185,17 +261,19 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 
     //MARK: Functions
     func ResetFields() {
-        text1.backgroundColor = UIColor.white
-        text2.backgroundColor = UIColor.white
-        text3.backgroundColor = UIColor.white
-        denom.backgroundColor = UIColor.white
-        text4.backgroundColor = UIColor.white
-        
+       
         text1.text = ""
+        text1.placeholder = "Input Will Go Here"
         text2.text = ""
+        text2.placeholder = "Input Will Go Here"
         text3.text = ""
+        text3.placeholder = "Input Will Go Here"
         denom.text = ""
+        denom.placeholder = "Input Will Go Here"
         text4.text = ""
+        text4.placeholder = "Input Will Go Here"
+        
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 0, fifth: 0)
         
         answer.text = "Please Select a\nCalculation"
     }
@@ -208,25 +286,17 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
     }
     
-    func t4(){
+    func t1(){
 //        text1.backgroundColor = UIColor.darkGray
 //        text2.backgroundColor = UIColor.darkGray
 //        text3.backgroundColor = UIColor.darkGray
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
     }
     
     
@@ -314,19 +384,15 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = ""
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
         
-        text2.placeholder = "Time (s)"
-        text3.placeholder = "Initial Velocity"
-        text4.placeholder = "Final Velocity"
+        text1.placeholder = "Time (s)"
+        text2.placeholder = "Initial Velocity"
+        text3.placeholder = "Final Velocity"
         
-        var vf = Float(text4.text!);
-        var vi = Float(text3.text!);
-        var t = Float(text2.text!);
+        var vf = Float(text3.text!);
+        var vi = Float(text2.text!);
+        var t = Float(text1.text!);
         
         if vf == nil{
             vf = 0
@@ -353,15 +419,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Feet"
+        text1.placeholder = "Feet"
         
-        var f = Float(text4.text!);
+        var f = Float(text1.text!);
         if f==nil {
             f = 0
         }
@@ -376,15 +438,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Meters"
+        text1.placeholder = "Meters"
         
-        var m = Float(text4.text!);
+        var m = Float(text1.text!);
         if m==nil{
             m = 0
         }
@@ -393,11 +451,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func mk() {
         //Mile to Kilometer
-        t4()
+        t1()
         
-        text4.placeholder = "Miles"
+        text1.placeholder = "Miles"
         
-        var mile = Float(text4.text!);
+        var mile = Float(text1.text!);
         if mile==nil {
             mile = 0
         }
@@ -406,11 +464,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func km() {
         //Kilometer to Mile
-        t4()
+        t1()
         
-        text4.placeholder = "Kilometer"
+        text1.placeholder = "Kilometer"
         
-        var kilom = Float(text4.text!);
+        var kilom = Float(text1.text!);
         if kilom==nil {
             kilom = 0
         }
@@ -419,11 +477,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func gl() {
         //Gallon to Liter
-        t4()
+        t1()
         
-        text4.placeholder = "Gallons"
+        text1.placeholder = "Gallons"
         
-        var gallon = Float(text4.text!);
+        var gallon = Float(text1.text!);
         if gallon==nil {
             gallon = 0
         }
@@ -432,11 +490,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
     
     func lg() {
         //Liter to Gallon
-        t4()
+        t1()
         
-        text4.placeholder = "Liters"
+        text1.placeholder = "Liters"
         
-        var liter = Float(text4.text!);
+        var liter = Float(text1.text!);
         if liter==nil {
             liter = 0
         }
@@ -451,16 +509,13 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.white
 //        text4.backgroundColor = UIColor.darkGray
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = ""
-        denom.text = ""
-        text4.text = "DO NOT FILL IN"
+        t1t2()
         
-        text3.placeholder = "Numerator"
+        text1.placeholder = "Numerator"
+        text2.placeholder = "Denominator"
         
-        var numerator = Float(text3.text!);
-        var denomerator = Float(denom.text!);
+        var numerator = Float(text1.text!);
+        var denomerator = Float(text2.text!);
         if numerator==nil {
             numerator = 0
         }
@@ -477,15 +532,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Number"
+        text1.placeholder = "Number"
         
-        var number = Double(text4.text!)
+        var number = Double(text1.text!)
         if number == nil {
             number = 0
         }
@@ -501,15 +552,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Feet"
+        text1.placeholder = "Feet"
         
-        var feet = Double(text4.text!)
+        var feet = Double(text1.text!)
         if feet == nil{
             feet = 0
         }
@@ -527,15 +574,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Inches"
+        text1.placeholder = "Inches"
         
-        var inches = Double(text4.text!)
+        var inches = Double(text1.text!)
         if inches == nil{
             inches = 0
         }
@@ -553,15 +596,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Fahrenheit"
+        text1.placeholder = "Fahrenheit"
         
-        var frnheit = Double(text4.text!)
+        var frnheit = Double(text1.text!)
         if frnheit == nil{
             frnheit = 0
         }
@@ -578,15 +617,11 @@ class AdvancedCalc: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
 //        denom.backgroundColor = UIColor.darkGray
 //        text4.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        denom.text = "DO NOT FILL IN"
-        text4.text = ""
+        t1()
         
-        text4.placeholder = "Celsius"
+        text1.placeholder = "Celsius"
         
-        var celsius = Double(text4.text!)
+        var celsius = Double(text1.text!)
         if celsius == nil{
             celsius = 0
         }

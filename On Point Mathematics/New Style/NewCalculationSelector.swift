@@ -14,7 +14,20 @@ class NewCalculationSelector: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UnivCheckEasyModeState() == 0{
+            performSegue(withIdentifier: "EasyModeOff", sender: self)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UnivCheckEasyModeState() == 0{
+            performSegue(withIdentifier: "EasyModeOff", sender: self)
+        }
+    }
+
+    
+    
+    
 
     // MARK: - Table view data source
     
