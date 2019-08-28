@@ -90,3 +90,4 @@ func UnivCheckEasyModeState() -> Int{
         return 0
     }
 }
+

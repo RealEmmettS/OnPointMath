@@ -32,8 +32,7 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
         text3.delegate = self
         radius.delegate = self
         
-        text3.placeholder = "Width"
-        radius.placeholder = "Radius"
+        ResetFields()
         
         if UnivCheckEasyModeState() == 1{
             performSegue(withIdentifier: "EasyMode", sender: self)
@@ -48,6 +47,66 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
     
     
     
+    func notUsedTextFields(first: Int, second: Int, third: Int, fourth: Int){
+        if first == 1{
+            text1.isEnabled = true
+            text1.isHidden = true
+            print("Hide 1")
+        } else if first == 0{
+            text1.isEnabled = true
+            text1.isHidden = false
+            print("Show 1")
+        }
+        
+        if second == 1{
+            text2.isEnabled = true
+            text2.isHidden = true
+            print("Hide 2")
+       }else if second == 0{
+            text2.isEnabled = true
+            text2.isHidden = false
+            print("Show 2")
+        }
+        
+        if third == 1{
+            text3.isEnabled = true
+            text3.isHidden = true
+            print("Hide 3")
+        } else if third == 0{
+            text3.isEnabled = true
+            text3.isHidden = false
+            print("Show 3")
+        }
+        
+        if fourth == 1{
+            radius.isEnabled = true
+            radius.isHidden = true
+            print("Hide 4")
+        }else if fourth == 0{
+            radius.isEnabled = true
+            radius.isHidden = false
+            print("Show 4")
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //Picker Options
     let options = ["--Area--","Triangle","Rectangle","Parallelogram","Circle","--Volume--","Cube","Cone","Cylinder","Sphere","--Surface Area--","Cube","Rectangular Prism","Cylinder","Triangular Prism","--Lateral Surface Area--","Rectangular Prism","Cylinder"];
@@ -56,8 +115,6 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
     
     
     
@@ -206,13 +263,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.darkGray
         
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
-        
-        text2.placeholder = "Base"
+        text1.placeholder = "Base"
+        text2.placeholder = "Height"
         
         var b = Float(text1.text!);
         var h = Float(text2.text!);
@@ -232,15 +286,13 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.white
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = "DO NOT FILL IN"
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        text3.placeholder = "Width"
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         
         var l = Float(text1.text!);
-        var w = Float(text3.text!);
+        var w = Float(text2.text!);
         if l == nil{
             l = 0
         }
@@ -257,10 +309,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
+        
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         
         var l = Float(text1.text!);
         var h = Float(text2.text!);
@@ -280,14 +332,11 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Radius"
         
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         if r == nil{
             r = 0
         }
@@ -302,11 +351,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.white
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+       notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1)
         
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         var l = Float(text1.text!);
@@ -333,15 +381,13 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Height"
+        text2.placeholder = "Radius"
         
-        var h = Float(text2.text!);
-        var r = Float(radius.text!);
+        var h = Float(text1.text!);
+        var r = Float(text2.text!);
         if h == nil{
             h = 0
         }
@@ -360,15 +406,13 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Height"
+        text2.placeholder = "Radius"
         
-        var h = Float(text2.text!);
-        var r = Float(radius.text!);
+        var h = Float(text1.text!);
+        var r = Float(text2.text!);
         if h == nil{
             h = 0
         }
@@ -388,14 +432,11 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = "DO NOT FILL IN"
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Radius"
         
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         if r == nil{
             r = 0
         }
@@ -414,10 +455,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
+        
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         
         var l = Float(text1.text!);
         var h = Float(text2.text!);
@@ -451,11 +492,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.white
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1)
         
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         var l = Float(text1.text!);
@@ -493,14 +533,12 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Radius"
+        text2.placeholder = "Height"
         
-        var r = Double(radius.text!);
+        var r = Double(text1.text!);
         var h = Double(text2.text!);
         
         if r == nil{
@@ -533,11 +571,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.white
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1)
         
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         
@@ -576,11 +613,10 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.white
 //        radius.backgroundColor = UIColor.darkGray
         
-        text1.text = ""
-        text2.text = ""
-        text3.text = ""
-        radius.text = "DO NOT FILL IN"
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1)
         
+        text1.placeholder = "Length"
+        text2.placeholder = "Height"
         text3.placeholder = "Width"
         
         var l = Float(text1.text!);
@@ -615,14 +651,12 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.white
         
-        text1.text = "DO NOT FILL IN"
-        text2.text = ""
-        text3.text = "DO NOT FILL IN"
-        radius.text = ""
+        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1)
         
-        radius.placeholder = "Radius"
+        text1.placeholder = "Radius"
+        text2.placeholder = "Height"
         
-        var r = Float(radius.text!);
+        var r = Float(text1.text!);
         var h = Float(text2.text!);
         
         if r == nil{
@@ -646,11 +680,17 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
 //        text2.backgroundColor = UIColor.darkGray
 //        text3.backgroundColor = UIColor.darkGray
 //        radius.backgroundColor = UIColor.darkGray
-
+        
+        notUsedTextFields(first: 0, second: 0, third: 0, fourth: 0)
+        
         text1.text = ""
+        text1.placeholder = "Input Will Go Here"
         text2.text = ""
+        text2.placeholder = "Input Will Go Here"
         text3.text = ""
+        text3.placeholder = "Input Will Go Here"
         radius.text = ""
+        radius.placeholder = "Input Will Go Here"
         
         answer_label.text = "Please Select a\nCalculation"
     }
