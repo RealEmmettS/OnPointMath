@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3z7-bP-k5e">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3z7-bP-k5e">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +41,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HbK-2N-wdA"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
@@ -52,7 +50,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Oc8-vQ-Rri"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
@@ -62,7 +59,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XaI-lv-WaL"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
@@ -72,7 +68,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bQh-9T-3ZJ"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
@@ -84,7 +79,7 @@
                                 </constraints>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EtK-4A-elZ" firstAttribute="leading" secondItem="UVd-1X-839" secondAttribute="leading" constant="16" id="Coj-yc-XX5"/>
                             <constraint firstItem="XIv-Oi-ldG" firstAttribute="top" secondItem="OzP-ls-GDA" secondAttribute="bottom" constant="8" id="CqJ-Sg-cXx"/>
@@ -121,7 +116,7 @@
                         <outlet property="text1" destination="OzP-ls-GDA" id="hd3-Up-SVf"/>
                         <outlet property="text2" destination="XIv-Oi-ldG" id="Zzc-3T-1F1"/>
                         <outlet property="text3" destination="aYI-Ue-Sd1" id="ssF-Qh-ayH"/>
-                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="0FS-hv-aa8"/>
+                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="0FS-hv-aa8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caQ-yK-W5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,9 +162,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dft-19-GKu">
-                                <rect key="frame" x="16" y="493" width="343" height="30"/>
+                                <rect key="frame" x="16" y="493" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
@@ -187,21 +181,19 @@
                                 </constraints>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-8v-4eL">
-                                <rect key="frame" x="16" y="531" width="343" height="30"/>
+                                <rect key="frame" x="16" y="535" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-Yg-KH0">
-                                <rect key="frame" x="16" y="569" width="343" height="30"/>
+                                <rect key="frame" x="16" y="577" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="V7R-qd-X8C" firstAttribute="trailing" secondItem="hXM-Yg-KH0" secondAttribute="trailing" constant="16" id="5Cn-t7-utg"/>
                             <constraint firstItem="qi5-rq-X0U" firstAttribute="leading" secondItem="V7R-qd-X8C" secondAttribute="leading" constant="16" id="Alu-3N-KUo"/>
@@ -242,7 +234,7 @@
                         <outlet property="text2" destination="q40-gb-qyE" id="iiJ-qB-dio"/>
                         <outlet property="text3" destination="Dft-19-GKu" id="HTh-E8-Uhz"/>
                         <outlet property="text4" destination="hXM-Yg-KH0" id="OGS-mq-icF"/>
-                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="M0y-OA-44I"/>
+                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="M0y-OA-44I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rt-dR-YdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,7 +251,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ch9-9t-1fi">
                                 <rect key="frame" x="0.0" y="143" width="375" height="131"/>
-                                <color key="backgroundColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="OPT Blue Main Items"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="ZlW-l9-Tdf"/>
@@ -276,7 +268,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" title="x">
-                                            <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="OPT Blue Main Items"/>
                                         </state>
                                         <connections>
                                             <action selector="Buttons:" destination="NYs-ib-ZOK" eventType="touchUpInside" id="mqc-f4-HfX"/>
@@ -287,7 +279,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" title="÷">
-                                            <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="OPT Blue Main Items"/>
                                         </state>
                                         <connections>
                                             <action selector="Buttons:" destination="NYs-ib-ZOK" eventType="touchUpInside" id="o5Y-48-Hgf"/>
@@ -298,7 +290,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" title="+">
-                                            <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="OPT Blue Main Items"/>
                                         </state>
                                         <connections>
                                             <action selector="Buttons:" destination="NYs-ib-ZOK" eventType="touchUpInside" id="VBG-cy-cMg"/>
@@ -309,7 +301,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" title="-">
-                                            <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="OPT Blue Main Items"/>
                                         </state>
                                         <connections>
                                             <action selector="Buttons:" destination="NYs-ib-ZOK" eventType="touchUpInside" id="zG6-Kb-KCb"/>
@@ -320,7 +312,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="5"/>
                                         <state key="normal" title="=">
-                                            <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="OPT Blue Main Items"/>
                                         </state>
                                         <connections>
                                             <action selector="Buttons:" destination="NYs-ib-ZOK" eventType="touchUpInside" id="g4i-Qj-cBr"/>
@@ -338,7 +330,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="59.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="7">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="ButtonType">
@@ -363,10 +355,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-Mh-34G">
-                                                <rect key="frame" x="0.0" y="109.66666666666669" width="43" height="59.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="109.66666666666667" width="43" height="59.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="4">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -390,7 +382,7 @@
                                                 <rect key="frame" x="0.0" y="219" width="43" height="59.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="1">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -414,7 +406,7 @@
                                                 <rect key="frame" x="0.0" y="328.66666666666663" width="43" height="59.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="0">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -437,7 +429,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="59.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="8">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -458,10 +450,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpm-zV-8dv">
-                                                <rect key="frame" x="0.0" y="109.66666666666669" width="43" height="59.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="109.66666666666667" width="43" height="59.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="5">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -485,7 +477,7 @@
                                                 <rect key="frame" x="0.0" y="219" width="43" height="59.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="2">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -509,7 +501,7 @@
                                                 <rect key="frame" x="0.0" y="328.66666666666663" width="43" height="59.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title=".">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -532,7 +524,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="59.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="9">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -550,10 +542,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-aq-PtL">
-                                                <rect key="frame" x="0.0" y="109.66666666666669" width="43" height="59.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="109.66666666666667" width="43" height="59.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="6">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -577,7 +569,7 @@
                                                 <rect key="frame" x="0.0" y="219" width="43" height="59.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="3">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -601,7 +593,7 @@
                                                 <rect key="frame" x="0.0" y="328.66666666666663" width="43" height="59.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="61"/>
                                                 <state key="normal" title="C">
-                                                    <color key="titleColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" name="OPT Blue Main Items"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="MainColor">
@@ -636,7 +628,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ch9-9t-1fi" firstAttribute="trailing" secondItem="592-HJ-dfG" secondAttribute="trailing" id="1K7-av-BbZ"/>
                             <constraint firstItem="ch9-9t-1fi" firstAttribute="leading" secondItem="592-HJ-dfG" secondAttribute="leading" id="3do-C2-BPA"/>
@@ -654,7 +646,7 @@
                     <tabBarItem key="tabBarItem" title="Calculator" image="calculator" landscapeImage="calculator" largeContentSizeImage="calculator" selectedImage="calculator" id="E1v-tP-1Ap"/>
                     <connections>
                         <outlet property="label" destination="ch9-9t-1fi" id="E3B-t7-cJ0"/>
-                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="HBS-61-l3w"/>
+                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="HBS-61-l3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG9-Dh-kL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -677,13 +669,14 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-Ce-rV3">
                                 <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="581.33333333333326"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Simple Interest: P•r•t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l•h Area - Rectangle: l•h Area - Parallelogram: l•h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π•r^2  Volume - Cube: B•h Volume - Cone: 1/3 B•h Volume - Cylinder: B•h Volume - Sphere: 4/3 π•r^3  SA - Cube: P*h + 2•B SA - R Prism: P•h + 2•B SA - Cylinder: 2π•r•h + 2π•r^2 SA - Triangular Prism: P•h + 2•B  LA - Cube: P•h LA - Cylinder: 2π•r•h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  feet-meter: f/3.28 meter-feet: m•3.28 mile-kilometer: mi•1.61 kilometer-mile: ki•0.6214 Gallon-Liter: G•3.785412 Liter-Gallon: L/3.785412 Fraction-Decicimal: numer/denom </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xcs-lJ-jt7" firstAttribute="leading" secondItem="wa3-Gb-4qO" secondAttribute="leading" constant="28" id="8Oy-8t-zEB"/>
                             <constraint firstItem="1ly-Ce-rV3" firstAttribute="bottom" secondItem="wa3-Gb-4qO" secondAttribute="bottom" id="Ei2-Mt-HcT"/>
@@ -698,7 +691,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Formulas" image="order" landscapeImage="order" largeContentSizeImage="order" selectedImage="order" id="BR0-8y-YNP"/>
                     <connections>
-                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="obx-5e-zXb"/>
+                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="obx-5e-zXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-aS-fVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,7 +713,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-3a-cKn">
-                                <rect key="frame" x="16" y="188.66666666666666" width="124" height="46"/>
+                                <rect key="frame" x="16" y="189" width="124" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="kZK-qS-son"/>
                                     <constraint firstAttribute="width" constant="124" id="ufb-Oc-LEY"/>
@@ -730,7 +723,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tJa-Ur-vVa">
-                                <rect key="frame" x="146" y="196.66666666666666" width="49" height="31"/>
+                                <rect key="frame" x="146" y="197" width="49" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="lMF-ZB-n2T"/>
                                     <constraint firstAttribute="height" constant="31" id="wNL-Oy-7mF"/>
@@ -740,7 +733,7 @@
                                 </connections>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kzr-zO-0c2" firstAttribute="leading" secondItem="UGi-ta-ymv" secondAttribute="leading" constant="16" id="2l7-ZW-fC8"/>
                             <constraint firstItem="Kzr-zO-0c2" firstAttribute="top" secondItem="UGi-ta-ymv" secondAttribute="top" constant="35" id="936-6c-MTS"/>
@@ -752,6 +745,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UGi-ta-ymv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zMv-6X-ix7"/>
                     <connections>
                         <outlet property="EasyLabelSwitch" destination="tJa-Ur-vVa" id="jgA-Au-PnX"/>
                     </connections>
@@ -770,18 +764,20 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-r9-aSw">
                                 <rect key="frame" x="0.0" y="160.99999999999997" width="375" height="350.33333333333326"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">On Point Tech was founded in 2017 as a technology support company. Our founder had an idea of the perfect tech support. You see, most tech support is swayed by whomever employs the support representitive.  On Point Tech aimed to give quality tech support to its customers, without the swayed judgement of a hardware company. Although On Point Tech has recently changed its main goal (as of late 2018), we still provide universal tech support which can be found at our website.  As mentioned, in late 2018, we decided to switch OPT's main objective, because of the 'suprisingly' low market for tech support, to software development.   This change so far has turned out to be a success thanks to you, and we really hope you enjoy using our products. -The OPT Team</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Tab Bar icons happily provided by Icons8 www.icons8.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NT3-AT-A7f">
                                 <rect key="frame" x="0.0" y="727" width="375" height="51"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="4c9-jt-bBE"/>
                                     <constraint firstAttribute="height" constant="51" id="lFi-zU-G59"/>
                                 </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -793,7 +789,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NT3-AT-A7f" firstAttribute="leading" secondItem="uyU-RA-Lta" secondAttribute="leading" id="2LI-9e-Sds"/>
                             <constraint firstItem="qGe-r9-aSw" firstAttribute="top" secondItem="uyU-RA-Lta" secondAttribute="top" constant="73" id="7Jj-Ax-edu"/>
@@ -809,6 +805,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uyU-RA-Lta"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qvY-qB-J2i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuA-qS-2Ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -890,7 +887,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zvP-ko-1ms" firstAttribute="trailing" secondItem="VMT-Ya-5hh" secondAttribute="trailing" id="2M9-2N-Njo"/>
                             <constraint firstItem="VMT-Ya-5hh" firstAttribute="trailing" secondItem="XX7-3b-Z6x" secondAttribute="trailing" constant="16" id="9Yi-ye-YdJ"/>
@@ -927,7 +924,7 @@
                         <outlet property="principle" destination="ztA-O0-dBK" id="1GM-jW-xXM"/>
                         <outlet property="rate" destination="kGO-6W-7eD" id="2Uq-Yb-Vdt"/>
                         <outlet property="time" destination="NgC-IV-SSq" id="8WZ-90-pNr"/>
-                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="vWG-Yt-Fem"/>
+                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="vWG-Yt-Fem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNw-SJ-cAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -938,6 +935,7 @@
         <scene sceneID="WBv-7f-iM7">
             <objects>
                 <navigationController id="VAb-SB-Adf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jwD-7q-0pc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bXZ-XG-xer">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -981,19 +979,20 @@
             <objects>
                 <tableViewController id="irS-zy-0ey" customClass="NewCalculationSelector" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g9O-iy-nhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LabelCell" textLabel="9I7-iE-vEn" rowHeight="75" style="IBUITableViewCellStyleDefault" id="J1b-zB-OE7">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J1b-zB-OE7" id="5r9-Gt-DkP">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="74.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9I7-iE-vEn">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="74.666666666666671"/>
+                                            <rect key="frame" x="16" y="0.0" width="323.66666666666669" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -1001,6 +1000,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -1010,9 +1010,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="qKL-Vq-gHd"/>
+                    <navigationItem key="navigationItem" id="ctL-e3-FBx"/>
                     <connections>
                         <segue destination="b6p-cv-6v9" kind="show" identifier="showResults" id="CNX-GR-cFh"/>
-                        <segue destination="3z7-bP-k5e" kind="show" identifier="EasyModeOff" animates="NO" id="hTG-wN-hdv"/>
+                        <segue destination="3z7-bP-k5e" kind="presentation" identifier="EasyModeOff" animates="NO" modalPresentationStyle="fullScreen" id="hTG-wN-hdv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYc-t4-T2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1024,11 +1025,12 @@
             <objects>
                 <viewController id="VJg-pf-45r" customClass="SearchViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsK-Af-Lbr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type out what your looking for" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-c6-HHo">
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="search"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -1039,14 +1041,15 @@
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-xw-ndH">
-                                <rect key="frame" x="0.0" y="144" width="375" height="536"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="585"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" textLabel="f3O-tb-Ogu" detailTextLabel="Uvp-Y2-hAu" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="2YS-RH-LTa">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2YS-RH-LTa" id="Gyt-pg-GGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348.66666666666669" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3O-tb-Ogu">
@@ -1086,7 +1089,7 @@
                         <outlet property="SearchBar" destination="Nu2-c6-HHo" id="9Dh-oH-h9W"/>
                         <outlet property="searchDisplayController" destination="lYO-aa-ibP" id="xb2-Mo-2Z4"/>
                         <outlet property="tableView" destination="Z9k-xw-ndH" id="zzT-M3-SkH"/>
-                        <segue destination="3z7-bP-k5e" kind="show" identifier="EasyModeOff" animates="NO" id="ISw-3w-RGX"/>
+                        <segue destination="3z7-bP-k5e" kind="presentation" identifier="EasyModeOff" animates="NO" modalPresentationStyle="fullScreen" id="ISw-3w-RGX"/>
                         <segue destination="b6p-cv-6v9" kind="show" identifier="ResultsSegue" id="Rly-E3-mSl"/>
                     </connections>
                 </viewController>
@@ -1107,21 +1110,14 @@
             <objects>
                 <viewController id="b6p-cv-6v9" customClass="ResultsAndCalcPage" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lde-WV-DFW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculations" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-RQ-vV7">
-                                <rect key="frame" x="16" y="103" width="343" height="65.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-xB-dKZ">
                                 <rect key="frame" x="16" y="237.33333333333334" width="343" height="30.000000000000028"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="g4u-LH-T9C"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <userDefinedRuntimeAttributes>
@@ -1133,7 +1129,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gDd-ms-mTw"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <userDefinedRuntimeAttributes>
@@ -1145,7 +1140,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LU4-pO-dUR"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <userDefinedRuntimeAttributes>
@@ -1157,7 +1151,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="U97-lY-lJU"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <userDefinedRuntimeAttributes>
@@ -1169,7 +1162,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HrO-zO-MJp"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="light"/>
                                 <userDefinedRuntimeAttributes>
@@ -1177,7 +1169,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saB-2O-rya">
-                                <rect key="frame" x="16" y="553" width="343" height="106"/>
+                                <rect key="frame" x="16" y="602" width="343" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="4qy-up-BOn"/>
                                 </constraints>
@@ -1186,21 +1178,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-pS-l8X">
-                                <rect key="frame" x="125" y="679" width="124" height="30"/>
+                                <rect key="frame" x="125" y="728" width="124" height="30"/>
                                 <state key="normal" title="Copy to Clipboard"/>
                                 <connections>
                                     <action selector="copyToClipboard:" destination="b6p-cv-6v9" eventType="touchUpInside" id="dXd-9t-C2N"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculations" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGI-RQ-vV7">
+                                <rect key="frame" x="16" y="104" width="343" height="65.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RpA-Xo-UAZ" firstAttribute="leading" secondItem="cQV-xB-dKZ" secondAttribute="leading" id="2Pc-2e-SMZ"/>
                             <constraint firstItem="RnI-pS-l8X" firstAttribute="leading" secondItem="8sA-Bj-bCr" secondAttribute="leading" constant="125" id="33t-BX-iNR"/>
                             <constraint firstItem="saB-2O-rya" firstAttribute="trailing" secondItem="RpA-Xo-UAZ" secondAttribute="trailing" id="40h-Jh-iqO"/>
                             <constraint firstItem="cQV-xB-dKZ" firstAttribute="leading" secondItem="8sA-Bj-bCr" secondAttribute="leading" constant="16" id="4hL-Gp-I8g"/>
-                            <constraint firstItem="cQV-xB-dKZ" firstAttribute="top" secondItem="YGI-RQ-vV7" secondAttribute="bottom" constant="68.666666666666686" id="5BZ-jA-OBc"/>
-                            <constraint firstItem="YGI-RQ-vV7" firstAttribute="top" secondItem="8sA-Bj-bCr" secondAttribute="top" constant="15" id="5TZ-9q-3FM"/>
+                            <constraint firstItem="cQV-xB-dKZ" firstAttribute="top" secondItem="YGI-RQ-vV7" secondAttribute="bottom" constant="67.666666666666657" id="5BZ-jA-OBc"/>
+                            <constraint firstItem="YGI-RQ-vV7" firstAttribute="top" secondItem="8sA-Bj-bCr" secondAttribute="top" constant="16" id="5TZ-9q-3FM"/>
                             <constraint firstItem="8sA-Bj-bCr" firstAttribute="bottom" secondItem="saB-2O-rya" secondAttribute="bottom" constant="70" id="6Co-ho-plp"/>
                             <constraint firstItem="CeC-f7-wYx" firstAttribute="trailing" secondItem="cQV-xB-dKZ" secondAttribute="trailing" id="9nE-60-QhJ"/>
                             <constraint firstItem="w4q-HM-WkV" firstAttribute="leading" secondItem="cQV-xB-dKZ" secondAttribute="leading" id="AyR-Ne-Bpx"/>
@@ -1259,6 +1257,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8sA-Bj-bCr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9tj-R0-bKS"/>
                     <connections>
                         <outlet property="answer" destination="saB-2O-rya" id="THG-VN-CFr"/>
                         <outlet property="answer_label" destination="saB-2O-rya" id="OCb-Zk-0jg"/>
@@ -1273,12 +1272,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YY-xn-03T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="2238.9162561576354"/>
+            <point key="canvasLocation" x="30" y="2228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SZq-Ai-kSd">
             <objects>
                 <navigationController id="3z7-bP-k5e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kq2-dq-a6v"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTu-34-mc2">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1299,7 +1299,7 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Info" style="plain" id="V7C-OF-eUV">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="lJc-Gm-ITW">
-                                    <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                    <rect key="frame" x="334.33333333333337" y="10" width="24.666666666666686" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <connections>
                                         <segue destination="InO-3V-H9S" kind="show" id="dfV-Og-6ji"/>
@@ -1316,8 +1316,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ApS-WE-rUA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.3006091118" green="0.66280484200000001" blue="0.97259002920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="OPT Blue Color"/>
+                        <color key="selectedImageTintColor" name="Tab Colors"/>
                     </tabBar>
                     <connections>
                         <segue destination="zGm-Ej-2D0" kind="relationship" relationship="viewControllers" id="PAd-KL-y9e"/>
@@ -1336,7 +1336,7 @@
             <objects>
                 <viewController id="eOe-iF-TPb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4eq-oH-nZd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-NA-jk8">
@@ -1346,14 +1346,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-zt-kLI">
-                                <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="532.33333333333326"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="581.33333333333326"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Simple Interest: P•r•t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l•h Area - Rectangle: l•h Area - Parallelogram: l•h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π•r^2  Volume - Cube: B•h Volume - Cone: 1/3 B•h Volume - Cylinder: B•h Volume - Sphere: 4/3 π•r^3  SA - Cube: P*h + 2•B SA - R Prism: P•h + 2•B SA - Cylinder: 2π•r•h + 2π•r^2 SA - Triangular Prism: P•h + 2•B  LA - Cube: P•h LA - Cylinder: 2π•r•h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  feet-meter: f/3.28 meter-feet: m•3.28 mile-kilometer: mi•1.61 kilometer-mile: ki•0.6214 Gallon-Liter: G•3.785412 Liter-Gallon: L/3.785412 Fraction-Decicimal: numer/denom </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OLz-NA-jk8" firstAttribute="top" secondItem="msM-ZJ-AMg" secondAttribute="top" constant="5" id="4La-JN-4iH"/>
                             <constraint firstItem="eqf-zt-kLI" firstAttribute="leading" secondItem="msM-ZJ-AMg" secondAttribute="leading" id="7aL-ZU-w31"/>
@@ -1380,12 +1381,21 @@
         <image name="genius" width="30" height="30"/>
         <image name="money_box" width="30" height="30"/>
         <image name="order" width="30" height="30"/>
+        <namedColor name="OPT Blue Color">
+            <color red="0.24755546288695693" green="0.34310430126040964" blue="0.47248284624763603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="OPT Blue Main Items">
+            <color red="0.14705882668495179" green="0.34117646813392638" blue="0.620588231086731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tab Colors">
+            <color red="7.4505805691682525e-10" green="7.4505805691682525e-10" blue="7.4505805691682525e-10" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ISw-3w-RGX"/>
-        <segue reference="Rly-E3-mSl"/>
-        <segue reference="VgC-Zx-7sP"/>
-        <segue reference="HBS-61-l3w"/>
+        <segue reference="hTG-wN-hdv"/>
+        <segue reference="CNX-GR-cFh"/>
+        <segue reference="bit-A0-nYy"/>
+        <segue reference="obx-5e-zXb"/>
         <segue reference="uRz-M9-nmm"/>
     </inferredMetricsTieBreakers>
 </document>
