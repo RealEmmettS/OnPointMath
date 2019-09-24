@@ -21,6 +21,7 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         interest.text = ""
         
         if UnivCheckEasyModeState() == 1{
+            //performSegue(withIdentifier: "EasyMode", sender: self)
             performSegue(withIdentifier: "EasyMode", sender: self)
         }
     }

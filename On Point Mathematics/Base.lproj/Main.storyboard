@@ -12,7 +12,7 @@
         <!--Geometry-->
         <scene sceneID="XEi-6s-tcq">
             <objects>
-                <viewController id="4Sb-6D-NGS" customClass="geometry" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="4Sb-6D-NGS" customClass="geometry" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0T5-1t-DmL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                         <outlet property="text1" destination="OzP-ls-GDA" id="hd3-Up-SVf"/>
                         <outlet property="text2" destination="XIv-Oi-ldG" id="Zzc-3T-1F1"/>
                         <outlet property="text3" destination="aYI-Ue-Sd1" id="ssF-Qh-ayH"/>
-                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="0FS-hv-aa8"/>
+                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="0FS-hv-aa8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caQ-yK-W5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +126,7 @@
         <!--Advanced-->
         <scene sceneID="Vib-w4-cuL">
             <objects>
-                <viewController id="r5P-us-geQ" customClass="AdvancedCalc" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="r5P-us-geQ" customClass="AdvancedCalc" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KbX-dE-djN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +234,7 @@
                         <outlet property="text2" destination="q40-gb-qyE" id="iiJ-qB-dio"/>
                         <outlet property="text3" destination="Dft-19-GKu" id="HTh-E8-Uhz"/>
                         <outlet property="text4" destination="hXM-Yg-KH0" id="OGS-mq-icF"/>
-                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="M0y-OA-44I"/>
+                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="M0y-OA-44I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rt-dR-YdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,7 +244,7 @@
         <!--Calculator-->
         <scene sceneID="x9D-Nk-Qn7">
             <objects>
-                <viewController id="NYs-ib-ZOK" customClass="calcViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="NYs-ib-ZOK" customClass="calcViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4m-HD-9xs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,7 +646,7 @@
                     <tabBarItem key="tabBarItem" title="Calculator" image="calculator" landscapeImage="calculator" largeContentSizeImage="calculator" selectedImage="calculator" id="E1v-tP-1Ap"/>
                     <connections>
                         <outlet property="label" destination="ch9-9t-1fi" id="E3B-t7-cJ0"/>
-                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="HBS-61-l3w"/>
+                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="HBS-61-l3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iG9-Dh-kL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,7 +691,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Formulas" image="order" landscapeImage="order" largeContentSizeImage="order" selectedImage="order" id="BR0-8y-YNP"/>
                     <connections>
-                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="obx-5e-zXb"/>
+                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="obx-5e-zXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-aS-fVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -701,9 +701,9 @@
         <!--Settings Page-->
         <scene sceneID="Sy1-T1-GDM">
             <objects>
-                <viewController id="la3-YP-rOi" customClass="SettingsPage" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="la3-YP-rOi" customClass="SettingsPage" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rkK-z1-dFG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzr-zO-0c2">
@@ -733,7 +733,7 @@
                                 </connections>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Kzr-zO-0c2" firstAttribute="leading" secondItem="UGi-ta-ymv" secondAttribute="leading" constant="16" id="2l7-ZW-fC8"/>
                             <constraint firstItem="Kzr-zO-0c2" firstAttribute="top" secondItem="UGi-ta-ymv" secondAttribute="top" constant="35" id="936-6c-MTS"/>
@@ -757,7 +757,7 @@
         <!--View Controller-->
         <scene sceneID="nd6-bc-hh1">
             <objects>
-                <viewController id="InO-3V-H9S" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="InO-3V-H9S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9z-8x-inr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -789,7 +789,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NT3-AT-A7f" firstAttribute="leading" secondItem="uyU-RA-Lta" secondAttribute="leading" id="2LI-9e-Sds"/>
                             <constraint firstItem="qGe-r9-aSw" firstAttribute="top" secondItem="uyU-RA-Lta" secondAttribute="top" constant="73" id="7Jj-Ax-edu"/>
@@ -814,7 +814,7 @@
         <!--Investments-->
         <scene sceneID="aM9-6f-f0r">
             <objects>
-                <viewController id="zGm-Ej-2D0" customClass="investmentSelect" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="zGm-Ej-2D0" customClass="investmentSelect" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fgv-fi-k77">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -924,17 +924,17 @@
                         <outlet property="principle" destination="ztA-O0-dBK" id="1GM-jW-xXM"/>
                         <outlet property="rate" destination="kGO-6W-7eD" id="2Uq-Yb-Vdt"/>
                         <outlet property="time" destination="NgC-IV-SSq" id="8WZ-90-pNr"/>
-                        <segue destination="VAb-SB-Adf" kind="presentation" identifier="EasyMode" animates="NO" modalPresentationStyle="fullScreen" id="vWG-Yt-Fem"/>
+                        <segue destination="VAb-SB-Adf" kind="show" identifier="EasyMode" animates="NO" id="vWG-Yt-Fem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNw-SJ-cAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="29.600000000000001" y="848.27586206896558"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--EasyModeStart-->
         <scene sceneID="WBv-7f-iM7">
             <objects>
-                <navigationController id="VAb-SB-Adf" sceneMemberID="viewController">
+                <navigationController title="EasyModeStart" modalPresentationStyle="fullScreen" id="VAb-SB-Adf" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jwD-7q-0pc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bXZ-XG-xer">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -951,7 +951,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Jfb-wT-gUg">
             <objects>
-                <tabBarController id="nSO-9v-Day" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="nSO-9v-Day" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mah-sZ-ajo">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="Settings" landscapeImage="Settings" largeContentSizeImage="Settings" id="4Z2-vD-tSn">
                             <connections>
@@ -977,9 +977,9 @@
         <!--New Calculation Selector-->
         <scene sceneID="ScL-1z-wj6">
             <objects>
-                <tableViewController id="irS-zy-0ey" customClass="NewCalculationSelector" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="irS-zy-0ey" customClass="NewCalculationSelector" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g9O-iy-nhp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1013,7 +1013,7 @@
                     <navigationItem key="navigationItem" id="ctL-e3-FBx"/>
                     <connections>
                         <segue destination="b6p-cv-6v9" kind="show" identifier="showResults" id="CNX-GR-cFh"/>
-                        <segue destination="3z7-bP-k5e" kind="presentation" identifier="EasyModeOff" animates="NO" modalPresentationStyle="fullScreen" id="hTG-wN-hdv"/>
+                        <segue destination="3z7-bP-k5e" kind="show" identifier="EasyModeOff" animates="NO" id="hTG-wN-hdv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYc-t4-T2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1023,9 +1023,9 @@
         <!--Search View Controller-->
         <scene sceneID="BcN-g3-Nzi">
             <objects>
-                <viewController id="VJg-pf-45r" customClass="SearchViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="VJg-pf-45r" customClass="SearchViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsK-Af-Lbr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type out what your looking for" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-c6-HHo">
@@ -1041,7 +1041,7 @@
                                 </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-xw-ndH">
-                                <rect key="frame" x="0.0" y="144" width="375" height="585"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1089,7 +1089,7 @@
                         <outlet property="SearchBar" destination="Nu2-c6-HHo" id="9Dh-oH-h9W"/>
                         <outlet property="searchDisplayController" destination="lYO-aa-ibP" id="xb2-Mo-2Z4"/>
                         <outlet property="tableView" destination="Z9k-xw-ndH" id="zzT-M3-SkH"/>
-                        <segue destination="3z7-bP-k5e" kind="presentation" identifier="EasyModeOff" animates="NO" modalPresentationStyle="fullScreen" id="ISw-3w-RGX"/>
+                        <segue destination="3z7-bP-k5e" kind="show" identifier="EasyModeOff" animates="NO" id="ISw-3w-RGX"/>
                         <segue destination="b6p-cv-6v9" kind="show" identifier="ResultsSegue" id="Rly-E3-mSl"/>
                     </connections>
                 </viewController>
@@ -1110,7 +1110,7 @@
             <objects>
                 <viewController id="b6p-cv-6v9" customClass="ResultsAndCalcPage" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lde-WV-DFW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-xB-dKZ">
@@ -1169,7 +1169,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saB-2O-rya">
-                                <rect key="frame" x="16" y="602" width="343" height="106"/>
+                                <rect key="frame" x="16" y="553" width="343" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="4qy-up-BOn"/>
                                 </constraints>
@@ -1178,7 +1178,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnI-pS-l8X">
-                                <rect key="frame" x="125" y="728" width="124" height="30"/>
+                                <rect key="frame" x="125" y="679" width="124" height="30"/>
                                 <state key="normal" title="Copy to Clipboard"/>
                                 <connections>
                                     <action selector="copyToClipboard:" destination="b6p-cv-6v9" eventType="touchUpInside" id="dXd-9t-C2N"/>
@@ -1277,7 +1277,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SZq-Ai-kSd">
             <objects>
-                <navigationController id="3z7-bP-k5e" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="3z7-bP-k5e" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kq2-dq-a6v"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTu-34-mc2">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -1294,7 +1294,7 @@
         <!--Tab BarVC-->
         <scene sceneID="5Fh-Lb-dNh">
             <objects>
-                <tabBarController id="N2I-Kv-0Zh" customClass="TabBarVC" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="N2I-Kv-0Zh" customClass="TabBarVC" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="leA-Tb-zhd">
                         <rightBarButtonItems>
                             <barButtonItem title="Info" style="plain" id="V7C-OF-eUV">
@@ -1336,7 +1336,7 @@
             <objects>
                 <viewController id="eOe-iF-TPb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4eq-oH-nZd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Formulas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLz-NA-jk8">
@@ -1346,7 +1346,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eqf-zt-kLI">
-                                <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="581.33333333333326"/>
+                                <rect key="frame" x="0.0" y="147.66666666666669" width="375" height="532.33333333333326"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Simple Interest: P•r•t Compound Interest: P(1+r)^t  Area -Triangle: 1/2 l•h Area - Rectangle: l•h Area - Parallelogram: l•h Area - Trapazoid: 1/2(l + l2)h Area - Cricle: π•r^2  Volume - Cube: B•h Volume - Cone: 1/3 B•h Volume - Cylinder: B•h Volume - Sphere: 4/3 π•r^3  SA - Cube: P*h + 2•B SA - R Prism: P•h + 2•B SA - Cylinder: 2π•r•h + 2π•r^2 SA - Triangular Prism: P•h + 2•B  LA - Cube: P•h LA - Cylinder: 2π•r•h  Pythagorean Theorum:  a^2 + b^2 = c^2  Speed: d/t Acceleration: (vf-vi)/t  feet-meter: f/3.28 meter-feet: m•3.28 mile-kilometer: mi•1.61 kilometer-mile: ki•0.6214 Gallon-Liter: G•3.785412 Liter-Gallon: L/3.785412 Fraction-Decicimal: numer/denom </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1382,20 +1382,20 @@
         <image name="money_box" width="30" height="30"/>
         <image name="order" width="30" height="30"/>
         <namedColor name="OPT Blue Color">
-            <color red="0.24755546288695693" green="0.34310430126040964" blue="0.47248284624763603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.24705882352941178" green="0.3411764705882353" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="OPT Blue Main Items">
-            <color red="0.14705882668495179" green="0.34117646813392638" blue="0.620588231086731" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14509803921568629" green="0.33725490196078434" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tab Colors">
-            <color red="7.4505805691682525e-10" green="7.4505805691682525e-10" blue="7.4505805691682525e-10" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hTG-wN-hdv"/>
-        <segue reference="CNX-GR-cFh"/>
+        <segue reference="ISw-3w-RGX"/>
+        <segue reference="Rly-E3-mSl"/>
         <segue reference="bit-A0-nYy"/>
-        <segue reference="obx-5e-zXb"/>
-        <segue reference="uRz-M9-nmm"/>
+        <segue reference="vWG-Yt-Fem"/>
+        <segue reference="Djx-zV-CTD"/>
     </inferredMetricsTieBreakers>
 </document>
