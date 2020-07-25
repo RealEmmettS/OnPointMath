@@ -82,10 +82,11 @@ extension UISearchBar{
 
 
 func UnivCheckEasyModeState() -> Int{
-    if UserDefaults.standard.bool(forKey: "EasyMode") == true{
-        return 1
-    }else if UserDefaults.standard.bool(forKey: "EasyMode") == false{
+    
+    if UserDefaults.standard.bool(forKey: "EasyMode") == false{
         return 0
+    }else if UserDefaults.standard.bool(forKey: "EasyMode") == true{
+        return 1
     }else{
         return 0
     }

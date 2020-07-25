@@ -37,10 +37,10 @@ class SettingsPage: UIViewController {
     
     
     func CheckEasyModeState(){
-        if UserDefaults.standard.bool(forKey: "EasyMode") == true{
-            EasyLabelSwitch.isOn = true
-        }else if UserDefaults.standard.bool(forKey: "EasyMode") == false{
+        if UserDefaults.standard.bool(forKey: "EasyMode") == false || UserDefaults.standard.bool(forKey: "EasyMode") == nil{
             EasyLabelSwitch.isOn = false
+        }else if UserDefaults.standard.bool(forKey: "EasyMode") == true{
+            EasyLabelSwitch.isOn = true
         }
     }
     
