@@ -40,9 +40,9 @@ class geometry: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, 
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UnivCheckEasyModeState() == 1{
-            performSegue(withIdentifier: "EasyMode", sender: self)
-        }
+//        if UnivCheckEasyModeState() == 1{
+//            performSegue(withIdentifier: "EasyMode", sender: self)
+//        }
     }
     
     

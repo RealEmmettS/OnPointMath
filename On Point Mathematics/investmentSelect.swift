@@ -20,9 +20,9 @@ class investmentSelect: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         
         interest.text = ""
         
-        if UnivCheckEasyModeState() == 1{
-            performSegue(withIdentifier: "EasyMode", sender: self)
-        }
+//        if UnivCheckEasyModeState() == 1{
+//            performSegue(withIdentifier: "EasyMode", sender: self)
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

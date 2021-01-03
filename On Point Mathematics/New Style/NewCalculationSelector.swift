@@ -14,15 +14,11 @@ class NewCalculationSelector: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if UnivCheckEasyModeState() == 0{
-            performSegue(withIdentifier: "EasyModeOff", sender: self)
-        }
+        //easy mode off transition was previously here
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UnivCheckEasyModeState() == 0{
-            performSegue(withIdentifier: "EasyModeOff", sender: self)
-        }
+        //easy mode off transition was previously here
     }
 
     

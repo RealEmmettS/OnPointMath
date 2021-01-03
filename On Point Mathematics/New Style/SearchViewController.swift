@@ -17,15 +17,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         SearchBar.delegate = self
         SearchBar.returnKeyType = UIReturnKeyType.done
         
-        if UnivCheckEasyModeState() == 0{
-            performSegue(withIdentifier: "EasyModeOff", sender: self)
-        }
+        //easy mode off transition was previously here
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if UnivCheckEasyModeState() == 0{
-            performSegue(withIdentifier: "EasyModeOff", sender: self)
-        }
+        //easy mode off transition was previously here
     }
     
     
