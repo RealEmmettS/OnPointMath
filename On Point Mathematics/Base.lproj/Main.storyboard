@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAb-SB-Adf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAb-SB-Adf">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTa-nX-HF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1375" y="2170"/>
+            <point key="canvasLocation" x="-1657" y="2169"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jfb-wT-gUg">
@@ -38,13 +37,90 @@
                     </tabBar>
                     <connections>
                         <segue destination="irS-zy-0ey" kind="relationship" relationship="viewControllers" id="bit-A0-nYy"/>
-                        <segue destination="VJg-pf-45r" kind="relationship" relationship="viewControllers" id="fPY-YJ-uzv"/>
+                        <segue destination="Wki-W1-I0y" kind="relationship" relationship="viewControllers" id="hu1-Ac-zQV"/>
                         <segue destination="eOe-iF-TPb" kind="relationship" relationship="viewControllers" id="xiX-E5-aXJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggb-JK-7FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="2170"/>
+            <point key="canvasLocation" x="-934" y="2169"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Sw7-BC-La7">
+            <objects>
+                <viewController id="Wki-W1-I0y" customClass="SearchViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9J-jK-5AG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type out what your looking for" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bc-37-IFR">
+                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kxF-pO-PId">
+                                <rect key="frame" x="0.0" y="144" width="375" height="668"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" textLabel="DLq-4T-lcr" detailTextLabel="UYU-sC-rzE" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="0qh-VF-cW8">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0qh-VF-cW8" id="Q4Y-iU-Ap3">
+                                            <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DLq-4T-lcr">
+                                                    <rect key="frame" x="16" y="18" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UYU-sC-rzE">
+                                                    <rect key="frame" x="15.999999999999996" y="41.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rOb-E1-DbF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kxF-pO-PId" firstAttribute="trailing" secondItem="rOb-E1-DbF" secondAttribute="trailing" id="0u4-jJ-49S"/>
+                            <constraint firstAttribute="bottom" secondItem="kxF-pO-PId" secondAttribute="bottom" id="3sU-4l-iMf"/>
+                            <constraint firstItem="kxF-pO-PId" firstAttribute="top" secondItem="0bc-37-IFR" secondAttribute="bottom" id="BVz-xH-V18"/>
+                            <constraint firstItem="0bc-37-IFR" firstAttribute="leading" secondItem="rOb-E1-DbF" secondAttribute="leading" id="DB4-n2-EjU"/>
+                            <constraint firstItem="0bc-37-IFR" firstAttribute="trailing" secondItem="rOb-E1-DbF" secondAttribute="trailing" id="JF4-Ar-1gu"/>
+                            <constraint firstItem="kxF-pO-PId" firstAttribute="leading" secondItem="rOb-E1-DbF" secondAttribute="leading" id="RQ7-cW-8xF"/>
+                            <constraint firstItem="kxF-pO-PId" firstAttribute="top" secondItem="0bc-37-IFR" secondAttribute="bottom" id="ZMh-6J-ISd"/>
+                            <constraint firstItem="kxF-pO-PId" firstAttribute="top" secondItem="0bc-37-IFR" secondAttribute="bottom" id="cUS-zH-rj0"/>
+                            <constraint firstItem="0bc-37-IFR" firstAttribute="top" secondItem="rOb-E1-DbF" secondAttribute="top" id="paa-ng-Emv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="WB8-Qo-GU2"/>
+                    <connections>
+                        <outlet property="SearchBar" destination="0bc-37-IFR" id="IEx-dn-4J8"/>
+                        <outlet property="tableView" destination="kxF-pO-PId" id="92o-Cp-4gc"/>
+                        <segue destination="b6p-cv-6v9" kind="show" identifier="ResultsSegue" id="YwM-q1-KCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZI-Nk-pGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="2169"/>
         </scene>
         <!--New Calculation Selector-->
         <scene sceneID="ScL-1z-wj6">
@@ -89,91 +165,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYc-t4-T2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="2170"/>
-        </scene>
-        <!--Search View Controller-->
-        <scene sceneID="BcN-g3-Nzi">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="VJg-pf-45r" customClass="SearchViewController" customModule="On_Point_Mathematics" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rsK-Af-Lbr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Type out what your looking for" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-c6-HHo">
-                                <rect key="frame" x="0.0" y="88" width="375" height="56"/>
-                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="search"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z9k-xw-ndH">
-                                <rect key="frame" x="0.0" y="144" width="375" height="585"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" textLabel="f3O-tb-Ogu" detailTextLabel="Uvp-Y2-hAu" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="2YS-RH-LTa">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2YS-RH-LTa" id="Gyt-pg-GGo">
-                                            <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="75"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3O-tb-Ogu">
-                                                    <rect key="frame" x="16" y="18" width="33" height="20.333333333333332"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uvp-Y2-hAu">
-                                                    <rect key="frame" x="15.999999999999996" y="41.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="EZX-Ge-B9R"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Nu2-c6-HHo" firstAttribute="top" secondItem="EZX-Ge-B9R" secondAttribute="top" id="8Yl-gh-nA2"/>
-                            <constraint firstItem="Z9k-xw-ndH" firstAttribute="leading" secondItem="EZX-Ge-B9R" secondAttribute="leading" id="X3a-Nw-gvh"/>
-                            <constraint firstItem="Z9k-xw-ndH" firstAttribute="trailing" secondItem="EZX-Ge-B9R" secondAttribute="trailing" id="XrE-LA-Nz6"/>
-                            <constraint firstItem="Z9k-xw-ndH" firstAttribute="top" secondItem="Nu2-c6-HHo" secondAttribute="bottom" id="b9J-8m-Lmj"/>
-                            <constraint firstItem="Nu2-c6-HHo" firstAttribute="leading" secondItem="EZX-Ge-B9R" secondAttribute="leading" id="fSW-6K-Kno"/>
-                            <constraint firstItem="Nu2-c6-HHo" firstAttribute="trailing" secondItem="EZX-Ge-B9R" secondAttribute="trailing" id="j4S-0R-xME"/>
-                            <constraint firstItem="Z9k-xw-ndH" firstAttribute="bottom" secondItem="EZX-Ge-B9R" secondAttribute="bottom" id="kqE-m2-a2p"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="HSG-fw-Pzc"/>
-                    <connections>
-                        <outlet property="SearchBar" destination="Nu2-c6-HHo" id="9Dh-oH-h9W"/>
-                        <outlet property="searchDisplayController" destination="lYO-aa-ibP" id="xb2-Mo-2Z4"/>
-                        <outlet property="tableView" destination="Z9k-xw-ndH" id="zzT-M3-SkH"/>
-                        <segue destination="b6p-cv-6v9" kind="show" identifier="ResultsSegue" id="Rly-E3-mSl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BXQ-YS-Aou" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="lYO-aa-ibP">
-                    <connections>
-                        <outlet property="delegate" destination="VJg-pf-45r" id="vec-CY-7RE"/>
-                        <outlet property="searchContentsController" destination="VJg-pf-45r" id="yFW-8B-1de"/>
-                        <outlet property="searchResultsDataSource" destination="VJg-pf-45r" id="dNi-6s-OsY"/>
-                        <outlet property="searchResultsDelegate" destination="VJg-pf-45r" id="vhH-Nx-ikd"/>
-                    </connections>
-                </searchDisplayController>
-            </objects>
-            <point key="canvasLocation" x="694" y="2170"/>
+            <point key="canvasLocation" x="30" y="2169"/>
         </scene>
         <!--Results And Calc Page-->
         <scene sceneID="iMA-Kf-4ag">
@@ -388,13 +380,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rly-E3-mSl"/>
+        <segue reference="YwM-q1-KCX"/>
         <segue reference="bit-A0-nYy"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="order" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
