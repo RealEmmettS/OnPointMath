@@ -9,6 +9,15 @@
 
 import Foundation
 import UIKit
+
+
+//COLORS
+let ESBlack = UIColor(named: "ES Black")
+let ESYellow = UIColor(red: 247, green: 218, blue: 38, alpha: 1)
+
+
+
+
 extension UITextField{
     
     @IBInspectable var doneAccessory: Bool{

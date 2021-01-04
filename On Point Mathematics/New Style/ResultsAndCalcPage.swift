@@ -18,6 +18,7 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         text3.delegate = self
         text4.delegate = self
         text5.delegate = self
+        calcLabel.textColor = ESBlack
         answer_label.text = "Answer Will Appear Here"
         if selectedCalcID == nil{
             selectedCalcID = 0

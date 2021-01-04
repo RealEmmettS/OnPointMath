@@ -30,6 +30,7 @@ class NewCalculationSelector: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
         //view.tintColor = UIColor(red:0.40, green:0.69, blue:0.90, alpha:1.0)
         view.tintColor = UIColor(named: "OPT Blue Main Items")
+        //view.tintColor = ESBlack
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
     }
