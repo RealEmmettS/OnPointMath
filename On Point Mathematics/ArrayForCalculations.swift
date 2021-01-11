@@ -99,7 +99,7 @@ let advConv = [
     Headline(id: 3.27, title: "Fraction to Decimal", group: "Conversions"),
     Headline(id: 3.28, title: "Feet to Inches", group: "Conversions"),
     Headline(id: 3.29, title: "Inches to Feet", group: "Conversions"),
-    Headline(id: 3.210, title: "Fahrenheit to Celsius", group: "Conversions"),
+    Headline(id: 3.2101, title: "Fahrenheit to Celsius", group: "Conversions"),//id is 3.2101 because 3.210 is the same as 3.21
     Headline(id: 3.211, title: "Celsius to Fahrenheit", group: "Conversions"),
 ]
 let advOther = [

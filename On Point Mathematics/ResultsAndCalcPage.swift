@@ -201,7 +201,7 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             ftin()
         }else if itemID == 3.29{
             inft()
-        }else if itemID == 3.210{
+        }else if itemID == 3.2101{
             fc()
         }else if itemID == 3.211{
             cf()
