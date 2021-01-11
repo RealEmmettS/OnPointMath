@@ -728,9 +728,10 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             hy = 0
         }
         
-        let legpt1 = pow(l1!, 2)
-        let legpt2 = pow(hy!, 2)
-        let leg = sqrt(legpt1-legpt2)
+        let a2 = pow(l1!, 2) //a^2
+        let b2 = pow(hy!, 2) //b^2
+        let c2 = a2+b2       //c^2
+        let leg = sqrt(c2)   //c
         
         answer.text = "Leg Length = \(leg)"
         

@@ -76,14 +76,14 @@ let geoLSA = [
 
 //MARK: Advanced
 let advSections = [
-    SectionHeadline(id: 3.0, title: "Pythagorean Theorum", items: advPythag),
+    SectionHeadline(id: 3.0, title: "Pythagorean Theorem", items: advPythag),
     SectionHeadline(id: 3.1, title: "Physics", items: advPhysics),
     SectionHeadline(id: 3.2, title: "Conversions", items: advConv),
     SectionHeadline(id: 3.3, title: "Other", items: advOther)
 ]
 let advPythag = [
-    Headline(id: 3.01, title: "Hypotenuse", group: "Pythagorean Theorum"),
-    Headline(id: 3.02, title: "Leg", group: "Pythagorean Theorum")
+    Headline(id: 3.01, title: "Hypotenuse", group: "Pythagorean Theorem"),
+    Headline(id: 3.02, title: "Leg", group: "Pythagorean Theorem")
 ]
 let advPhysics = [
     Headline(id: 3.11, title: "Speed", group: "Physics"),
