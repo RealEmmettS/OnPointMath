@@ -478,30 +478,21 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     
     func cubesa() {
         //Cube
-        // Formula: S=P*h+2*B3
+        // Formula: SA = 6a^2
         
-        notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
-        text1.placeholder = "Length"
-        text2.placeholder = "Height"
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        text1.placeholder = "Length (Side 1)"
+        //text2.placeholder = "Height"
         
         var l = Float(text1.text!);
-        var h = Float(text2.text!);
+        
         
         if l == nil{
             l = 0
         }
-        if h == nil{
-            h = 0
-        }
         
-        let B = l!*l!
         
-        let prt1 = l!+l!+l!+l!
-        let prt2 = prt1*h!
-        let prt3 = 2*B
-        let prt4 = prt2+prt3
-        
-        let SA = prt4
+        let SA = (6*(pow(l!,2)))
         
         answer_label.text = "Answer About: \(SA)"
         
@@ -510,7 +501,7 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     
     func rectanglesa() {
         //Rec. Prism
-        // Formula: S=P*h+2*B
+        // Formula: SA = 2((w*l)+(h*l)+(h*w))
         
         notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
         text1.placeholder = "Length"
@@ -518,9 +509,9 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         text3.placeholder = "Width"
         
         
-        var l = Float(text1.text!);
-        var h = Float(text2.text!);
-        var w = Float(text3.text!);
+        var l = Double(text1.text!);
+        var h = Double(text2.text!);
+        var w = Double(text3.text!);
         
         if l == nil{
             l = 0
@@ -532,14 +523,9 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             w = 0
         }
         
-        let B = l!*w!
+        let pt1 = ((w!*l!)+(h!*l!)+(h!*w!))
         
-        let prt1 = l!+l!+w!+w!
-        let prt2 = prt1*h!
-        let prt3 = 2*B
-        let prt4 = prt2+prt3
-        
-        let SA = prt4
+        let SA = (2*pt1)
         
         answer_label.text = "Answer About: \(SA)"
     }
@@ -689,26 +675,28 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     //Calculations
     func hypot() {
         //Pythagorean Theorum
+        // h = a2 + b2 = c2
         t1t2()
         
         text1.placeholder  = "Leg 1"
         text2.placeholder = "Leg 2"
         
-        var l1 = Float(text1.text!);
-        var l2 = Float(text2.text!);
+        var a = Double(text1.text!);
+        var b = Double(text2.text!);
         
-        if l1 == nil{
-            l1 = 0
+        if a == nil{
+            a = 0
         }
-        if l2 == nil{
-            l2 = 0
+        if b == nil{
+            b = 0
         }
         
-        let hpt1 = pow(l1!, 2)
-        let hpt2 = pow(l2!, 2)
-        let h = sqrt(hpt1+hpt2)
+//        let a2 = pow(l1!, 2)
+//        let b2 = pow(l2!, 2)
+//        let c2 = a2+b2
+        let c = (a! * a! + b! * b!).squareRoot()
         
-        answer.text = "Hypotenuse Length = \(h)"
+        answer.text = "Hypotenuse Length = \(c)"
     }
     
     func leg() {
@@ -718,22 +706,24 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         text1.placeholder = "Leg 1"
         text2.placeholder = "Hypotenuse"
         
-        var l1 = Float(text1.text!);
-        var hy = Float(text2.text!);
+        var a = Double(text1.text!);
+        var c = Double(text2.text!);
         
-        if l1 == nil{
-            l1 = 0
+        if a == nil{
+            a = 0
         }
-        if hy == nil{
-            hy = 0
+        if c == nil{
+            c = 0
         }
         
-        let a2 = pow(l1!, 2) //a^2
-        let b2 = pow(hy!, 2) //b^2
-        let c2 = a2+b2       //c^2
-        let leg = sqrt(c2)   //c
         
-        answer.text = "Leg Length = \(leg)"
+        let a2 = pow(a!,2)
+        let c2 = pow(c!,2)
+        
+        let pt1 = c2-a2
+        let b = pt1.squareRoot()
+        
+        answer.text = "Leg Length = \(b)"
         
     }
     
