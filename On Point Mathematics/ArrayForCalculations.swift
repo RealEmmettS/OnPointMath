@@ -36,8 +36,8 @@ let allItems = invest+geoArea+geoVolume+geoSA+geoLSA+advPythag+advPhysics+advCon
 let invSections = [SectionHeadline(id: 1.0, title: "Investments", items: invest)]
 let invest = [
     Headline(id: 1.01, title: "Simple Interest", group: "Investments"),
-    Headline(id: 1.02, title: "Compound Interest", group: "Investments"),
-    Headline(id:1.03, title: "Car Loan", group: "Investments")
+    Headline(id: 1.02, title: "Compound Interest", group: "Investments")
+    //Headline(id:1.03, title: "Car Loan", group: "Investments")
 ]
 
 //MARK: Geometry
@@ -55,6 +55,7 @@ let geoArea = [
 ]
 let geoVolume = [
     Headline(id: 2.11, title: "Cube", group: "Volume"),
+    Headline(id: 2.111, title: "Rectangular Prism", group: "Volume"),
     Headline(id: 2.12, title: "Cone", group: "Volume"),
     Headline(id: 2.13, title: "Cylinder", group: "Volume"),
     Headline(id: 2.14, title: "Sphere", group: "Volume")
@@ -92,15 +93,21 @@ let advPhysics = [
 let advConv = [
     Headline(id: 3.21, title: "Feet to Meters", group: "Conversions"),
     Headline(id: 3.22, title: "Meters to Feet", group: "Conversions"),
-    Headline(id: 3.23, title: "Mile to Kilometer", group: "Conversions"),
-    Headline(id: 3.24, title: "Kilometer to Mile", group: "Conversions"),
-    Headline(id: 3.25, title: "Gallon to Liter", group: "Conversions"),
-    Headline(id: 3.26, title: "Liter to Gallon", group: "Conversions"),
+    Headline(id: 3.23, title: "Miles to Kilometers", group: "Conversions"),
+    Headline(id: 3.24, title: "Kilometers to Miles", group: "Conversions"),
+    Headline(id: 3.2411, title: "US Gallons to UK Gallons", group: "Conversions"),
+    Headline(id: 3.2412, title: "UK Gallons to US Gallons", group: "Conversions"),
+    Headline(id: 3.25, title: "US Gallons to Liter", group: "Conversions"),
+    Headline(id: 3.2511, title: "UK Gallons to Liter", group: "Conversions"),
+    Headline(id: 3.26, title: "Liter to US Gallons", group: "Conversions"),
+    Headline(id: 3.2611, title: "Liter to UK Gallons", group: "Conversions"),
     Headline(id: 3.27, title: "Fraction to Decimal", group: "Conversions"),
     Headline(id: 3.28, title: "Feet to Inches", group: "Conversions"),
     Headline(id: 3.29, title: "Inches to Feet", group: "Conversions"),
     Headline(id: 3.2101, title: "Fahrenheit to Celsius", group: "Conversions"),//id is 3.2101 because 3.210 is the same as 3.21
     Headline(id: 3.211, title: "Celsius to Fahrenheit", group: "Conversions"),
+    Headline(id: 3.212, title: "Centimeters to Inches", group: "Conversions"),
+    Headline(id: 3.213, title: "Inches to Centimeters", group: "Conversions")
 ]
 let advOther = [
     Headline(id: 3.31, title: "Square Root", group: "Other")

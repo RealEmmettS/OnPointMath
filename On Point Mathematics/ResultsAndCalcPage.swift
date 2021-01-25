@@ -142,6 +142,8 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         //Geometry Volume = 2.1
         if itemID == 2.11{
             cubev()
+        }else if itemID==2.111{
+            rectv()
         }else if itemID == 2.12{
             conev()
         }else if itemID == 2.13{
@@ -191,10 +193,18 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             mk()
         }else if itemID == 3.24{
             km()
+        }else if itemID == 3.2411{
+            usgukg()
+        }else if itemID == 3.2412{
+            ukgusg()
         }else if itemID == 3.25{
             gl()
+        }else if itemID == 3.2511{
+            ukgl()
         }else if itemID == 3.26{
             lg()
+        }else if itemID == 3.2611{
+            lukg()
         }else if itemID == 3.27{
             fd()
         }else if itemID == 3.28{
@@ -205,6 +215,10 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             fc()
         }else if itemID == 3.211{
             cf()
+        }else if itemID == 3.212{
+            ci()
+        }else if itemID == 3.213{
+            ic()
         }
         
         //Advanced Other - 3.3
@@ -322,6 +336,13 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         answer_label.text = "Monthly Payments: \(roundedStep7)\n(No Down Payments)";
         
     }
+    
+    
+    
+    //////////////////////////////////////////////////////////////////////////////
+    
+    
+    
     func triangle() {
         //Triangle
         notUsedTextFields(first: 0, second: 0, third: 1, fourth: 1, fifth: 1)
@@ -396,6 +417,28 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
     func cubev() {
         //Cube
         
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Length"
+        
+        var l = Float(text1.text!);
+        var h = l
+        var w = l
+        if l == nil{
+            l = 0
+        }
+        if h == nil{
+            h = 0
+        }
+        if w == nil{
+            w = 0
+        }
+        
+        let B = l!*w!
+        answer_label.text = "Answer: \(B*h!)"
+    }
+    
+    func rectv(){
         notUsedTextFields(first: 0, second: 0, third: 0, fourth: 1, fifth: 1)
         
         text1.placeholder = "Length"
@@ -830,6 +873,33 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         answer.text = "Answer: \(kilom!*0.6214)";
     }
     
+    func usgukg(){
+        //US Gallons to UK Gallons
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "US Gallons"
+        
+        var usgallon = Float(text1.text!);
+        if usgallon==nil {
+            usgallon = 0
+        }
+        answer.text = "Answer: \(usgallon!/1.201)";
+
+    }
+    
+    func ukgusg(){
+        //UK Gallons to US Gallons
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "UK Gallons"
+        
+        var usgallon = Float(text1.text!);
+        if usgallon==nil {
+            usgallon = 0
+        }
+        answer.text = "Answer: \(usgallon!*1.201)";
+    }
+    
     func gl() {
         //Gallon to Liter
         notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
@@ -843,6 +913,19 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         answer.text = "Answer: \(gallon!*3.785412)";
     }
     
+    func ukgl(){
+        //Imperial Gallon to Liter
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Gallons"
+        
+        var gallon = Float(text1.text!);
+        if gallon==nil {
+            gallon = 0
+        }
+        answer.text = "Answer: \(gallon!*4.546)";
+    }
+    
     func lg() {
         //Liter to Gallon
         notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
@@ -854,6 +937,19 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
             liter = 0
         }
         answer.text = "Answer: \(liter!/3.785412)";
+    }
+    
+    func lukg(){
+        //Liter to Imperial Gallon
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Liters"
+        
+        var liter = Float(text1.text!);
+        if liter==nil {
+            liter = 0
+        }
+        answer.text = "Answer: \(liter!/4.546)";
     }
     
     func fd() {
@@ -948,7 +1044,39 @@ class ResultsAndCalcPage: UIViewController, UITextFieldDelegate {
         let frnheit = (celsius!*1.8)+32
         answer.text = "Answer: \(frnheit)"
     }
-
+    
+    
+    func ci(){
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Centimeters"
+        
+        var c = Float(text1.text!)
+        if c == nil{
+            c=0
+            answer.text = "Answer: 0 in"
+        }else{
+            answer.text = "Answer: \(c!/2.54) in"
+        }
+        
+        
+        
+    }
    
+    func ic(){
+        notUsedTextFields(first: 0, second: 1, third: 1, fourth: 1, fifth: 1)
+        
+        text1.placeholder = "Inches"
+        
+        var i = Float(text1.text!)
+        
+        if i == nil{
+            i=0
+            answer.text = "Answer: 0 in"
+        }else{
+            answer.text = "Answer: \(i!*2.54) in"
+        }
+        
+    }
 
 }
